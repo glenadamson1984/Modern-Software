@@ -7,15 +7,15 @@ const Logo = () => {
         <Image
           src="/images/1-only.png"
           alt="Modern Software"
-          width={95}
-          height={82.5}
+          width={190}
+          height={165}
         />
       </div>
       <div
         style={{ fontFamily: "Roboto, sans-serif", color: "#ffe1d0" }}
         className="text-3xl lg:text-6xl lg:ml-6"
       >
-        Modern Software
+        The modern approach
       </div>
     </div>
   );

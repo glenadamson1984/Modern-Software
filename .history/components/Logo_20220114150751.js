@@ -7,8 +7,8 @@ const Logo = () => {
         <Image
           src="/images/1-only.png"
           alt="Modern Software"
-          width={95}
-          height={82.5}
+          width={127}
+          height={110}
         />
       </div>
       <div
