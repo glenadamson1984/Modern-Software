@@ -16,19 +16,19 @@ const NavigationControl = ({ isOpen, onOpen }) => {
 
       <div className="hidden sm:block">
         <div className="flex space-x-4">
-          <h1 className="title">
+          <h1 className="title :hover:underline">
             <Link href="/projects">
-              <a className="hover:underline underline-offset-1">Projects</a>
+              <a>Projects</a>
             </Link>
           </h1>
           <h1 className="title">
             <Link href="/about">
-              <a className="hover:underline underline-offset-1">About</a>
+              <a>About</a>
             </Link>
           </h1>
           <h1 className="title">
             <Link href="/contactus">
-              <a className="hover:underline underline-offset-1">Contact us</a>
+              <a>Contact us</a>
             </Link>
           </h1>
         </div>
