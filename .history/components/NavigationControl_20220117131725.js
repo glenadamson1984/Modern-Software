@@ -16,7 +16,8 @@ const NavigationControl = ({ isOpen, onOpen }) => {
       <div className="flex flex-col sm:hidden">
         <div>
           <button onClick={onOpen}>
-            {isOpen ? <MdClose /> : <GiHamburgerMenu />}
+            <GiHamburgerMenu />
+            <MdClose />
           </button>
         </div>
       </div>

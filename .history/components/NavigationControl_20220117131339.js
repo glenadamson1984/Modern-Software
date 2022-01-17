@@ -10,13 +10,14 @@ const navigation = [
   { name: "Calendar", href: "#", current: false },
 ];
 
-const NavigationControl = ({ isOpen, onOpen }) => {
+const NavigationControl = () => {
   return (
     <>
       <div className="flex flex-col sm:hidden">
         <div>
-          <button onClick={onOpen}>
-            {isOpen ? <MdClose /> : <GiHamburgerMenu />}
+          <button onClick={() => {}}>
+            <GiHamburgerMenu />
+            <MdClose />
           </button>
         </div>
       </div>

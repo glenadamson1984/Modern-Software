@@ -1,7 +1,5 @@
-import react from "React";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdClose } from "react-icons/md";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -10,17 +8,14 @@ const navigation = [
   { name: "Calendar", href: "#", current: false },
 ];
 
-const NavigationControl = ({ isOpen, onOpen }) => {
+const NavigationControl = () => {
   return (
     <>
-      <div className="flex flex-col sm:hidden">
-        <div>
-          <button onClick={onOpen}>
-            {isOpen ? <MdClose /> : <GiHamburgerMenu />}
-          </button>
-        </div>
+      <div className="flex block sm:hidden">
+        <button>
+          <GiHamburgerMenu />
+        </button>
       </div>
-
       <div className="hidden sm:block">
         <div className="flex space-x-4">
           <h1 className="title">

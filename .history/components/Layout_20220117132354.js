@@ -27,8 +27,8 @@ const Layout = ({ children }) => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="z-10 flex justify-end h-full text-2xl sm:hidden bg-slate-800">
-          <div className="flex flex-col gap-4 m-5">
+        <div className="flex justify-end mr-5 text-2xl border-2 sm:hidden ">
+          <div className="flex flex-col gap-4">
             <h1 className="title">
               <Link href="/projects">
                 <a>Projects</a>
