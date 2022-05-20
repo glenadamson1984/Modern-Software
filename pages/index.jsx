@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import useWindowSize from "../src/hooks/useWindowSize";
-import mobileImage from "../public/images/mobile-hero-ninja.png";
-import desktopImage from "../public/images/hero-img-full.png";
 import Image from "next/image";
 
 const StyledHeroBackgroundMobile = styled.div`
