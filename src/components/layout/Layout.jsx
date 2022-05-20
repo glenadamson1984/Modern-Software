@@ -10,6 +10,12 @@ import useWindowSize from "../../hooks/useWindowSize";
 const StyledBody = styled.body`
   display: flex;
   flex-direction: column;
+`;
+
+const StyledContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   margin: 0.5rem 1rem;
 
@@ -24,12 +30,6 @@ const StyledBody = styled.body`
   ${media.forBigDesktopAndUp} {
     margin: 0.5rem 17rem;
   }
-`;
-
-const StyledContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 const StyledNavigationContainer = styled.div`
