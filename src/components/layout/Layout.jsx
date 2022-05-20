@@ -7,11 +7,10 @@ import styled from "styled-components";
 import { colours, media } from "../../utils/style.utils";
 import useWindowSize from "../../hooks/useWindowSize";
 
-const StyledContainer = styled.div`
+const StyledBody = styled.body`
   display: flex;
-  flex: 1;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+
   margin: 0.5rem 1rem;
 
   ${media.forDesktop} {
@@ -25,6 +24,12 @@ const StyledContainer = styled.div`
   ${media.forBigDesktopAndUp} {
     margin: 0.5rem 17rem;
   }
+`;
+
+const StyledContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledNavigationContainer = styled.div`
@@ -62,20 +67,22 @@ const Layout = ({ children }) => {
         <meta name="description" content="Modern Software" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <StyledContainer>
-        <Logo />
-        {isDesktop ? (
-          <StyledNavigationContainer>
-            <NavigationControl />
-            <StyledCallToAction>
-              <StyledCallToActionText>Get in Touch</StyledCallToActionText>
-            </StyledCallToAction>
-          </StyledNavigationContainer>
-        ) : (
-          <FontAwesomeIcon size="2x" color={colours.red} icon={faBars} />
-        )}
-      </StyledContainer>
-
+      <StyledBody>
+        <StyledContainer>
+          <Logo />
+          {isDesktop ? (
+            <StyledNavigationContainer>
+              <NavigationControl />
+              <StyledCallToAction>
+                <StyledCallToActionText>Get in Touch</StyledCallToActionText>
+              </StyledCallToAction>
+            </StyledNavigationContainer>
+          ) : (
+            <FontAwesomeIcon size="2x" color={colours.red} icon={faBars} />
+          )}
+        </StyledContainer>
+        {children}
+      </StyledBody>
       {/*{isMobileMenuOpen && (*/}
       {/*  <div className="flex justify-end h-full text-2xl sm:hidden bg-slate-800">*/}
       {/*    <div className="flex flex-col gap-4 m-5">*/}
