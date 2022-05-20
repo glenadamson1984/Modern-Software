@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import useWindowSize from "../src/hooks/useWindowSize";
+import mobileImage from "../public/images/mobile-hero-ninja.png";
+import desktopImage from "../public/images/hero-img-full.png";
 
 const StyledHeroBackgroundMobile = styled.div`
-  background-image: url("/images/mobile-hero-ninja.png");
+  background-image: url("${mobileImage.src}");
   position: absolute;
   top: 80px;
   left: 0;
@@ -14,7 +16,7 @@ const StyledHeroBackgroundMobile = styled.div`
 `;
 
 const StyledHeroBackgroundDesktop = styled.div`
-  background-image: url("/images/hero-img-full.png");
+  background-image: url("${desktopImage.src}");
   position: absolute;
   top: 125px;
   left: 0;
