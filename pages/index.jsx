@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const StyledHeroBackgroundMobile = styled.div`
   position: absolute;
-  top: 80px;
+  top: 85px;
   left: 0;
   right: 0;
   background-repeat: no-repeat;
