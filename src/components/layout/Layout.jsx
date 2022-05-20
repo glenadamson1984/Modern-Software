@@ -4,8 +4,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
-import { colours, media } from "../utils/style.utils";
-import useWindowSize from "../hooks/useWindowSize";
+import { colours, media } from "../../utils/style.utils";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -27,6 +27,30 @@ const StyledContainer = styled.div`
   }
 `;
 
+const StyledNavigationContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const StyledCallToAction = styled.div`
+  background: ${colours.red};
+  border-radius: 30px;
+  opacity: 1;
+  padding: 1rem;
+
+  &:hover {
+    background: ${colours.white};
+    color: ${colours.red};
+`;
+
+const StyledCallToActionText = styled.div`
+  text-align: center;
+  font: normal normal medium 20px/26px Roboto;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 1rem;
+`;
+
 const Layout = ({ children }) => {
   const { checkIsDesktop } = useWindowSize();
   const isDesktop = checkIsDesktop();
@@ -41,7 +65,12 @@ const Layout = ({ children }) => {
       <StyledContainer>
         <Logo />
         {isDesktop ? (
-          <NavigationControl />
+          <StyledNavigationContainer>
+            <NavigationControl />
+            <StyledCallToAction>
+              <StyledCallToActionText>Get in Touch</StyledCallToActionText>
+            </StyledCallToAction>
+          </StyledNavigationContainer>
         ) : (
           <FontAwesomeIcon size="2x" color={colours.red} icon={faBars} />
         )}

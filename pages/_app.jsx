@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Layout from "../src/components/Layout";
+import Layout from "../src/components/layout/Layout";
 import React from "react";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
-import { colours, media } from "../utils/style.utils";
-import useWindowSize from "../hooks/useWindowSize";
+import { colours, media } from "../../utils/style.utils";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const StyledLogoTitle = styled.div`
   font-family: Roboto, sans-serif;
