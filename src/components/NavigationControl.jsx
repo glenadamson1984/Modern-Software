@@ -1,39 +1,38 @@
 import Link from "next/link";
 import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdClose } from "react-icons/md";
+import styled from "styled-components";
 
-const NavigationControl = ({ isOpen, onOpen }) => {
+const StyledContainer = styled.div`
+  display: flex;
+`;
+
+const StyledNav = styled.div`
+  text-align: left;
+  font: normal normal normal 20px/26px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+`;
+
+const NavigationControl = () => {
   return (
-    <>
-      <div className="flex flex-col sm:hidden">
-        <div>
-          <button onClick={onOpen}>
-            {isOpen ? <MdClose /> : <GiHamburgerMenu />}
-          </button>
-        </div>
-      </div>
-
-      <div className="hidden sm:block">
-        <div className="flex space-x-4">
-          <h1 className="title">
-            <Link href="/projects">
-              <a className="hover:underline underline-offset-1">Projects</a>
-            </Link>
-          </h1>
-          <h1 className="title">
-            <Link href="/about">
-              <a className="hover:underline underline-offset-1">About</a>
-            </Link>
-          </h1>
-          <h1 className="title">
-            <Link href="/contactus">
-              <a className="hover:underline underline-offset-1">Contact us</a>
-            </Link>
-          </h1>
-        </div>
-      </div>
-    </>
+    <StyledContainer>
+      <StyledNav>
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
+      </StyledNav>
+      <StyledNav>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </StyledNav>
+      <StyledNav>
+        <Link href="/contactus">
+          <a>Contact us</a>
+        </Link>
+      </StyledNav>
+    </StyledContainer>
   );
 };
 
