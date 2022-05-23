@@ -5,22 +5,13 @@ import Image from "next/image";
 import { colours, media } from "../src/utils/style.utils";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 
-const StyledHeroBackgroundMobile = styled.div`
+const StyledHeroBackground = styled.div`
   position: relative;
   left: 0;
   right: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 773px;
-`;
-
-const StyledHeroBackgroundDesktop = styled.div`
-  position: relative;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 940px;
+  height: ${(props) => (props.isDesktop ? "940px" : "773px")};
 `;
 
 const StyledHeroContainer = styled.div`
@@ -28,19 +19,9 @@ const StyledHeroContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  top: 25rem;
-  flex-direction: column;
-`;
-
-const StyledHeroContainerDesktop = styled.div`
-  z-index: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  top: 15rem;
-  width: 40%;
+  align-items: ${(props) => (props.isDesktop ? "flex-start" : "center")};
+  top: ${(props) => (props.isDesktop ? "15rem" : "25rem")};
+  width: ${(props) => (props.isDesktop ? "40%" : "100%")};
   flex-direction: column;
 
   ${media.forDesktop} {
@@ -56,14 +37,9 @@ const StyledHeroContainerDesktop = styled.div`
   }
 `;
 
-const StyledRedLineMobile = styled.div`
+const StyledRedLine = styled.div`
   border-top: 5px solid ${colours.red};
-  width: 30%;
-`;
-
-const StyledRedLineDesktop = styled.div`
-  border-top: 5px solid ${colours.red};
-  width: 10%;
+  width: ${(props) => (props.isDesktop ? "10%" : "30%")};
 `;
 
 const StyledHeroTitle = styled.div`
@@ -110,7 +86,7 @@ const Home = () => {
     <>
       {isDesktop ? (
         <>
-          <StyledHeroBackgroundDesktop>
+          <StyledHeroBackground isDesktop={true}>
             <Image
               src="/images/hero-img-full.png"
               alt="Modern Software"
@@ -118,8 +94,8 @@ const Home = () => {
               height={773}
               layout="fill"
             />
-            <StyledHeroContainerDesktop>
-              <StyledRedLineDesktop />
+            <StyledHeroContainer isDesktop={true}>
+              <StyledRedLine isDesktop={true} />
               <StyledHeroDesktop>
                 Building modern software for
                 <StyledHeroTitleRed> Modern Companies</StyledHeroTitleRed>
@@ -130,12 +106,12 @@ const Home = () => {
                 design.
               </StyledHeroDescriptionDesktop>
               <CallToActionButton>Discuss Your Project</CallToActionButton>
-            </StyledHeroContainerDesktop>
-          </StyledHeroBackgroundDesktop>
+            </StyledHeroContainer>
+          </StyledHeroBackground>
         </>
       ) : (
         <>
-          <StyledHeroBackgroundMobile>
+          <StyledHeroBackground isDesktop={false}>
             <Image
               src="/images/mobile-hero-ninja.png"
               alt="Modern Software"
@@ -144,8 +120,8 @@ const Home = () => {
               layout="fill"
               position="absolute"
             />
-            <StyledHeroContainer>
-              <StyledRedLineMobile />
+            <StyledHeroContainer isDesktop={false}>
+              <StyledRedLine isDesktop={false} />
               <StyledHeroTitle>
                 Building modern software for
                 <StyledHeroTitleRed> Modern Companies</StyledHeroTitleRed>
@@ -157,7 +133,7 @@ const Home = () => {
               </StyledHeroDescription>
               <CallToActionButton>Discuss Your Project</CallToActionButton>
             </StyledHeroContainer>
-          </StyledHeroBackgroundMobile>
+          </StyledHeroBackground>
           <div style={{ position: "relative" }}>Our Services</div>
         </>
       )}
