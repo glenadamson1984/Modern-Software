@@ -20,7 +20,7 @@ const StyledHeroBackgroundDesktop = styled.div`
   right: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 756px;
+  height: 940px;
 `;
 
 const StyledHeroContainer = styled.div`
