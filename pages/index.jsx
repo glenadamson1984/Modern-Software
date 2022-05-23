@@ -37,6 +37,19 @@ const StyledHeroContainer = styled.div`
   }
 `;
 
+const StyledOurServicesContainer = styled.div`
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: ${(props) => (props.isDesktop ? "flex-start" : "center")};
+  top: ${(props) => (props.isDesktop ? "15rem" : "0")};
+  width: ${(props) => (props.isDesktop ? "40%" : "100%")};
+  flex-direction: column;
+  background: white;
+  padding-bottom: 2rem;
+`;
+
 const StyledRedLine = styled.div`
   border-top: 5px solid ${colours.red};
   width: ${(props) => (props.isDesktop ? "10%" : "30%")};
@@ -56,6 +69,7 @@ const StyledOurServicesTitle = styled.div`
   letter-spacing: 0px;
   color: black;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const StyledHeroDesktop = styled.div`
@@ -75,7 +89,7 @@ const StyledHeroDescription = styled.div`
   letter-spacing: 0px;
   color: #bfbfbf;
   opacity: 1;
-  margin: 2rem 0;
+  margin: 2rem 0.25rem;
 `;
 
 const StyledHeroDescriptionDesktop = styled.div`
@@ -85,6 +99,30 @@ const StyledHeroDescriptionDesktop = styled.div`
   color: #bfbfbf;
   opacity: 1;
   margin: 2rem 0;
+`;
+
+const StyledServiceRow = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  color: black;
+  margin: 2rem 0;
+`;
+
+const StyledServiceGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+`;
+
+const StyledServiceGridTitle = styled.div`
+  text-align: center;
+  font: normal normal bold 20px/30px Roboto;
+  letter-spacing: 0px;
+  color: #232323;
+  opacity: 1;
+  margin-top: 0.5rem;
 `;
 
 const Home = () => {
@@ -148,12 +186,81 @@ const Home = () => {
               <CallToActionButton>Discuss Your Project</CallToActionButton>
             </StyledHeroContainer>
           </StyledHeroBackground>
-          {/*<StyledHeroContainer isDesktop={false}>*/}
-          {/*  <StyledOurServicesTitle>*/}
-          {/*    Our*/}
-          {/*    <StyledHeroTitleRed> Services</StyledHeroTitleRed>*/}
-          {/*  </StyledOurServicesTitle>*/}
-          {/*</StyledHeroContainer>*/}
+          <StyledOurServicesContainer isDesktop={false}>
+            <StyledOurServicesTitle>
+              Our
+              <StyledHeroTitleRed> Services</StyledHeroTitleRed>
+            </StyledOurServicesTitle>
+            <StyledRedLine isDesktop={false} />
+            <StyledHeroDescription>
+              Our services focus on offering the best software engineering
+              experience. We offer bespoke software solutions to fit your needs.
+              We focus on the entire lifecycle from design, through
+              implementation right through to production using the best
+              methodologies which are proven in the software industry.
+            </StyledHeroDescription>
+            <StyledServiceRow>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/1ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>
+                  Custom Software Development
+                </StyledServiceGridTitle>
+              </StyledServiceGrid>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/2ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>
+                  Web Application Development
+                </StyledServiceGridTitle>
+              </StyledServiceGrid>
+            </StyledServiceRow>
+            <StyledServiceRow>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/3ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>
+                  Mobile App Development
+                </StyledServiceGridTitle>
+              </StyledServiceGrid>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/4ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>UX & UI Design</StyledServiceGridTitle>
+              </StyledServiceGrid>
+            </StyledServiceRow>
+            <StyledServiceRow>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/5ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>
+                  Software Tuition
+                </StyledServiceGridTitle>
+              </StyledServiceGrid>
+            </StyledServiceRow>
+
+            <CallToActionButton>View All Services</CallToActionButton>
+          </StyledOurServicesContainer>
         </>
       )}
     </>
