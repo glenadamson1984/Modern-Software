@@ -50,6 +50,14 @@ const StyledHeroTitle = styled.div`
   margin-top: 2rem;
 `;
 
+const StyledOurServicesTitle = styled.div`
+  text-align: center;
+  font: normal normal bold 32px/42px Roboto;
+  letter-spacing: 0px;
+  color: black;
+  margin-top: 2rem;
+`;
+
 const StyledHeroDesktop = styled.div`
   text-align: left;
   font: normal normal bold 60px/79px Roboto;
@@ -108,6 +116,12 @@ const Home = () => {
               <CallToActionButton>Discuss Your Project</CallToActionButton>
             </StyledHeroContainer>
           </StyledHeroBackground>
+          {/*<StyledHeroContainer isDesktop={true}>*/}
+          {/*  <StyledOurServicesTitle>*/}
+          {/*    Our*/}
+          {/*    <StyledHeroTitleRed> Services</StyledHeroTitleRed>*/}
+          {/*  </StyledOurServicesTitle>*/}
+          {/*</StyledHeroContainer>*/}
         </>
       ) : (
         <>
@@ -134,7 +148,12 @@ const Home = () => {
               <CallToActionButton>Discuss Your Project</CallToActionButton>
             </StyledHeroContainer>
           </StyledHeroBackground>
-          <div style={{ position: "relative" }}>Our Services</div>
+          {/*<StyledHeroContainer isDesktop={false}>*/}
+          {/*  <StyledOurServicesTitle>*/}
+          {/*    Our*/}
+          {/*    <StyledHeroTitleRed> Services</StyledHeroTitleRed>*/}
+          {/*  </StyledOurServicesTitle>*/}
+          {/*</StyledHeroContainer>*/}
         </>
       )}
     </>
