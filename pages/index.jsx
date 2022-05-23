@@ -148,10 +148,15 @@ const StyledOurServicesDescriptionDesktop = styled.div`
 
 const StyledServiceRow = styled.div`
   display: flex;
-  width: 100%;
   justify-content: space-around;
   color: black;
-  margin: 2rem 0;
+`;
+
+const StyledServiceRowDesktop = styled.div`
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  margin: 5rem 10rem;
 `;
 
 const StyledServiceGrid = styled.div`
@@ -212,7 +217,61 @@ const Home = () => {
               implementation right through to production using the best
               methodologies which are proven in the software industry.
             </StyledOurServicesDescriptionDesktop>
-            <div style={{ color: "black" }}>Icons need to placed here</div>
+            <StyledServiceRowDesktop>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/1ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>
+                  Custom Software Development
+                </StyledServiceGridTitle>
+              </StyledServiceGrid>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/2ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>
+                  Web Application Development
+                </StyledServiceGridTitle>
+              </StyledServiceGrid>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/3ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>
+                  Mobile App Development
+                </StyledServiceGridTitle>
+              </StyledServiceGrid>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/4ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>UX & UI Design</StyledServiceGridTitle>
+              </StyledServiceGrid>
+              <StyledServiceGrid>
+                <Image
+                  src="/images/5ser.png"
+                  alt="Modern Software"
+                  width={100}
+                  height={90}
+                />
+                <StyledServiceGridTitle>
+                  Software Tuition
+                </StyledServiceGridTitle>
+              </StyledServiceGrid>
+            </StyledServiceRowDesktop>
             <CallToActionButton>View All Services</CallToActionButton>
           </StyledOurServicesContainerDesktop>
         </>
