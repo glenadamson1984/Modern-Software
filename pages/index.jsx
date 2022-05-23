@@ -43,8 +43,17 @@ const StyledOurServicesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: ${(props) => (props.isDesktop ? "flex-start" : "center")};
-  top: ${(props) => (props.isDesktop ? "15rem" : "0")};
-  width: ${(props) => (props.isDesktop ? "40%" : "100%")};
+  flex-direction: column;
+  background: white;
+  padding-bottom: 2rem;
+`;
+
+const StyledOurServicesContainerDesktop = styled.div`
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background: white;
   padding-bottom: 2rem;
@@ -53,6 +62,13 @@ const StyledOurServicesContainer = styled.div`
 const StyledRedLine = styled.div`
   border-top: 5px solid ${colours.red};
   width: ${(props) => (props.isDesktop ? "10%" : "30%")};
+`;
+
+const StyledRedLineDesktop = styled.div`
+  border-top: 5px solid ${colours.red};
+  width: 30%;
+  position: relative;
+  left: 6rem;
 `;
 
 const StyledHeroTitle = styled.div`
@@ -68,6 +84,15 @@ const StyledOurServicesTitle = styled.div`
   font: normal normal bold 32px/42px Roboto;
   letter-spacing: 0px;
   color: black;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+`;
+
+const StyledOurServicesTitleDesktop = styled.div`
+  text-align: center;
+  font: normal normal bold 48px/63px Roboto;
+  letter-spacing: 0px;
+  color: #232323;
   margin-top: 2rem;
   margin-bottom: 1rem;
 `;
@@ -99,6 +124,26 @@ const StyledHeroDescriptionDesktop = styled.div`
   color: #bfbfbf;
   opacity: 1;
   margin: 2rem 0;
+`;
+
+const StyledOurServicesDescriptionDesktop = styled.div`
+  text-align: center;
+  font: normal normal normal 18px/30px Roboto;
+  letter-spacing: 0px;
+  color: #bfbfbf;
+  opacity: 1;
+
+  ${media.forDesktop} {
+    margin: 0 18rem;
+  }
+
+  ${media.forDesktopWideScreen} {
+    margin: 0 18rem;
+  }
+
+  ${media.forBigDesktopAndUp} {
+    margin: 0 27rem;
+  }
 `;
 
 const StyledServiceRow = styled.div`
@@ -154,12 +199,22 @@ const Home = () => {
               <CallToActionButton>Discuss Your Project</CallToActionButton>
             </StyledHeroContainer>
           </StyledHeroBackground>
-          {/*<StyledHeroContainer isDesktop={true}>*/}
-          {/*  <StyledOurServicesTitle>*/}
-          {/*    Our*/}
-          {/*    <StyledHeroTitleRed> Services</StyledHeroTitleRed>*/}
-          {/*  </StyledOurServicesTitle>*/}
-          {/*</StyledHeroContainer>*/}
+          <StyledOurServicesContainerDesktop isDesktop={true}>
+            <StyledOurServicesTitleDesktop>
+              Our
+              <StyledHeroTitleRed> Services</StyledHeroTitleRed>
+              <StyledRedLineDesktop isDesktop={true} />
+            </StyledOurServicesTitleDesktop>
+            <StyledOurServicesDescriptionDesktop>
+              Our services focus on offering the best software engineering
+              experience. We offer bespoke software solutions to fit your needs.
+              We focus on the entire lifecycle from design, through
+              implementation right through to production using the best
+              methodologies which are proven in the software industry.
+            </StyledOurServicesDescriptionDesktop>
+            <div style={{ color: "black" }}>Icons need to placed here</div>
+            <CallToActionButton>View All Services</CallToActionButton>
+          </StyledOurServicesContainerDesktop>
         </>
       ) : (
         <>
