@@ -11,7 +11,7 @@ const StyledHeroBackground = styled.div`
   right: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  height: ${(props) => (props.isDesktop ? "940px" : "773px")};
+  height: ${(props) => (props.isDesktop ? "756px" : "773px")};
 `;
 
 const StyledHeroContainer = styled.div`
@@ -20,7 +20,7 @@ const StyledHeroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: ${(props) => (props.isDesktop ? "flex-start" : "center")};
-  top: ${(props) => (props.isDesktop ? "15rem" : "25rem")};
+  top: ${(props) => (props.isDesktop ? "15rem" : "2rem")};
   width: ${(props) => (props.isDesktop ? "40%" : "100%")};
   flex-direction: column;
 
@@ -150,6 +150,7 @@ const StyledServiceRow = styled.div`
   display: flex;
   justify-content: space-around;
   color: black;
+  margin-bottom: 5rem;
 `;
 
 const StyledServiceRowDesktop = styled.div`
@@ -175,21 +176,55 @@ const StyledServiceGridTitle = styled.div`
   margin-top: 0.5rem;
 `;
 
+const StyledNinjaContainerDesktop = styled.div`
+  display: flex;
+  position: absolute;
+  height: 700px;
+  width: 700px;
+  right: 100px;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin-top: 2rem;
+`;
+
+const StyledNinjaContainer = styled.div`
+  display: flex;
+  position: relative;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  margin-top: 2rem;
+`;
+
 const Home = () => {
-  const { checkIsDesktop } = useWindowSize();
+  const { checkIsDesktop, checkIsTablet } = useWindowSize();
   const isDesktop = checkIsDesktop();
+
   return (
     <>
       {isDesktop ? (
         <>
           <StyledHeroBackground isDesktop={true}>
             <Image
-              src="/images/hero-img-full.png"
+              src="/images/hero-img-half.png"
               alt="Modern Software"
-              width={375}
-              height={773}
+              width={1920}
+              height={756}
               layout="fill"
             />
+            <StyledNinjaContainerDesktop>
+              <Image
+                src="/images/hero-img.png"
+                alt="Modern Software"
+                width={675}
+                height={567}
+                layout="fill"
+                position="absolute"
+                objectFit="contain"
+              />
+            </StyledNinjaContainerDesktop>
             <StyledHeroContainer isDesktop={true}>
               <StyledRedLine isDesktop={true} />
               <StyledHeroDesktop>
@@ -279,13 +314,25 @@ const Home = () => {
         <>
           <StyledHeroBackground isDesktop={false}>
             <Image
-              src="/images/mobile-hero-ninja.png"
+              src="/images/hero-img-half.png"
               alt="Modern Software"
               width={375}
               height={773}
               layout="fill"
               position="absolute"
+              style={{ zIndex: -1 }}
             />
+            <StyledNinjaContainer>
+              <Image
+                src="/images/hero-img.png"
+                alt="Modern Software"
+                width={675}
+                height={567}
+                layout="fill"
+                position="absolute"
+                objectFit="contain"
+              />
+            </StyledNinjaContainer>
             <StyledHeroContainer isDesktop={false}>
               <StyledRedLine isDesktop={false} />
               <StyledHeroTitle>
