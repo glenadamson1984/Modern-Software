@@ -7,6 +7,8 @@ import styled from "styled-components";
 import { colours, media } from "../../utils/style.utils";
 import useWindowSize from "../../hooks/useWindowSize";
 import CallToActionButton from "../buttons/action/CallToActionButton";
+import Image from "next/image";
+import Footer from "./Footer";
 
 const StyledBody = styled.body`
   display: flex;
@@ -62,6 +64,7 @@ const Layout = ({ children }) => {
           )}
         </StyledContainer>
         {children}
+        <Footer />
       </StyledBody>
     </>
   );
