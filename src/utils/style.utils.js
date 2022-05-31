@@ -16,4 +16,7 @@ export const media = {
 export const colours = {
   white: "#fff",
   red: "#E51F28",
+  black: "#232323",
+  grey: "#6B6B6B",
+  darkWhite: "#BFBFBF",
 };

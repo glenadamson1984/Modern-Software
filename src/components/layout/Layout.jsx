@@ -23,15 +23,15 @@ const StyledContainer = styled.div`
   margin: 0.5rem 1rem;
 
   ${media.forDesktop} {
-    margin: 0.5rem 8rem;
+    margin: 1rem 8rem;
   }
 
   ${media.forDesktopWideScreen} {
-    margin: 0.5rem 8rem;
+    margin: 1rem 8rem;
   }
 
   ${media.forBigDesktopAndUp} {
-    margin: 0.5rem 17rem;
+    margin: 1rem 17rem;
   }
 `;
 
