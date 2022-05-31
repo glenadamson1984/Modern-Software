@@ -32,6 +32,10 @@ const useWindowSize = () => {
     }
   }, []); // Empty array ensures that effect is only run on mount
 
+  const checkIsDesktopWideScreen = () => {
+    return windowSize.width !== undefined && windowSize.width > 1600;
+  };
+
   const checkIsDesktop = () => {
     return windowSize.width !== undefined && windowSize.width > 1200;
   };
@@ -48,7 +52,13 @@ const useWindowSize = () => {
     return windowSize.width !== undefined && windowSize.width < 600;
   };
 
-  return { windowSize, checkIsDesktop, checkIsTablet, checkIsMobile };
+  return {
+    windowSize,
+    checkIsDesktop,
+    checkIsDesktopWideScreen,
+    checkIsTablet,
+    checkIsMobile,
+  };
 };
 
 export default useWindowSize;
