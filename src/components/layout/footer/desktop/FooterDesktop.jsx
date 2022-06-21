@@ -66,8 +66,11 @@ const FooterDesktop = () => {
                 width={20}
                 height={20}
               />
-              home address
-              <div style={{ paddingLeft: "20px" }}>portadown, bt66666</div>
+              1 Lisnagrilly Manor
+              <div style={{ paddingLeft: "20px" }}>Portadown</div>
+              <div style={{ paddingLeft: "20px" }}>Craigavon</div>
+              <div style={{ paddingLeft: "20px" }}>Co. Armagh</div>
+              <div style={{ paddingLeft: "20px" }}>BT63 5ZX</div>
             </StyledAddressContainerDesktop>
             <StyledAddressContainerDesktop
               style={{
@@ -80,7 +83,7 @@ const FooterDesktop = () => {
                 width={20}
                 height={20}
               />
-              02938735647
+              07921568808
             </StyledAddressContainerDesktop>
           </StyledContactUsContainerDesktop>
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -94,8 +97,11 @@ const FooterDesktop = () => {
                 width={20}
                 height={20}
               />
-              home address
-              <div style={{ paddingLeft: "20px" }}>portadown, bt66666</div>
+              320 Firecrest Court
+              <div style={{ paddingLeft: "20px" }}>Centre Park</div>
+              <div style={{ paddingLeft: "20px" }}>Warrington</div>
+              <div style={{ paddingLeft: "20px" }}>Cheshire</div>
+              <div style={{ paddingLeft: "20px" }}>WA1 1RG</div>
             </StyledAddressContainerDesktop>
             <StyledAddressContainerDesktop
               style={{
@@ -108,7 +114,7 @@ const FooterDesktop = () => {
                 width={20}
                 height={20}
               />
-              02938735647
+              07921568808
             </StyledAddressContainerDesktop>
           </div>
         </StyledFooterContentRowDesktop>
