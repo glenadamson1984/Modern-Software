@@ -10,9 +10,10 @@ const StyledCallToAction = styled.div`
 
   &:hover {
     background: ${(props) =>
-      props.variant === "secondary" ? "black" : `${colours.white}`};
+      props.variant === "secondary" ? `${colours.white}` : `${colours.black}`};
     color: ${(props) =>
-      props.variant === "secondary" ? `${colours.white}` : `${colours.red}`};
+      props.variant === "secondary" ? `${colours.black}` : `${colours.white}`};
+    
 `;
 
 const StyledCallToActionText = styled.div`
@@ -25,7 +26,7 @@ const StyledCallToActionText = styled.div`
 
 const CallToActionButton = ({ children, variant = "primary" }) => {
   return (
-    <StyledCallToAction variant="secondary">
+    <StyledCallToAction variant={variant}>
       <StyledCallToActionText>{children}</StyledCallToActionText>
     </StyledCallToAction>
   );

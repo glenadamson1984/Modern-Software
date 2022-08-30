@@ -236,7 +236,9 @@ const Home = () => {
                 solutions across the stack with an emphasis on quality frontend
                 design.
               </StyledHeroDescriptionDesktop>
-              <CallToActionButton>Discuss Your Project</CallToActionButton>
+              <CallToActionButton variant="secondary">
+                Discuss Your Project
+              </CallToActionButton>
             </StyledHeroContainer>
           </StyledHeroBackground>
           <StyledOurServicesContainerDesktop isDesktop={true}>
@@ -344,7 +346,9 @@ const Home = () => {
                 solutions across the stack with an emphasis on quality frontend
                 design.
               </StyledHeroDescription>
-              <CallToActionButton>Discuss Your Project</CallToActionButton>
+              <CallToActionButton variant="secondary">
+                Discuss Your Project
+              </CallToActionButton>
             </StyledHeroContainer>
           </StyledHeroBackground>
           <StyledOurServicesContainer isDesktop={false}>

@@ -30,7 +30,9 @@ const Layout = ({ children }) => {
           {isDesktop ? (
             <StyledNavigationContainer>
               <NavigationControl />
-              <CallToActionButton>Get in Touch</CallToActionButton>
+              <CallToActionButton variant="secondary">
+                Get in Touch
+              </CallToActionButton>
             </StyledNavigationContainer>
           ) : (
             <FontAwesomeIcon size="2x" color={colours.red} icon={faBars} />
