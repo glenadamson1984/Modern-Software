@@ -18,6 +18,7 @@ export const colours = {
   whiteBorder: "#e8e8e8",
   red: "#E51F28",
   black: "#232323",
+  darkGrey: "#262626",
   grey: "#6B6B6B",
   darkWhite: "#BFBFBF",
 };

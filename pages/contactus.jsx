@@ -1,17 +1,11 @@
 import React from "react";
+import SubPageLayout from "../src/components/layout/SubPageLayout";
 
 const ContactUs = () => {
   return (
-    <div
-      style={{
-        height: "600px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      Contact Us Page - Currently under construction
-    </div>
+    <SubPageLayout subTitle="Contact Us">
+      Currently under construction
+    </SubPageLayout>
   );
 };
 

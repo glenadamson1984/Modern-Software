@@ -1,17 +1,15 @@
 import React from "react";
+import { useRouter } from "next/router";
+import SubPageLayout from "../src/components/layout/SubPageLayout";
+import { RemoveSlashFromURl } from "../src/components/layout/navigation/NavigationPaths";
 
 const Portfolio = () => {
+  const { pathname } = useRouter();
+
   return (
-    <div
-      style={{
-        height: "600px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      Portfolio Page - Currently under construction
-    </div>
+    <SubPageLayout subTitle={RemoveSlashFromURl(pathname)}>
+      Currently under construction
+    </SubPageLayout>
   );
 };
 
