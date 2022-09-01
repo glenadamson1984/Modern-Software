@@ -8,9 +8,18 @@ import {
   StyledNavigationContainer,
   StyledNavigationLink,
 } from "./mobile-menu.styles";
-import { NavigationItemsMobile } from "./NavigationPaths";
+import { ConvertPathNameToURL, NavigationItemsMobile } from "./NavigationPaths";
+import { useRouter } from "next/router";
 
 const MobileMenu = ({ showMenu, onMenuClick }) => {
+  const router = useRouter();
+
+  const navigateToPath = (path) => {
+    router
+      .push(path === "Home" ? "/" : ConvertPathNameToURL(path))
+      .then(onMenuClick(!showMenu));
+  };
+
   return (
     <StyledContainer>
       <StyledIconContainer>
@@ -20,7 +29,10 @@ const MobileMenu = ({ showMenu, onMenuClick }) => {
       </StyledIconContainer>
       <StyledNavigationContainer>
         {NavigationItemsMobile.map((navigationItem, index) => (
-          <StyledNavigationLink key={index}>
+          <StyledNavigationLink
+            key={index}
+            onClick={() => navigateToPath(navigationItem)}
+          >
             {navigationItem}
           </StyledNavigationLink>
         ))}

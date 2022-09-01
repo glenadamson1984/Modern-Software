@@ -180,7 +180,10 @@ const Home = () => {
                 solutions across the stack with an emphasis on quality frontend
                 design.
               </StyledHeroDescription>
-              <CallToActionButton variant="secondary">
+              <CallToActionButton
+                variant="secondary"
+                onClick={() => router.push("/contactus")}
+              >
                 Discuss Your Project
               </CallToActionButton>
             </StyledHeroContainer>
@@ -258,7 +261,9 @@ const Home = () => {
               </StyledServiceGrid>
             </StyledServiceRow>
 
-            <CallToActionButton>View All Services</CallToActionButton>
+            <CallToActionButton onClick={() => router.push("/services")}>
+              View All Services
+            </CallToActionButton>
           </StyledOurServicesContainer>
         </>
       )}
