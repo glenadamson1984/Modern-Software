@@ -24,7 +24,7 @@ import {
   StyledServiceGridTitle,
   StyledServiceRow,
   StyledServiceRowDesktop,
-} from "./index.styles";
+} from "../page-styles/index.styles";
 
 const Home = () => {
   const { checkIsDesktop } = useWindowSize();
