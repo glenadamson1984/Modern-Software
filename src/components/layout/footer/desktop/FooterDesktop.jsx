@@ -16,9 +16,11 @@ import Image from "next/image";
 import { StyledLogoTitle } from "../../logo/logo.styles";
 import { colours } from "../../../../utils/style.utils";
 import useWindowSize from "../../../../hooks/useWindowSize";
+import { useRouter } from "next/router";
 
 const FooterDesktop = () => {
   const { checkIsDesktop, checkIsDesktopWideScreen } = useWindowSize();
+  const router = useRouter();
   const isDesktop = checkIsDesktop();
   const isDesktopWideScreen = checkIsDesktopWideScreen();
 
@@ -35,7 +37,7 @@ const FooterDesktop = () => {
       </StyledBackgroundImageDesktop>
       <StyledFooterContentContainerDesktop>
         <StyledFooterContentRowDesktop>
-          <div>
+          <div style={{ cursor: "pointer" }} onClick={() => router.push("/")}>
             <Image
               src="/images/1-only.png"
               alt="Modern Software"

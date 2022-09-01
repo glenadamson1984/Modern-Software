@@ -141,7 +141,9 @@ const Home = () => {
                 </StyledServiceGridTitle>
               </StyledServiceGrid>
             </StyledServiceRowDesktop>
-            <CallToActionButton>View All Services</CallToActionButton>
+            <CallToActionButton onClick={() => router.push("/services")}>
+              View All Services
+            </CallToActionButton>
           </StyledOurServicesContainerDesktop>
         </>
       ) : (

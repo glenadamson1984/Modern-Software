@@ -7,6 +7,7 @@ const StyledCallToAction = styled.div`
   border-radius: 30px;
   opacity: 1;
   padding: 1rem;
+  cursor: pointer;
 
   &:hover {
     background: ${(props) =>
