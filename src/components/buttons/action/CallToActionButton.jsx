@@ -24,9 +24,9 @@ const StyledCallToActionText = styled.div`
   padding: 0 1rem;
 `;
 
-const CallToActionButton = ({ children, variant = "primary" }) => {
+const CallToActionButton = ({ children, variant = "primary", onClick }) => {
   return (
-    <StyledCallToAction variant={variant}>
+    <StyledCallToAction variant={variant} onClick={onClick}>
       <StyledCallToActionText>{children}</StyledCallToActionText>
     </StyledCallToAction>
   );

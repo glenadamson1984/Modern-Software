@@ -1,205 +1,34 @@
 import React from "react";
-import styled from "styled-components";
 import useWindowSize from "../src/hooks/useWindowSize";
 import Image from "next/image";
-import { colours, media } from "../src/utils/style.utils";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
-
-const StyledHeroBackground = styled.div`
-  position: relative;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: ${(props) => (props.isDesktop ? "756px" : "773px")};
-`;
-
-const StyledHeroContainer = styled.div`
-  z-index: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: ${(props) => (props.isDesktop ? "flex-start" : "center")};
-  top: ${(props) => (props.isDesktop ? "15rem" : "2rem")};
-  width: ${(props) => (props.isDesktop ? "40%" : "100%")};
-  flex-direction: column;
-
-  ${media.forDesktop} {
-    margin: 0 8rem;
-  }
-
-  ${media.forDesktopWideScreen} {
-    margin: 0 8rem;
-  }
-
-  ${media.forBigDesktopAndUp} {
-    margin: 0 17rem;
-  }
-`;
-
-const StyledOurServicesContainer = styled.div`
-  z-index: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: ${(props) => (props.isDesktop ? "flex-start" : "center")};
-  flex-direction: column;
-  background: white;
-  padding-bottom: 2rem;
-`;
-
-const StyledOurServicesContainerDesktop = styled.div`
-  z-index: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: white;
-  padding-bottom: 2rem;
-`;
-
-const StyledRedLine = styled.div`
-  border-top: 5px solid ${colours.red};
-  width: ${(props) => (props.isDesktop ? "10%" : "30%")};
-`;
-
-const StyledRedLineDesktop = styled.div`
-  border-top: 5px solid ${colours.red};
-  width: 30%;
-  position: relative;
-  left: 6rem;
-`;
-
-const StyledHeroTitle = styled.div`
-  text-align: center;
-  font: normal normal bold 32px/42px Roboto;
-  letter-spacing: 0px;
-  color: ${colours.white};
-  margin-top: 2rem;
-`;
-
-const StyledOurServicesTitle = styled.div`
-  text-align: center;
-  font: normal normal bold 32px/42px Roboto;
-  letter-spacing: 0px;
-  color: black;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-`;
-
-const StyledOurServicesTitleDesktop = styled.div`
-  text-align: center;
-  font: normal normal bold 48px/63px Roboto;
-  letter-spacing: 0px;
-  color: #232323;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-`;
-
-const StyledHeroDesktop = styled.div`
-  text-align: left;
-  font: normal normal bold 60px/79px Roboto;
-  letter-spacing: 0px;
-  opacity: 1;
-`;
-
-const StyledHeroTitleRed = styled.span`
-  color: ${colours.red};
-`;
-
-const StyledHeroDescription = styled.div`
-  text-align: center;
-  font: normal normal normal 18px/30px Roboto;
-  letter-spacing: 0px;
-  color: #bfbfbf;
-  opacity: 1;
-  margin: 2rem 0.25rem;
-`;
-
-const StyledHeroDescriptionDesktop = styled.div`
-  text-align: left;
-  font: normal normal normal 18px/30px Roboto;
-  letter-spacing: 0px;
-  color: #bfbfbf;
-  opacity: 1;
-  margin: 2rem 0;
-`;
-
-const StyledOurServicesDescriptionDesktop = styled.div`
-  text-align: center;
-  font: normal normal normal 18px/30px Roboto;
-  letter-spacing: 0px;
-  color: #bfbfbf;
-  opacity: 1;
-
-  ${media.forDesktop} {
-    margin: 0 18rem;
-  }
-
-  ${media.forDesktopWideScreen} {
-    margin: 0 18rem;
-  }
-
-  ${media.forBigDesktopAndUp} {
-    margin: 0 27rem;
-  }
-`;
-
-const StyledServiceRow = styled.div`
-  display: flex;
-  justify-content: space-around;
-  color: black;
-  margin-bottom: 5rem;
-`;
-
-const StyledServiceRowDesktop = styled.div`
-  display: flex;
-  justify-content: space-around;
-  color: black;
-  margin: 5rem 10rem;
-`;
-
-const StyledServiceGrid = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-`;
-
-const StyledServiceGridTitle = styled.div`
-  text-align: center;
-  font: normal normal bold 20px/30px Roboto;
-  letter-spacing: 0px;
-  color: #232323;
-  opacity: 1;
-  margin-top: 0.5rem;
-`;
-
-const StyledNinjaContainerDesktop = styled.div`
-  display: flex;
-  position: absolute;
-  height: 700px;
-  width: 700px;
-  right: 100px;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
-  margin-top: 2rem;
-`;
-
-const StyledNinjaContainer = styled.div`
-  display: flex;
-  position: relative;
-  height: 350px;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
-  margin-top: 2rem;
-`;
+import { useRouter } from "next/router";
+import {
+  StyledHeroBackground,
+  StyledHeroContainer,
+  StyledHeroDescription,
+  StyledHeroDescriptionDesktop,
+  StyledHeroDesktop,
+  StyledHeroTitle,
+  StyledHeroTitleRed,
+  StyledNinjaContainer,
+  StyledNinjaContainerDesktop,
+  StyledOurServicesContainer,
+  StyledOurServicesContainerDesktop,
+  StyledOurServicesDescriptionDesktop,
+  StyledOurServicesTitle,
+  StyledOurServicesTitleDesktop,
+  StyledRedLine,
+  StyledRedLineDesktop,
+  StyledServiceGrid,
+  StyledServiceGridTitle,
+  StyledServiceRow,
+  StyledServiceRowDesktop,
+} from "./index.styles";
 
 const Home = () => {
-  const { checkIsDesktop, checkIsTablet } = useWindowSize();
+  const { checkIsDesktop } = useWindowSize();
+  const router = useRouter();
   const isDesktop = checkIsDesktop();
 
   return (
@@ -236,7 +65,10 @@ const Home = () => {
                 solutions across the stack with an emphasis on quality frontend
                 design.
               </StyledHeroDescriptionDesktop>
-              <CallToActionButton variant="secondary">
+              <CallToActionButton
+                variant="secondary"
+                onClick={() => router.push("/contactus")}
+              >
                 Discuss Your Project
               </CallToActionButton>
             </StyledHeroContainer>

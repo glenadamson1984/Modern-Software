@@ -13,9 +13,11 @@ import {
   StyledNavigationContainer,
 } from "./layout.styles";
 import MobileMenu from "./navigation/MobileMenu";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
   const { checkIsDesktop } = useWindowSize();
+  const router = useRouter();
   const isDesktop = checkIsDesktop();
   const [showMenu, setShowMenu] = useState(false);
 
@@ -32,7 +34,10 @@ const Layout = ({ children }) => {
           {isDesktop ? (
             <StyledNavigationContainer>
               <NavigationControl />
-              <CallToActionButton variant="secondary">
+              <CallToActionButton
+                variant="secondary"
+                onClick={() => router.push("/contactus")}
+              >
                 Get in Touch
               </CallToActionButton>
             </StyledNavigationContainer>
