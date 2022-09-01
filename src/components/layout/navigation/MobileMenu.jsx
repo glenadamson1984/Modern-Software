@@ -8,7 +8,7 @@ import {
   StyledNavigationContainer,
   StyledNavigationLink,
 } from "./mobile-menu.styles";
-import { NavigationItems } from "./NavigationPaths";
+import { NavigationItemsMobile } from "./NavigationPaths";
 
 const MobileMenu = ({ showMenu, onMenuClick }) => {
   return (
@@ -19,7 +19,7 @@ const MobileMenu = ({ showMenu, onMenuClick }) => {
         </div>
       </StyledIconContainer>
       <StyledNavigationContainer>
-        {NavigationItems.map((navigationItem, index) => (
+        {NavigationItemsMobile.map((navigationItem, index) => (
           <StyledNavigationLink key={index}>
             {navigationItem}
           </StyledNavigationLink>
