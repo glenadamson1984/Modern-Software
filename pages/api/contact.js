@@ -1,11 +1,31 @@
 import nodemailer from "nodemailer";
 import * as dotenv from "dotenv";
+const sgMail = require("@sendgrid/mail");
 dotenv.config();
 
 export default async function handler(req, res) {
   // if (req.method !== "POST") {
   //   res.status(404).json({ message: "Error sending email." });
   // }
+
+  sgMail.setApiKey(
+    "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"
+  );
+  const msg = {
+    to: "glenadamson1984@gmail.com", // Change to your recipient
+    from: "glen.adamson@modern-software.co.uk", // Change to your verified sender
+    subject: "Sending with SendGrid is Fun",
+    text: "and easy to do anywhere, even with Node.js",
+    html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+  };
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log("Email sent");
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
   const { name, phone, email, message } = req.body;
 
