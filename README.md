@@ -1,6 +1,6 @@
 Modern Software website.
 
-Built entirely with nextjs and hosted on vercel.
+Built entirely with nextjs and hosted on vercel. Styled components used throughout.
 
 Emails:-
 Originally planned to use nodemailer with a simple gmail account. Gmail has now blocked this feature which was previously
