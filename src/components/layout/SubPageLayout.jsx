@@ -1,6 +1,17 @@
 import React from "react";
 import { StyledSubHeader, StyledUnderline } from "./subpage-layout";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { colours } from "../../utils/style.utils";
+
+const StyledContainer = styled.div`
+  padding: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: ${colours.offWhite} 0 0 no-repeat padding-box;
+  opacity: 1;
+`;
 
 const SubPageLayout = ({ children, subTitle }) => {
   return (
@@ -9,16 +20,7 @@ const SubPageLayout = ({ children, subTitle }) => {
         <div>{subTitle}</div>
         <StyledUnderline />
       </StyledSubHeader>
-      <div
-        style={{
-          height: "500px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        {children}
-      </div>
+      <StyledContainer>{children}</StyledContainer>
     </>
   );
 };

@@ -1,5 +1,82 @@
 import React, { useState, useEffect, useRef } from "react";
 import SubPageLayout from "../src/components/layout/SubPageLayout";
+import styled from "styled-components";
+import { colours } from "../src/utils/style.utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faPhone,
+  faEnvelope,
+  faPen,
+} from "@fortawesome/free-solid-svg-icons";
+
+const StyledContactForm = styled.div`
+  /* UI Properties */
+  background: #ffffff 0 0 no-repeat padding-box;
+  box-shadow: 0 0 40px #00000014;
+  opacity: 1;
+  padding: 50px;
+  border-radius: 15px;
+`;
+
+const StyledContactDetails = styled.div`
+  /* UI Properties */
+  background: ${colours.whiteBorder} 0 0 no-repeat padding-box;
+  opacity: 1;
+`;
+
+const StyledTitle = styled.div`
+  /* UI Properties */
+  text-align: center;
+  font: normal normal bold 48px/36px Roboto;
+  letter-spacing: 0px;
+  color: #232323;
+  text-transform: capitalize;
+  margin: 0 100px 25px 100px;
+
+  > span {
+    color: ${colours.red};
+  }
+`;
+
+const StyledFieldSet = styled.fieldset`
+  border: none;
+  width: 100%;
+  margin-bottom: 10px;
+`;
+
+const StyledSubmit = styled.input`
+  background: #e51f28 0 0 no-repeat padding-box;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  width: 60%;
+  height: 40px;
+`;
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  position: absolute;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  color: ${colours.grey};
+`;
+
+const StyledInput = styled.input`
+  width: 100%;
+  padding: 10px 0px 10px 50px;
+  border: none;
+  background: ${colours.offWhite};
+  font-size: 20px;
+`;
+
+const StyledTextArea = styled.textarea`
+  width: 100%;
+  padding: 10px 0px 10px 50px;
+  border: none;
+  background: ${colours.offWhite};
+  font-size: 20px;
+`;
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -9,7 +86,7 @@ const ContactUs = () => {
   const emailRef = useRef();
   const messageRef = useRef();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let data = {
       name: nameRef.current.value,
@@ -17,59 +94,87 @@ const ContactUs = () => {
       email: emailRef.current.value,
       message: messageRef.current.value,
     };
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          setSubmitted(true);
-          // we will throw up a success modal here
-          nameRef.current.value = "";
-          phoneRef.current.value = "";
-          emailRef.current.value = "";
-          messageRef.current.value = "";
-        }
-      })
-      .catch((e) => {
-        // we will throw up an alert modal here
-        console.log({ e });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+
+      if (response.status === 200) {
+        setSubmitted(true);
+        // we will throw up a success modal here
+        nameRef.current.value = "";
+        phoneRef.current.value = "";
+        emailRef.current.value = "";
+        messageRef.current.value = "";
+      }
+    } catch (e) {
+      // we will throw up an alert modal here
+      console.log({ e });
+    }
   };
 
   return (
     <SubPageLayout subTitle="Contact Us">
-      <div>
-        Send A Message
+      <StyledContactForm>
+        <StyledTitle>
+          Send A <span>Message</span>
+        </StyledTitle>
+
         <form>
-          <fieldset>
-            <label htmlFor="name">Name</label>
-            <input ref={nameRef} type="text" name="name" />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="phone">Phone</label>
-            <input ref={phoneRef} type="text" name="phone" />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="email">Email</label>
-            <input ref={emailRef} type="text" name="email" />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="message">Message</label>
-            <input ref={messageRef} type="text" name="message" />
-          </fieldset>
-          <input
-            type="submit"
-            onClick={(e) => {
-              handleSubmit(e);
-            }}
-          />
+          <StyledFieldSet>
+            <StyledIcon icon={faUser} />
+            <StyledInput
+              ref={nameRef}
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+          </StyledFieldSet>
+          <StyledFieldSet>
+            <StyledIcon icon={faPhone} />
+            <StyledInput
+              ref={phoneRef}
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+            />
+          </StyledFieldSet>
+          <StyledFieldSet>
+            <StyledIcon icon={faEnvelope} />
+            <StyledInput
+              ref={emailRef}
+              type="text"
+              name="email"
+              placeholder="Email Address"
+            />
+          </StyledFieldSet>
+          <StyledFieldSet>
+            <StyledIcon icon={faPen} />
+            <StyledTextArea
+              ref={messageRef}
+              name="message"
+              rows="4"
+              placeholder="Tell us a little about your project idea or requirements"
+            />
+          </StyledFieldSet>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <StyledSubmit
+              type="submit"
+              onClick={async (e) => {
+                await handleSubmit(e);
+              }}
+              value="Send"
+            />
+          </div>
         </form>
-      </div>
+      </StyledContactForm>
+      {/*<StyledContactDetails>Or You Can...</StyledContactDetails>*/}
     </SubPageLayout>
   );
 };
