@@ -3,6 +3,8 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 export default function handler(req, res) {
+  console.log("least im here");
+
   if (req.method !== "POST") {
     res.status(404).json({ message: "Error sending email." });
   }
