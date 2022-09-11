@@ -3,8 +3,6 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 export default function handler(req, res) {
-  console.log("least im here");
-
   if (req.method !== "POST") {
     res.status(404).json({ message: "Error sending email." });
   }
@@ -31,7 +29,7 @@ export default function handler(req, res) {
   };
 
   transporter.sendMail(mailData, function (err, info) {
-    if (err) res.status(502).json({ message: "Error sending email." });
+    if (err) res.status(502).json({ message: `Error sending email. ${err}` });
     else res.status(200).json({ name: "Message sent successfully." });
   });
 }
