@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import SubPageLayout from "../src/components/layout/SubPageLayout";
 import styled from "styled-components";
-import { colours } from "../src/utils/style.utils";
+import { colours, media } from "../src/utils/style.utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -11,11 +11,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const StyledContactForm = styled.div`
-  /* UI Properties */
-  background: #ffffff 0 0 no-repeat padding-box;
-  box-shadow: 0 0 40px #00000014;
-  opacity: 1;
-  padding: 50px;
+  ${media.forDesktop} {
+    background: #ffffff 0 0 no-repeat padding-box;
+    box-shadow: 0 0 40px #00000014;
+    opacity: 1;
+    padding: 50px;
+  }
+
   border-radius: 15px;
 `;
 
