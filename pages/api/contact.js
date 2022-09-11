@@ -3,9 +3,9 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 export default function handler(req, res) {
-  if (req.method !== "POST") {
-    res.status(404).json({ message: "Error sending email." });
-  }
+  // if (req.method !== "POST") {
+  //   res.status(404).json({ message: "Error sending email." });
+  // }
 
   const { name, phone, email, message } = req.body;
 
