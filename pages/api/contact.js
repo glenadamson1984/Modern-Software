@@ -29,7 +29,12 @@ export default function handler(req, res) {
   };
 
   transporter.sendMail(mailData, function (err, info) {
-    if (err) res.status(502).json({ message: `Error sending email. ${err}` });
+    if (err)
+      res
+        .status(502)
+        .json({
+          message: `Error sending email. ${process.env.PASSWORD} ${err}`,
+        });
     else res.status(200).json({ name: "Message sent successfully." });
   });
 }
