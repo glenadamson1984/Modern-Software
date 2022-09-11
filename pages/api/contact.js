@@ -11,8 +11,8 @@ export default async function handler(req, res) {
 
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
-    to: "glenadamson1984@gmail.com", // Change to your recipient
-    from: "glen.adamson@modern-software.co.uk", // Change to your verified sender
+    to: "glenadamson1984@gmail.com",
+    from: "glen.adamson@modern-software.co.uk",
     subject: "Modern Software Generated Enquiry",
     text: `Name ${name}
       Phone: ${phone}
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     res.status(200).json({ name: "Message sent successfully." });
   } catch (e) {
     res.status(502).json({
-      message: `Error sending email. ${process.env.PASSWORD} ${err}`,
+      message: `Error sending email.`,
     });
   }
 }
