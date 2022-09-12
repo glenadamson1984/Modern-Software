@@ -9,6 +9,7 @@ import {
   faEnvelope,
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
+import useWindowSize from "../src/hooks/useWindowSize";
 
 const StyledContactForm = styled.div`
   ${media.forDesktop} {
@@ -22,9 +23,37 @@ const StyledContactForm = styled.div`
 `;
 
 const StyledContactDetails = styled.div`
-  /* UI Properties */
-  background: ${colours.whiteBorder} 0 0 no-repeat padding-box;
+  background: ${colours.offWhite} 0 0 no-repeat padding-box;
   opacity: 1;
+`;
+
+const StyledContactDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledContactDetailType = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+`;
+
+const StyledContactDetail = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
+
+const StyledContactDetailValue = styled.div`
+  width: 100%;
+  margin-left: 75px;
+  color: ${colours.grey};
+`;
+
+const StyledContactDetailTypeTitle = styled.div`
+  margin-left: 50px;
+  color: ${colours.red};
+  font-size: 20px;
+  font: normal normal bold 20px/30px Roboto;
 `;
 
 const StyledTitle = styled.div`
@@ -82,6 +111,8 @@ const StyledTextArea = styled.textarea`
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { checkIsDesktop } = useWindowSize();
+  const isDesktop = checkIsDesktop();
 
   const nameRef = useRef();
   const phoneRef = useRef();
@@ -176,7 +207,42 @@ const ContactUs = () => {
           </div>
         </form>
       </StyledContactForm>
-      {/*<StyledContactDetails>Or You Can...</StyledContactDetails>*/}
+      {isDesktop && (
+        <StyledContactDetails>
+          <StyledTitle>
+            Or You <span>Can ...</span>
+          </StyledTitle>
+          <StyledContactDetailsContainer>
+            <StyledContactDetailType>
+              <FontAwesomeIcon
+                style={{ height: "25px", width: "25px", color: "red" }}
+                icon={faPhone}
+              />
+              <StyledContactDetailTypeTitle>
+                Phone me
+              </StyledContactDetailTypeTitle>
+            </StyledContactDetailType>
+            <StyledContactDetail>
+              <StyledContactDetailValue>07921568808</StyledContactDetailValue>
+            </StyledContactDetail>
+
+            <StyledContactDetailType>
+              <FontAwesomeIcon
+                style={{ height: "25px", width: "25px", color: "red" }}
+                icon={faEnvelope}
+              />
+              <StyledContactDetailTypeTitle>
+                Email me
+              </StyledContactDetailTypeTitle>
+            </StyledContactDetailType>
+            <StyledContactDetail>
+              <StyledContactDetailValue>
+                info@modern-software.co.uk
+              </StyledContactDetailValue>
+            </StyledContactDetail>
+          </StyledContactDetailsContainer>
+        </StyledContactDetails>
+      )}
     </SubPageLayout>
   );
 };
