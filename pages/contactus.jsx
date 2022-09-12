@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import SubPageLayout from "../src/components/layout/SubPageLayout";
-import styled from "styled-components";
-import { colours, media } from "../src/utils/style.utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -10,104 +8,21 @@ import {
   faPen,
 } from "@fortawesome/free-solid-svg-icons";
 import useWindowSize from "../src/hooks/useWindowSize";
-
-const StyledContactForm = styled.div`
-  ${media.forDesktop} {
-    background: #ffffff 0 0 no-repeat padding-box;
-    box-shadow: 0 0 40px #00000014;
-    opacity: 1;
-    padding: 50px;
-  }
-
-  border-radius: 15px;
-`;
-
-const StyledContactDetails = styled.div`
-  background: ${colours.offWhite} 0 0 no-repeat padding-box;
-  opacity: 1;
-`;
-
-const StyledContactDetailsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledContactDetailType = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 50px;
-`;
-
-const StyledContactDetail = styled.div`
-  display: flex;
-  justify-content: flex-start;
-`;
-
-const StyledContactDetailValue = styled.div`
-  width: 100%;
-  margin-left: 75px;
-  color: ${colours.grey};
-`;
-
-const StyledContactDetailTypeTitle = styled.div`
-  margin-left: 50px;
-  color: ${colours.red};
-  font-size: 20px;
-  font: normal normal bold 20px/30px Roboto;
-`;
-
-const StyledTitle = styled.div`
-  /* UI Properties */
-  text-align: center;
-  font: normal normal bold 48px/36px Roboto;
-  letter-spacing: 0px;
-  color: #232323;
-  text-transform: capitalize;
-  margin: 0 100px 25px 100px;
-
-  > span {
-    color: ${colours.red};
-  }
-`;
-
-const StyledFieldSet = styled.fieldset`
-  border: none;
-  width: 100%;
-  margin-bottom: 10px;
-`;
-
-const StyledSubmit = styled.input`
-  background: #e51f28 0 0 no-repeat padding-box;
-  border-radius: 30px;
-  color: white;
-  border: none;
-  width: 60%;
-  height: 40px;
-`;
-
-const StyledIcon = styled(FontAwesomeIcon)`
-  position: absolute;
-  padding: 10px;
-  height: 20px;
-  width: 20px;
-  color: ${colours.grey};
-`;
-
-const StyledInput = styled.input`
-  width: 100%;
-  padding: 10px 0px 10px 50px;
-  border: none;
-  background: ${colours.offWhite};
-  font-size: 20px;
-`;
-
-const StyledTextArea = styled.textarea`
-  width: 100%;
-  padding: 10px 0px 10px 50px;
-  border: none;
-  background: ${colours.offWhite};
-  font-size: 20px;
-`;
+import {
+  StyledContactForm,
+  StyledTitle,
+  StyledContactDetailValue,
+  StyledContactDetail,
+  StyledContactDetails,
+  StyledFieldSet,
+  StyledIcon,
+  StyledInput,
+  StyledTextArea,
+  StyledContactDetailTypeTitle,
+  StyledContactDetailType,
+  StyledContactDetailsContainer,
+} from "../page-styles/contactus.styles";
+import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -197,13 +112,13 @@ const ContactUs = () => {
             />
           </StyledFieldSet>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <StyledSubmit
-              type="submit"
+            <CallToActionButton
               onClick={async (e) => {
                 await handleSubmit(e);
               }}
-              value="Send"
-            />
+            >
+              Send
+            </CallToActionButton>
           </div>
         </form>
       </StyledContactForm>

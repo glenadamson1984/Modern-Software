@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { colours } from "../../utils/style.utils";
 
 const StyledContainer = styled.div`
-  padding: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
