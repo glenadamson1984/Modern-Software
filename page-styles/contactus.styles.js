@@ -90,3 +90,17 @@ export const StyledTextArea = styled.textarea`
   background: ${colours.offWhite};
   font-size: 20px;
 `;
+
+export const StyledSentMessage = styled.div`
+  color: ${colours.red};
+  font: normal normal bold 48px/36px Roboto;
+  text-align: center;
+`;
+
+export const StyledMessageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-top: 100px;
+`;

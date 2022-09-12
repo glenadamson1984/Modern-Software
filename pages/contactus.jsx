@@ -6,6 +6,7 @@ import {
   faPhone,
   faEnvelope,
   faPen,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import useWindowSize from "../src/hooks/useWindowSize";
 import {
@@ -21,6 +22,8 @@ import {
   StyledContactDetailTypeTitle,
   StyledContactDetailType,
   StyledContactDetailsContainer,
+  StyledSentMessage,
+  StyledMessageContainer,
 } from "../page-styles/contactus.styles";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 
@@ -66,6 +69,25 @@ const ContactUs = () => {
       console.log({ e });
     }
   };
+
+  if (submitted) {
+    return (
+      <SubPageLayout subTitle="Contact Us">
+        <StyledMessageContainer>
+          <FontAwesomeIcon
+            style={{
+              height: "100px",
+              width: "100px",
+              color: "red",
+              marginBottom: "50px",
+            }}
+            icon={faCheck}
+          />
+          <StyledSentMessage>Message Sent Successfully</StyledSentMessage>
+        </StyledMessageContainer>
+      </SubPageLayout>
+    );
+  }
 
   return (
     <SubPageLayout subTitle="Contact Us">
