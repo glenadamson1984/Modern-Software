@@ -59,8 +59,6 @@ const ContactUs = () => {
       return;
     }
 
-    console.log({ data });
-
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
