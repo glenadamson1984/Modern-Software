@@ -97,6 +97,12 @@ export const StyledSentMessage = styled.div`
   text-align: center;
 `;
 
+export const StyledErrorMessage = styled.div`
+  color: red;
+  margin-left: 50px;
+  font: normal normal bold 20px/30px Roboto;
+`;
+
 export const StyledMessageContainer = styled.div`
   display: flex;
   flex-direction: column;

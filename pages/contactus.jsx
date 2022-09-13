@@ -24,11 +24,13 @@ import {
   StyledContactDetailsContainer,
   StyledSentMessage,
   StyledMessageContainer,
+  StyledErrorMessage,
 } from "../page-styles/contactus.styles";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isError, setIsError] = useState(false);
   const { checkIsDesktop } = useWindowSize();
   const isDesktop = checkIsDesktop();
 
@@ -39,12 +41,25 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsError(false);
     let data = {
       name: nameRef.current.value,
       phone: phoneRef.current.value,
       email: emailRef.current.value,
       message: messageRef.current.value,
     };
+
+    if (
+      data.name === "" ||
+      data.email === "" ||
+      data.message === "" ||
+      data.phone === ""
+    ) {
+      setIsError(true);
+      return;
+    }
+
+    console.log({ data });
 
     try {
       const response = await fetch("/api/contact", {
@@ -95,6 +110,11 @@ const ContactUs = () => {
         <StyledTitle>
           Send A <span>Message</span>
         </StyledTitle>
+        {isError && (
+          <StyledErrorMessage>
+            *** Please complete all sections of this form
+          </StyledErrorMessage>
+        )}
 
         <form>
           <StyledFieldSet>
@@ -104,6 +124,7 @@ const ContactUs = () => {
               type="text"
               name="name"
               placeholder="Name"
+              required
             />
           </StyledFieldSet>
           <StyledFieldSet>
@@ -113,6 +134,7 @@ const ContactUs = () => {
               type="text"
               name="phone"
               placeholder="Phone Number"
+              required
             />
           </StyledFieldSet>
           <StyledFieldSet>
@@ -122,6 +144,7 @@ const ContactUs = () => {
               type="text"
               name="email"
               placeholder="Email Address"
+              required
             />
           </StyledFieldSet>
           <StyledFieldSet>
@@ -131,6 +154,7 @@ const ContactUs = () => {
               name="message"
               rows="4"
               placeholder="Tell us a little about your project idea or requirements"
+              required
             />
           </StyledFieldSet>
           <div style={{ display: "flex", justifyContent: "center" }}>
