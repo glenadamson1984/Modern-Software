@@ -59,7 +59,9 @@ const FooterDesktop = () => {
                 </StyledLink>
               </StyledNormalFontContainerDesktop>
               <StyledNormalFontContainerDesktop>
-                info@modern-software.co.uk
+                <a href="mailto:info@modern-software.co.uk">
+                  info@modern-software.co.uk
+                </a>
               </StyledNormalFontContainerDesktop>
             </div>
           </StyledContactUsContainerDesktop>

@@ -37,7 +37,11 @@ const Footer = () => {
             <a>Start A Project</a>
           </Link>
         </StyledLink>
-        <div>info@modern-software.co.uk</div>
+        <div>
+          <a href="mailto:info@modern-software.co.uk">
+            info@modern-software.co.uk
+          </a>
+        </div>
       </StyledLinks>
       <StyledAddressContainer>
         <div>

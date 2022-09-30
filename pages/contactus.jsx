@@ -196,7 +196,9 @@ const ContactUs = () => {
             </StyledContactDetailType>
             <StyledContactDetail>
               <StyledContactDetailValue>
-                info@modern-software.co.uk
+                <a href="mailto:info@modern-software.co.uk">
+                  info@modern-software.co.uk
+                </a>
               </StyledContactDetailValue>
             </StyledContactDetail>
           </StyledContactDetailsContainer>
