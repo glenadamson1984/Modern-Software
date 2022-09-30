@@ -7,9 +7,11 @@ import {
   StyledOfficeLocationContainer,
   StyledSubTitle,
   StyledContainer,
+  StyledLink,
 } from "./footer.styles";
 import { StyledLogoTitle } from "../logo/logo.styles";
 import FooterDesktop from "./desktop/FooterDesktop";
+import Link from "next/link";
 
 const Footer = () => {
   const { checkIsDesktop } = useWindowSize();
@@ -30,9 +32,11 @@ const Footer = () => {
       <StyledLogoTitle>Modern Software</StyledLogoTitle>
       <StyledSubTitle>Contact Us</StyledSubTitle>
       <StyledLinks>
-        <div>
-          <span>Start a Project</span>
-        </div>
+        <StyledLink>
+          <Link href="/contactus">
+            <a>Start A Project</a>
+          </Link>
+        </StyledLink>
         <div>info@modern-software.co.uk</div>
       </StyledLinks>
       <StyledAddressContainer>
@@ -71,7 +75,7 @@ const Footer = () => {
               width={20}
               height={20}
             />
-            07921568808
+            02838334830
           </div>
         </div>
         <div>

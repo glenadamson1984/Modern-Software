@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colours, media } from "../../../utils/style.utils";
+import Link from "next/link";
 
 export const StyledContainer = styled.div`
   background-color: ${colours.black};
@@ -99,6 +100,7 @@ export const StyledFooterContentSocialsRowDesktop = styled.div`
 `;
 
 export const StyledNormalFontContainerDesktop = styled.div`
+  position: relative;
   font: normal normal normal 18px/24px Roboto;
 `;
 
@@ -117,4 +119,10 @@ export const StyledSocialIconsContainerDesktop = styled.div`
   width: 400px;
   display: flex;
   justify-content: space-between;
+`;
+
+export const StyledLink = styled.div`
+  font: normal normal normal 16px/26px Roboto;
+  color: ${colours.red};
+  z-index: 1;
 `;

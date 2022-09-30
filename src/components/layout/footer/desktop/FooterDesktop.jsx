@@ -7,6 +7,7 @@ import {
   StyledFooterContentContainerDesktop,
   StyledFooterContentRowDesktop,
   StyledFooterContentSocialsRowDesktop,
+  StyledLink,
   StyledNormalFontContainerDesktop,
   StyledOfficeLocationContainer,
   StyledSocialIconsContainerDesktop,
@@ -17,6 +18,7 @@ import { StyledLogoTitle } from "../../logo/logo.styles";
 import { colours } from "../../../../utils/style.utils";
 import useWindowSize from "../../../../hooks/useWindowSize";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const FooterDesktop = () => {
   const { checkIsDesktop, checkIsDesktopWideScreen } = useWindowSize();
@@ -50,7 +52,11 @@ const FooterDesktop = () => {
             <StyledSubTitle>Contact Us</StyledSubTitle>
             <div>
               <StyledNormalFontContainerDesktop>
-                <span style={{ color: `${colours.red}` }}>Start a Project</span>
+                <StyledLink>
+                  <Link href="/contactus">
+                    <a>Start A Project</a>
+                  </Link>
+                </StyledLink>
               </StyledNormalFontContainerDesktop>
               <StyledNormalFontContainerDesktop>
                 info@modern-software.co.uk
@@ -85,7 +91,7 @@ const FooterDesktop = () => {
                 width={20}
                 height={20}
               />
-              07921568808
+              02838334830
             </StyledAddressContainerDesktop>
           </StyledContactUsContainerDesktop>
           <div style={{ display: "flex", flexDirection: "column" }}>
