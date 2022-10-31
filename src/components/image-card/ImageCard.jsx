@@ -51,12 +51,7 @@ const ImageCard = ({ position, imageUrl, title, description }) => {
             padding: "0.5rem",
           }}
         >
-          <Image
-            src={imageUrl}
-            alt="Mobile App Development"
-            width={400}
-            height={300}
-          />
+          <Image src={imageUrl} alt={title} width={400} height={300} />
         </div>
       </div>
       {position === "right" ? (
