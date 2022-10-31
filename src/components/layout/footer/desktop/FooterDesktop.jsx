@@ -140,30 +140,32 @@ const FooterDesktop = () => {
             Copyright @2022 Modern Software
           </StyledAddressContainerDesktop>
           <StyledSocialIconsContainerDesktop>
-            <Image
-              src="/images/facebook.png"
-              alt="Modern Software"
-              width={isDesktop && !isDesktopWideScreen ? 20 : 40}
-              height={isDesktop && !isDesktopWideScreen ? 20 : 40}
-            />
-            <Image
-              src="/images/instagram.png"
-              alt="Modern Software"
-              width={isDesktop && !isDesktopWideScreen ? 20 : 40}
-              height={isDesktop && !isDesktopWideScreen ? 20 : 40}
-            />
-            <Image
-              src="/images/twitter.png"
-              alt="Modern Software"
-              width={isDesktop && !isDesktopWideScreen ? 20 : 40}
-              height={isDesktop && !isDesktopWideScreen ? 20 : 40}
-            />
-            <Image
-              src="/images/linkedin.png"
-              alt="Modern Software"
-              width={isDesktop && !isDesktopWideScreen ? 20 : 40}
-              height={isDesktop && !isDesktopWideScreen ? 20 : 40}
-            />
+            {/*<Image*/}
+            {/*  src="/images/facebook.png"*/}
+            {/*  alt="Modern Software"*/}
+            {/*  width={isDesktop && !isDesktopWideScreen ? 20 : 40}*/}
+            {/*  height={isDesktop && !isDesktopWideScreen ? 20 : 40}*/}
+            {/*/>*/}
+            {/*<Image*/}
+            {/*  src="/images/instagram.png"*/}
+            {/*  alt="Modern Software"*/}
+            {/*  width={isDesktop && !isDesktopWideScreen ? 20 : 40}*/}
+            {/*  height={isDesktop && !isDesktopWideScreen ? 20 : 40}*/}
+            {/*/>*/}
+            {/*<Image*/}
+            {/*  src="/images/twitter.png"*/}
+            {/*  alt="Modern Software"*/}
+            {/*  width={isDesktop && !isDesktopWideScreen ? 20 : 40}*/}
+            {/*  height={isDesktop && !isDesktopWideScreen ? 20 : 40}*/}
+            {/*/>*/}
+            <a href="https://www.linkedin.com/company/modern-software">
+              <Image
+                src="/images/linkedin.png"
+                alt="Modern Software"
+                width={isDesktop && !isDesktopWideScreen ? 20 : 40}
+                height={isDesktop && !isDesktopWideScreen ? 20 : 40}
+              />
+            </a>
           </StyledSocialIconsContainerDesktop>
         </StyledFooterContentSocialsRowDesktop>
       </StyledFooterContentContainerDesktop>

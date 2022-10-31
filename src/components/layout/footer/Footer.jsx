@@ -130,30 +130,32 @@ const Footer = () => {
           justifyContent: "space-between",
         }}
       >
-        <Image
-          src="/images/facebook.png"
-          alt="Modern Software"
-          width={40}
-          height={40}
-        />
-        <Image
-          src="/images/instagram.png"
-          alt="Modern Software"
-          width={40}
-          height={40}
-        />
-        <Image
-          src="/images/twitter.png"
-          alt="Modern Software"
-          width={40}
-          height={40}
-        />
-        <Image
-          src="/images/linkedin.png"
-          alt="Modern Software"
-          width={40}
-          height={40}
-        />
+        {/*<Image*/}
+        {/*  src="/images/facebook.png"*/}
+        {/*  alt="Modern Software"*/}
+        {/*  width={40}*/}
+        {/*  height={40}*/}
+        {/*/>*/}
+        {/*<Image*/}
+        {/*  src="/images/instagram.png"*/}
+        {/*  alt="Modern Software"*/}
+        {/*  width={40}*/}
+        {/*  height={40}*/}
+        {/*/>*/}
+        {/*<Image*/}
+        {/*  src="/images/twitter.png"*/}
+        {/*  alt="Modern Software"*/}
+        {/*  width={40}*/}
+        {/*  height={40}*/}
+        {/*/>*/}
+        <a href="https://www.linkedin.com/company/modern-software">
+          <Image
+            src="/images/linkedin.png"
+            alt="Modern Software"
+            width={40}
+            height={40}
+          />
+        </a>
       </div>
       {/*commenting these links out for now*/}
       {/*<div>contact privacy notice cookie policy</div>*/}

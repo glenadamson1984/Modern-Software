@@ -22,6 +22,7 @@ export const StyledContactDetails = styled.div`
 export const StyledContactDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding-bottom: 2rem;
 `;
 
 export const StyledContactDetailType = styled.div`

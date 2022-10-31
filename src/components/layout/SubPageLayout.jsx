@@ -6,10 +6,12 @@ import { colours } from "../../utils/style.utils";
 
 const StyledContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background: ${colours.offWhite} 0 0 no-repeat padding-box;
   opacity: 1;
+  color: ${colours.black};
 `;
 
 const SubPageLayout = ({ children, subTitle }) => {
