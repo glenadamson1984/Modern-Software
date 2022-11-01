@@ -27,12 +27,14 @@ import {
   StyledErrorMessage,
 } from "../page-styles/contactus.styles";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
+import { useRouter } from "next/router";
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isError, setIsError] = useState(false);
   const { checkIsDesktop } = useWindowSize();
   const isDesktop = checkIsDesktop();
+  const router = useRouter();
 
   const nameRef = useRef();
   const phoneRef = useRef();
@@ -84,6 +86,10 @@ const ContactUs = () => {
   };
 
   if (submitted) {
+    setTimeout(() => {
+      router.push("/");
+    }, "2000");
+
     return (
       <SubPageLayout subTitle="Contact Us">
         <StyledMessageContainer>
