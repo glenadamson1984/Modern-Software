@@ -34,7 +34,9 @@ const ImageCard = ({ position, imageUrl, title, description }) => {
           }}
         >
           <StyledTitle>{title}</StyledTitle>
-          <StyledDescription>{description}</StyledDescription>
+          <StyledDescription isDesktop={isDesktop}>
+            {description}
+          </StyledDescription>
         </div>
       ) : null}
       <div
