@@ -53,7 +53,7 @@ const Tuition = () => {
           and others which you can skim over.
         </StyledSentence>
         <StyledSentence>
-          A four week course completely tailored costs around <span>£500</span>
+          A four week course completely tailored costs around <span>£500 </span>
           but rest assured you will leave this tuition with the confidence to
           tackle the world of software at pace.
         </StyledSentence>
