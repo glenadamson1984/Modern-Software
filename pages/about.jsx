@@ -5,6 +5,7 @@ import { RemoveSlashFromURl } from "../src/components/layout/navigation/Navigati
 import styled from "styled-components";
 import { colours } from "../src/utils/style.utils";
 import useWindowSize from "../src/hooks/useWindowSize";
+import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 
 const StyledContainer = styled.div`
   padding: ${(props) => (props.isDesktop ? "5rem" : "0")};
@@ -47,6 +48,49 @@ const About = () => {
             co-operation.
           </span>
         </StyledSentence>
+        <div
+          style={{
+            flex: "1",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "5rem 0",
+          }}
+        >
+          {isDesktop ? (
+            <div
+              style={{
+                flex: "1",
+                display: "flex",
+                width: "20rem",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <a
+                href="/ebrochure.pdf"
+                alt="alt text"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <CallToActionButton variant="secondary" onClick={() => null}>
+                  Download Brochure
+                </CallToActionButton>
+              </a>
+            </div>
+          ) : (
+            <a
+              href="/ebrochure.pdf"
+              alt="alt text"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CallToActionButton variant="secondary" onClick={() => null}>
+                Download Brochure
+              </CallToActionButton>
+            </a>
+          )}
+        </div>
         <StyledSentence>
           Our model works with the premise of an{" "}
           <span>MVP (minimal viable product).</span>
