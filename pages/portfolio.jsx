@@ -12,7 +12,7 @@ const Portfolio = () => {
       <ImageCard
         position="right"
         title="Terraquest"
-        imageUrl="/images/terraquest.png"
+        imageUrl="/images/TerraQuest.png"
         description="We delivered a fully frontend service to help build out the new Northern Ireland Planning Portal suite of web applications. Due for release in 2023 - ReactJS, NextJS, StoryBook"
       />
       <ImageCard
