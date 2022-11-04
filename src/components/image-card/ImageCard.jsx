@@ -3,7 +3,14 @@ import Image from "next/image";
 import useWindowSize from "../../hooks/useWindowSize";
 import { StyledDescription, StyledTitle } from "./ImageCard.styles";
 
-const ImageCard = ({ position, imageUrl, title, description }) => {
+const ImageCard = ({
+  position,
+  imageUrl,
+  title,
+  description,
+  height,
+  width,
+}) => {
   const { checkIsDesktop } = useWindowSize();
   const isDesktop = checkIsDesktop();
 
@@ -21,6 +28,7 @@ const ImageCard = ({ position, imageUrl, title, description }) => {
         width: "100%",
         justifyContent: "center",
         alignItems: "center",
+        paddingTop: "5rem",
       }}
     >
       {position === "left" ? (
@@ -53,7 +61,12 @@ const ImageCard = ({ position, imageUrl, title, description }) => {
             padding: "0.5rem",
           }}
         >
-          <Image src={imageUrl} alt={title} width={400} height={300} />
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={width ? width : 400}
+            height={height ? height : 300}
+          />
         </div>
       </div>
       {position === "right" ? (

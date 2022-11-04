@@ -11,6 +11,8 @@ const Portfolio = () => {
     <SubPageLayout subTitle={RemoveSlashFromURl(pathname)}>
       <ImageCard
         position="right"
+        height={191}
+        width={584}
         title="Terraquest"
         imageUrl="/images/TerraQuest.png"
         description="We delivered a fully frontend service to help build out the new Northern Ireland Planning Portal suite of web applications. Due for release in 2023 - ReactJS, NextJS, StoryBook"
@@ -18,6 +20,8 @@ const Portfolio = () => {
       <ImageCard
         position="left"
         title="Loughall Youth FC"
+        height={300}
+        width={300}
         imageUrl="/images/loughgall.jpg"
         description="Due to the ever increasing popularity of Loughgall Youth F.C the administration to run the club was stopping them from spending the time where they needed it most. Following a few seasons of struggling with paper consent forms they approached use to fully automate this experience saving endless hours for this year and many more to come."
       />
