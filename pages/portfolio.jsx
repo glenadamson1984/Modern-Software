@@ -11,9 +11,9 @@ const Portfolio = () => {
     <SubPageLayout subTitle={RemoveSlashFromURl(pathname)}>
       <ImageCard
         position="right"
-        title="Planning Portal NI"
-        imageUrl="/images/planningportal.png"
-        description="We delivered a fully frontend service to help build out the new planning portal website for Northern Ireland. Due for release in 2023 - ReactJS, NextJS, StoryBook"
+        title="Terraquest"
+        imageUrl="/images/terraquest.png"
+        description="We delivered a fully frontend service to help build out the new Northern Ireland Planning Portal suite of web applications. Due for release in 2023 - ReactJS, NextJS, StoryBook"
       />
       <ImageCard
         position="left"
