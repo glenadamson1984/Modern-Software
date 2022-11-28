@@ -28,6 +28,8 @@ import {
 } from "../page-styles/contactus.styles";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -74,14 +76,19 @@ const ContactUs = () => {
       if (response.status === 200) {
         setSubmitted(true);
         // we will throw up a success modal here
+        toast.success("Email sent successfully.", {
+          theme: "colored",
+        });
+
         nameRef.current.value = "";
         phoneRef.current.value = "";
         emailRef.current.value = "";
         messageRef.current.value = "";
       }
     } catch (e) {
-      // we will throw up an alert modal here
-      console.log({ e });
+      toast.error("Problem sending email. Please try again later.", {
+        theme: "colored",
+      });
     }
   };
 
@@ -89,27 +96,11 @@ const ContactUs = () => {
     setTimeout(() => {
       router.push("/");
     }, "2000");
-
-    return (
-      <SubPageLayout subTitle="Contact Us">
-        <StyledMessageContainer>
-          <FontAwesomeIcon
-            style={{
-              height: "100px",
-              width: "100px",
-              color: "red",
-              marginBottom: "50px",
-            }}
-            icon={faCheck}
-          />
-          <StyledSentMessage>Message Sent Successfully</StyledSentMessage>
-        </StyledMessageContainer>
-      </SubPageLayout>
-    );
   }
 
   return (
     <SubPageLayout subTitle="Contact Us">
+      <ToastContainer />
       <StyledContactForm>
         <StyledTitle>
           Send A <span>Message</span>
