@@ -61,10 +61,10 @@ const Portfolio = () => {
       </a>
       <ImageCard
         position="left"
-        height={100}
-        width={100}
+        height={346}
+        width={584}
         title="My Golf Buddy"
-        imageUrl=""
+        imageUrl="/images/my-golf-buddy.png"
         description="A complete UI/UX design for a new app concept - My Golf Buddy. So far a design consultation has taken place followed by a delivery of a figma design for a sales website and the mobile application itself. Looking forward to building out the MVP."
       />
     </SubPageLayout>
