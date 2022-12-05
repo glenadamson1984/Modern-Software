@@ -59,6 +59,14 @@ const Portfolio = () => {
           description="A full stack offering including Frontend and backend development. Consulting on scrum best practices to aid them in getting the best out of their agile processes and aided with architecture discussions to future proof their offering."
         />
       </a>
+      <ImageCard
+        position="left"
+        height={100}
+        width={100}
+        title="My Golf Buddy"
+        imageUrl=""
+        description="A complete UI/UX design for a new app concept - My Golf Buddy. So far a design consultation has taken place followed by a delivery of a figma design for a sales website and the mobile application itself. Looking forward to building out the MVP."
+      />
     </SubPageLayout>
   );
 };
