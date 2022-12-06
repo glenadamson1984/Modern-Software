@@ -108,7 +108,7 @@ const Footer = () => {
             style={{
               font: "normal normal normal 16px/26px Roboto",
               paddingTop: "1rem",
-              color: "#BFBFBF",
+              color: "#FFFFFF",
             }}
           >
             <Image
