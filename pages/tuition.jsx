@@ -12,12 +12,12 @@ const StyledContainer = styled.div`
 
 const StyledSentence = styled.div`
   text-align: center;
-  font: normal normal bold 28px/28px Roboto;
+  font: normal normal bold 28px/28px Baloo;
   letter-spacing: 0px;
   color: ${colours.black};
   padding: 0.5rem;
   > span {
-    color: ${colours.red};
+    color: ${colours.pink};
   }
 `;
 

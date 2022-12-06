@@ -24,12 +24,11 @@ const Footer = () => {
   return (
     <StyledContainer>
       <Image
-        src="/images/1-only.png"
+        src="/images/Logo/footer.png"
         alt="Modern Software"
-        width={95}
-        height={82.5}
+        width={235}
+        height={90.25}
       />
-      <StyledLogoTitle>Modern Software</StyledLogoTitle>
       <StyledSubTitle>Contact Us</StyledSubTitle>
       <StyledLinks>
         <StyledLink>
@@ -50,8 +49,8 @@ const Footer = () => {
           </StyledOfficeLocationContainer>
           <div
             style={{
-              font: "normal normal normal 16px/26px Roboto",
-              color: "#BFBFBF",
+              font: "normal normal normal 16px/26px Baloo",
+              color: "#FFFFFF",
             }}
           >
             <Image
@@ -68,9 +67,9 @@ const Footer = () => {
           </div>
           <div
             style={{
-              font: "normal normal normal 16px/26px Roboto",
+              font: "normal normal normal 16px/26px Baloo",
               paddingTop: "1rem",
-              color: "#BFBFBF",
+              color: "#FFFFFF",
             }}
           >
             <Image
@@ -89,8 +88,8 @@ const Footer = () => {
 
           <div
             style={{
-              font: "normal normal normal 16px/26px Roboto",
-              color: "#BFBFBF",
+              font: "normal normal normal 16px/26px Baloo",
+              color: "#FFFFFF",
             }}
           >
             <Image
@@ -107,9 +106,9 @@ const Footer = () => {
           </div>
           <div
             style={{
-              font: "normal normal normal 16px/26px Roboto",
+              font: "normal normal normal 16px/26px Baloo",
               paddingTop: "1rem",
-              color: "#BFBFBF",
+              color: "#FFFFFF",
             }}
           >
             <Image
@@ -152,8 +151,8 @@ const Footer = () => {
           <Image
             src="/images/linkedin.png"
             alt="Modern Software"
-            width={40}
-            height={40}
+            width={50}
+            height={44}
           />
         </a>
       </div>
@@ -161,8 +160,8 @@ const Footer = () => {
       {/*<div>contact privacy notice cookie policy</div>*/}
       <div
         style={{
-          font: "normal normal normal 16px/21px Roboto",
-          color: "#BFBFBF",
+          font: "normal normal normal 16px/21px Baloo",
+          color: "#FFFFFF",
         }}
       >
         Copyright @2022 Modern Software

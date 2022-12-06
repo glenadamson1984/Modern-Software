@@ -14,15 +14,15 @@ export const StyledContainer = styled.div`
   margin: 0.5rem 1rem;
 
   ${media.forDesktop} {
-    margin: 1rem 8rem;
+    margin: 1rem 6rem;
   }
 
   ${media.forDesktopWideScreen} {
-    margin: 1rem 8rem;
+    margin: 1rem 6rem;
   }
 
   ${media.forBigDesktopAndUp} {
-    margin: 1rem 17rem;
+    margin: 1rem 15rem;
   }
 `;
 

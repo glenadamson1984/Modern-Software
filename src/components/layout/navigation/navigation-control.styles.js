@@ -7,19 +7,30 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledNav = styled.div`
+  @keyframes example {
+    from {
+      margin: 0 1rem;
+    }
+    to {
+      margin: -0.5rem 1rem;
+    }
+  }
+
   text-align: left;
-  font: normal normal normal 20px/26px Roboto;
+  font: normal normal normal 20px/26px Baloo;
   letter-spacing: 0px;
-  color: ${(props) => (props.active ? colours.red : colours.white)};
+  color: ${(props) => (props.active ? colours.pink : colours.white)};
+  color: ${colours.white};
   text-transform: capitalize;
   margin: 0 1rem;
-  border-top: ${(props) => (props.active ? "2px solid" : "none")};
-  border-bottom: ${(props) => (props.active ? "2px solid" : "none")};
+  // border-top: ${(props) => (props.active ? "2px solid" : "none")};
+  // border-bottom: ${(props) => (props.active ? "2px solid" : "none")};
   padding: 0.25rem;
-  border-color: ${(props) => (props.active ? colours.red : colours.white)};
+  border-color: ${(props) => (props.active ? colours.pink : colours.white)};
 
   &:hover {
-    border-top: 2px solid;
-    border-bottom: 2px solid;
+    color: ${colours.pink};
+    animation-name: example;
+    animation-duration: 1s;
   }
 `;

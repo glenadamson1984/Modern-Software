@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colours } from "../../../utils/style.utils";
 
 const StyledCallToAction = styled.div`
-  background: ${colours.red};
+  background: ${colours.pink};
   border-radius: 30px;
   opacity: 1;
   padding: 1rem;
@@ -15,12 +15,12 @@ const StyledCallToAction = styled.div`
       props.variant === "secondary" ? `${colours.white}` : `${colours.black}`};
     color: ${(props) =>
       props.variant === "secondary" ? `${colours.black}` : `${colours.white}`};
-    
+  }
 `;
 
 const StyledCallToActionText = styled.div`
   text-align: center;
-  font: normal normal medium 20px/26px Roboto;
+  font: normal normal medium 20px/26px Baloo;
   font-weight: bold;
   font-size: 20px;
   padding: 0 1rem;

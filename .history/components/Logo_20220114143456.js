@@ -11,7 +11,7 @@ const Logo = () => {
           height={97.5}
         />
       </div>
-      <div style={{ fontFamily: "Roboto, sans-serif" }} className="text-2xl">
+      <div style={{ fontFamily: "Baloo, sans-serif" }} className="text-2xl">
         The modern approach
       </div>
     </div>

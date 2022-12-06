@@ -9,7 +9,7 @@ const Logo = () => {
         width={144}
         height={97.5}
       />
-      <div style={{font-family: 'Roboto', sans-serif;}}></div>
+      <div style={{font-family: 'Baloo', sans-serif;}}></div>
     </div>
   );
 };

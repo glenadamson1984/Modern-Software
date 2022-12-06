@@ -10,7 +10,7 @@ const Logo = () => {
         height={97.5}
       />
       <div
-        style={{ fontFamily: "Roboto, sans-serif" }}
+        style={{ fontFamily: "Baloo, sans-serif" }}
         className="text-base lg:text-6xl"
       >
         The modern approach
