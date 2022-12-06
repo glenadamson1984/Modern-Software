@@ -50,7 +50,7 @@ const Footer = () => {
           <div
             style={{
               font: "normal normal normal 16px/26px Roboto",
-              color: "#BFBFBF",
+              color: "#FFFFFF",
             }}
           >
             <Image
@@ -69,7 +69,7 @@ const Footer = () => {
             style={{
               font: "normal normal normal 16px/26px Roboto",
               paddingTop: "1rem",
-              color: "#BFBFBF",
+              color: "#FFFFFF",
             }}
           >
             <Image
@@ -89,11 +89,11 @@ const Footer = () => {
           <div
             style={{
               font: "normal normal normal 16px/26px Roboto",
-              color: "#BFBFBF",
+              color: "#FFFFFF",
             }}
           >
             <Image
-              src="/images/map-pin.pnh"
+              src="/images/map-pin.png"
               alt="Modern Software"
               width={20}
               height={20}

@@ -3,7 +3,7 @@ import { colours, media } from "../../../utils/style.utils";
 import Link from "next/link";
 
 export const StyledContainer = styled.div`
-  background-color: ${colours.black};
+  background-color: ${colours.green};
   display: flex;
   flex-direction: column;
   justify-content: center;

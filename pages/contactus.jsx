@@ -171,7 +171,7 @@ const ContactUs = () => {
           <StyledContactDetailsContainer>
             <StyledContactDetailType>
               <FontAwesomeIcon
-                style={{ height: "25px", width: "25px", color: "red" }}
+                style={{ height: "25px", width: "25px", color: "#80cea7" }}
                 icon={faPhone}
               />
               <StyledContactDetailTypeTitle>
@@ -184,7 +184,7 @@ const ContactUs = () => {
 
             <StyledContactDetailType>
               <FontAwesomeIcon
-                style={{ height: "25px", width: "25px", color: "red" }}
+                style={{ height: "25px", width: "25px", color: "#80cea7" }}
                 icon={faEnvelope}
               />
               <StyledContactDetailTypeTitle>
