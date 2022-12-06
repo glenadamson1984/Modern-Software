@@ -108,7 +108,7 @@ export const StyledHeroDescription = styled.div`
   text-align: center;
   font: normal normal normal 18px/30px Roboto;
   letter-spacing: 0px;
-  color: #bfbfbf;
+  color: #ffffff;
   opacity: 1;
   margin: 2rem 0.25rem;
 `;
