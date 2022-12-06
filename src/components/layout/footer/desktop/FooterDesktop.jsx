@@ -28,25 +28,24 @@ const FooterDesktop = () => {
 
   return (
     <StyledContainerDesktop>
-      <StyledBackgroundImageDesktop>
-        <Image
-          src="/images/footer-bg.png"
-          alt="Modern Software"
-          width={1920}
-          height={391}
-          position="absolute"
-        />
-      </StyledBackgroundImageDesktop>
+      {/*<StyledBackgroundImageDesktop>*/}
+      {/*  <Image*/}
+      {/*    src="/images/footer-bg.png"*/}
+      {/*    alt="Modern Software"*/}
+      {/*    width={1920}*/}
+      {/*    height={391}*/}
+      {/*    position="absolute"*/}
+      {/*  />*/}
+      {/*</StyledBackgroundImageDesktop>*/}
       <StyledFooterContentContainerDesktop>
         <StyledFooterContentRowDesktop>
           <div style={{ cursor: "pointer" }} onClick={() => router.push("/")}>
             <Image
-              src="/images/1-only.png"
+              src="/images/Logo/footer.png"
               alt="Modern Software"
-              width={95}
-              height={82.5}
+              width={235}
+              height={90.25}
             />
-            <StyledLogoTitle>Modern Software</StyledLogoTitle>
           </div>
           <StyledContactUsContainerDesktop>
             <StyledSubTitle>Contact Us</StyledSubTitle>
@@ -67,7 +66,7 @@ const FooterDesktop = () => {
           </StyledContactUsContainerDesktop>
           <StyledContactUsContainerDesktop>
             <StyledOfficeLocationContainer>
-              NI Office
+              Northern Ireland
             </StyledOfficeLocationContainer>
             <StyledAddressContainerDesktop>
               <Image
@@ -98,7 +97,7 @@ const FooterDesktop = () => {
           </StyledContactUsContainerDesktop>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <StyledOfficeLocationContainer>
-              NI Office
+              England
             </StyledOfficeLocationContainer>
             <StyledAddressContainerDesktop>
               <Image
@@ -162,8 +161,8 @@ const FooterDesktop = () => {
               <Image
                 src="/images/linkedin.png"
                 alt="Modern Software"
-                width={isDesktop && !isDesktopWideScreen ? 20 : 40}
-                height={isDesktop && !isDesktopWideScreen ? 20 : 40}
+                width={50}
+                height={44}
               />
             </a>
           </StyledSocialIconsContainerDesktop>

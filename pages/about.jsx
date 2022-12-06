@@ -18,7 +18,7 @@ const StyledSentence = styled.div`
   color: ${colours.black};
   padding: 0.5rem;
   > span {
-    color: ${colours.red};
+    color: ${colours.pink};
   }
 `;
 

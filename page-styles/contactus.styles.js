@@ -44,7 +44,7 @@ export const StyledContactDetailValue = styled.div`
 
 export const StyledContactDetailTypeTitle = styled.div`
   margin-left: 50px;
-  color: ${colours.red};
+  color: ${colours.pink};
   font-size: 20px;
   font: normal normal bold 20px/30px Roboto;
 `;
@@ -58,7 +58,7 @@ export const StyledTitle = styled.div`
   margin: 0 100px 25px 100px;
 
   > span {
-    color: ${colours.red};
+    color: ${colours.pink};
   }
 `;
 
@@ -93,7 +93,7 @@ export const StyledTextArea = styled.textarea`
 `;
 
 export const StyledSentMessage = styled.div`
-  color: ${colours.red};
+  color: ${colours.pink};
   font: normal normal bold 48px/36px Roboto;
   text-align: center;
 `;

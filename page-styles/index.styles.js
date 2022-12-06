@@ -56,12 +56,12 @@ export const StyledOurServicesContainerDesktop = styled.div`
 `;
 
 export const StyledRedLine = styled.div`
-  border-top: 5px solid ${colours.red};
+  border-top: 5px solid ${colours.pink};
   width: ${(props) => (props.isDesktop ? "10%" : "30%")};
 `;
 
 export const StyledRedLineDesktop = styled.div`
-  border-top: 5px solid ${colours.red};
+  border-top: 5px solid ${colours.pink};
   width: 30%;
   position: relative;
   left: 6rem;
@@ -101,7 +101,7 @@ export const StyledHeroDesktop = styled.div`
 `;
 
 export const StyledHeroTitleRed = styled.span`
-  color: ${colours.red};
+  color: ${colours.pink};
 `;
 
 export const StyledHeroDescription = styled.div`
@@ -117,7 +117,7 @@ export const StyledHeroDescriptionDesktop = styled.div`
   text-align: left;
   font: normal normal normal 18px/30px Roboto;
   letter-spacing: 0px;
-  color: #bfbfbf;
+  color: #ffffff;
   opacity: 1;
   margin: 2rem 0;
 `;

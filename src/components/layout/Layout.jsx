@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
             </StyledNavigationContainer>
           ) : (
             <div onClick={() => setShowMenu(!showMenu)}>
-              <FontAwesomeIcon size="2x" color={colours.red} icon={faBars} />
+              <FontAwesomeIcon size="2x" color={colours.pink} icon={faBars} />
             </div>
           )}
         </StyledContainer>

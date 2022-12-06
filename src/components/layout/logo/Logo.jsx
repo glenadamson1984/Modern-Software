@@ -12,12 +12,11 @@ const Logo = () => {
   return (
     <div style={{ cursor: "pointer" }} onClick={() => router.push("/")}>
       <Image
-        src="/images/1-only.png"
+        src="/images/Logo/cover2_1.png"
         alt="Modern Software"
-        width={isDesktop ? 95 : 65}
-        height={isDesktop ? 82.5 : 44}
+        width={isDesktop ? 668 : 223}
+        height={isDesktop ? 113 : 38}
       />
-      <StyledLogoTitle>Modern Software</StyledLogoTitle>
     </div>
   );
 };

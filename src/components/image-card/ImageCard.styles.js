@@ -5,7 +5,7 @@ export const StyledTitle = styled.div`
   text-align: center;
   font: normal normal bold 28px/28px Roboto;
   letter-spacing: 0px;
-  color: ${colours.red};
+  color: ${colours.pink};
 `;
 
 export const StyledDescription = styled.div`

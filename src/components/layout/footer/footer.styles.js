@@ -28,7 +28,7 @@ export const StyledLinks = styled.div`
   }
 
   > span {
-    color: ${colours.red};
+    color: ${colours.pink};
   }
 `;
 
@@ -111,7 +111,7 @@ export const StyledContactUsContainerDesktop = styled.div`
 
 export const StyledAddressContainerDesktop = styled.div`
   font: normal normal normal 16px/26px Roboto;
-  color: ${colours.darkWhite};
+  color: ${colours.white};
 `;
 
 export const StyledSocialIconsContainerDesktop = styled.div`
@@ -123,6 +123,6 @@ export const StyledSocialIconsContainerDesktop = styled.div`
 
 export const StyledLink = styled.div`
   font: normal normal normal 16px/26px Roboto;
-  color: ${colours.red};
+  color: ${colours.pink};
   z-index: 1;
 `;

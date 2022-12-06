@@ -35,6 +35,6 @@ export const StyledNavigationLink = styled.div`
   border-color: ${colours.whiteBorder};
 
   &:hover {
-    color: ${colours.red};
+    color: ${colours.pink};
   }
 `;

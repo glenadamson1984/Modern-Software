@@ -36,13 +36,6 @@ const Home = () => {
       {isDesktop ? (
         <>
           <StyledHeroBackground isDesktop={true}>
-            <Image
-              src="/images/hero-img-half.png"
-              alt="Modern Software"
-              width={1920}
-              height={756}
-              layout="fill"
-            />
             <StyledNinjaContainerDesktop>
               <Image
                 src="/images/hero-img.png"
@@ -89,7 +82,7 @@ const Home = () => {
             <StyledServiceRowDesktop>
               <StyledServiceGrid>
                 <Image
-                  src="/images/1ser.png"
+                  src="/images/11ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -100,7 +93,7 @@ const Home = () => {
               </StyledServiceGrid>
               <StyledServiceGrid>
                 <Image
-                  src="/images/2ser.png"
+                  src="/images/2ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -111,7 +104,7 @@ const Home = () => {
               </StyledServiceGrid>
               <StyledServiceGrid>
                 <Image
-                  src="/images/3ser.png"
+                  src="/images/3ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -122,7 +115,7 @@ const Home = () => {
               </StyledServiceGrid>
               <StyledServiceGrid>
                 <Image
-                  src="/images/4ser.png"
+                  src="/images/4ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -131,7 +124,7 @@ const Home = () => {
               </StyledServiceGrid>
               <StyledServiceGrid>
                 <Image
-                  src="/images/5ser.png"
+                  src="/images/5ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -204,7 +197,7 @@ const Home = () => {
             <StyledServiceRow>
               <StyledServiceGrid>
                 <Image
-                  src="/images/1ser.png"
+                  src="/images/11ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -215,7 +208,7 @@ const Home = () => {
               </StyledServiceGrid>
               <StyledServiceGrid>
                 <Image
-                  src="/images/2ser.png"
+                  src="/images/2ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -228,7 +221,7 @@ const Home = () => {
             <StyledServiceRow>
               <StyledServiceGrid>
                 <Image
-                  src="/images/3ser.png"
+                  src="/images/3ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -239,7 +232,7 @@ const Home = () => {
               </StyledServiceGrid>
               <StyledServiceGrid>
                 <Image
-                  src="/images/4ser.png"
+                  src="/images/4ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}
@@ -250,7 +243,7 @@ const Home = () => {
             <StyledServiceRow>
               <StyledServiceGrid>
                 <Image
-                  src="/images/5ser.png"
+                  src="/images/5ser.jpg"
                   alt="Modern Software"
                   width={100}
                   height={90}

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colours } from "../../../utils/style.utils";
 
 const StyledCallToAction = styled.div`
-  background: ${colours.red};
+  background: ${colours.pink};
   border-radius: 30px;
   opacity: 1;
   padding: 1rem;

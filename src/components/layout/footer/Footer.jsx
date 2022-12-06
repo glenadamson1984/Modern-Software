@@ -24,12 +24,11 @@ const Footer = () => {
   return (
     <StyledContainer>
       <Image
-        src="/images/1-only.png"
+        src="/images/Logo/footer.png"
         alt="Modern Software"
-        width={95}
-        height={82.5}
+        width={235}
+        height={90.25}
       />
-      <StyledLogoTitle>Modern Software</StyledLogoTitle>
       <StyledSubTitle>Contact Us</StyledSubTitle>
       <StyledLinks>
         <StyledLink>
@@ -94,7 +93,7 @@ const Footer = () => {
             }}
           >
             <Image
-              src="/images/map-pin.png"
+              src="/images/map-pin.pnh"
               alt="Modern Software"
               width={20}
               height={20}
@@ -152,8 +151,8 @@ const Footer = () => {
           <Image
             src="/images/linkedin.png"
             alt="Modern Software"
-            width={40}
-            height={40}
+            width={50}
+            height={44}
           />
         </a>
       </div>
@@ -162,7 +161,7 @@ const Footer = () => {
       <div
         style={{
           font: "normal normal normal 16px/21px Roboto",
-          color: "#BFBFBF",
+          color: "#FFFFFF",
         }}
       >
         Copyright @2022 Modern Software
