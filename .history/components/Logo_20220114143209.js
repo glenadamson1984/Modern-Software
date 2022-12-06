@@ -12,7 +12,7 @@ const Logo = () => {
         />
       </div>
 
-      <div style={{ fontFamily: "Roboto, sans-serif" }} className="lg:text-6xl">
+      <div style={{ fontFamily: "Baloo, sans-serif" }} className="lg:text-6xl">
         The modern approach
       </div>
     </div>

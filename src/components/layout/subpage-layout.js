@@ -5,7 +5,7 @@ export const StyledSubHeader = styled.div`
   height: 200px;
   background: ${colours.green};
   text-align: center;
-  font: normal normal bold 48px/63px Roboto;
+  font: normal normal bold 48px/63px Baloo;
   letter-spacing: 0px;
   color: ${colours.white};
   opacity: 1;

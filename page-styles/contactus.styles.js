@@ -46,12 +46,12 @@ export const StyledContactDetailTypeTitle = styled.div`
   margin-left: 50px;
   color: ${colours.pink};
   font-size: 20px;
-  font: normal normal bold 20px/30px Roboto;
+  font: normal normal bold 20px/30px Baloo;
 `;
 
 export const StyledTitle = styled.div`
   text-align: center;
-  font: normal normal bold 48px/36px Roboto;
+  font: normal normal bold 48px/36px Baloo;
   letter-spacing: 0px;
   color: #232323;
   text-transform: capitalize;
@@ -94,14 +94,14 @@ export const StyledTextArea = styled.textarea`
 
 export const StyledSentMessage = styled.div`
   color: ${colours.pink};
-  font: normal normal bold 48px/36px Roboto;
+  font: normal normal bold 48px/36px Baloo;
   text-align: center;
 `;
 
 export const StyledErrorMessage = styled.div`
   color: red;
   margin-left: 50px;
-  font: normal normal bold 20px/30px Roboto;
+  font: normal normal bold 20px/30px Baloo;
 `;
 
 export const StyledMessageContainer = styled.div`

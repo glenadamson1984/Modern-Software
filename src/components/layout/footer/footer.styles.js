@@ -13,7 +13,7 @@ export const StyledContainer = styled.div`
 
 export const StyledSubTitle = styled.div`
   padding: 2rem 0;
-  font: normal normal medium 20px/26px Roboto;
+  font: normal normal medium 20px/26px Baloo;
 `;
 
 export const StyledLinks = styled.div`
@@ -21,7 +21,7 @@ export const StyledLinks = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 2rem 2rem;
-  font: normal normal normal 18px/24px Roboto;
+  font: normal normal normal 18px/24px Baloo;
 
   > div {
     margin: 2em;
@@ -44,17 +44,17 @@ export const StyledAddressContainer = styled.div`
 `;
 
 export const StyledOfficeLocationContainer = styled.div`
-  font: normal normal medium 20px/26px Roboto;
+  font: normal normal medium 20px/26px Baloo;
   padding-bottom: 1rem;
 `;
 
 export const StyledAddress = styled.div`
-  font: normal normal normal 16px/26px Roboto;
+  font: normal normal normal 16px/26px Baloo;
   color: ${colours.darkWhite};
 `;
 
 export const StyledLogoTitle = styled.div`
-  font-family: Roboto, sans-serif;
+  font-family: Baloo, sans-serif;
   color: ${colours.white};
   font-size: 16px;
 `;
@@ -101,7 +101,7 @@ export const StyledFooterContentSocialsRowDesktop = styled.div`
 
 export const StyledNormalFontContainerDesktop = styled.div`
   position: relative;
-  font: normal normal normal 18px/24px Roboto;
+  font: normal normal normal 18px/24px Baloo;
 `;
 
 export const StyledContactUsContainerDesktop = styled.div`
@@ -110,7 +110,7 @@ export const StyledContactUsContainerDesktop = styled.div`
 `;
 
 export const StyledAddressContainerDesktop = styled.div`
-  font: normal normal normal 16px/26px Roboto;
+  font: normal normal normal 16px/26px Baloo;
   color: ${colours.white};
 `;
 
@@ -122,7 +122,7 @@ export const StyledSocialIconsContainerDesktop = styled.div`
 `;
 
 export const StyledLink = styled.div`
-  font: normal normal normal 16px/26px Roboto;
+  font: normal normal normal 16px/26px Baloo;
   color: ${colours.pink};
   z-index: 1;
 `;

@@ -69,7 +69,7 @@ export const StyledRedLineDesktop = styled.div`
 
 export const StyledHeroTitle = styled.div`
   text-align: center;
-  font: normal normal bold 32px/42px Roboto;
+  font: normal normal bold 32px/42px Baloo;
   letter-spacing: 0px;
   color: ${colours.white};
   margin-top: 2rem;
@@ -77,7 +77,7 @@ export const StyledHeroTitle = styled.div`
 
 export const StyledOurServicesTitle = styled.div`
   text-align: center;
-  font: normal normal bold 32px/42px Roboto;
+  font: normal normal bold 32px/42px Baloo;
   letter-spacing: 0px;
   color: black;
   margin-top: 2rem;
@@ -86,7 +86,7 @@ export const StyledOurServicesTitle = styled.div`
 
 export const StyledOurServicesTitleDesktop = styled.div`
   text-align: center;
-  font: normal normal bold 48px/63px Roboto;
+  font: normal normal bold 48px/63px Baloo;
   letter-spacing: 0px;
   color: #232323;
   margin-top: 2rem;
@@ -95,7 +95,7 @@ export const StyledOurServicesTitleDesktop = styled.div`
 
 export const StyledHeroDesktop = styled.div`
   text-align: left;
-  font: normal normal bold 60px/79px Roboto;
+  font: normal normal bold 60px/79px Baloo;
   letter-spacing: 0px;
   opacity: 1;
 `;
@@ -106,7 +106,7 @@ export const StyledHeroTitleRed = styled.span`
 
 export const StyledHeroDescription = styled.div`
   text-align: center;
-  font: normal normal normal 18px/30px Roboto;
+  font: normal normal normal 18px/30px Baloo;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
@@ -115,7 +115,7 @@ export const StyledHeroDescription = styled.div`
 
 export const StyledHeroDescriptionDesktop = styled.div`
   text-align: left;
-  font: normal normal normal 18px/30px Roboto;
+  font: normal normal normal 18px/30px Baloo;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
@@ -124,7 +124,7 @@ export const StyledHeroDescriptionDesktop = styled.div`
 
 export const StyledOurServicesDescriptionDesktop = styled.div`
   text-align: center;
-  font: normal normal normal 18px/30px Roboto;
+  font: normal normal normal 18px/30px Baloo;
   letter-spacing: 0px;
   color: #bfbfbf;
   opacity: 1;
@@ -165,7 +165,7 @@ export const StyledServiceGrid = styled.div`
 
 export const StyledServiceGridTitle = styled.div`
   text-align: center;
-  font: normal normal bold 20px/30px Roboto;
+  font: normal normal bold 20px/30px Baloo;
   letter-spacing: 0px;
   color: #232323;
   opacity: 1;

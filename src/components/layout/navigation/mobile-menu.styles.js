@@ -28,7 +28,7 @@ export const StyledNavigationContainer = styled.div`
 
 export const StyledNavigationLink = styled.div`
   color: ${colours.black};
-  font: normal normal normal 32px/42px Roboto;
+  font: normal normal normal 32px/42px Baloo;
   width: 100vw;
   border-bottom: 2px solid;
   margin-top: 2px;
