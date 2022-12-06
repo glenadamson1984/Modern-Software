@@ -15,7 +15,7 @@ const StyledCallToAction = styled.div`
       props.variant === "secondary" ? `${colours.white}` : `${colours.black}`};
     color: ${(props) =>
       props.variant === "secondary" ? `${colours.black}` : `${colours.white}`};
-    
+  }
 `;
 
 const StyledCallToActionText = styled.div`
