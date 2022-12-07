@@ -15,7 +15,7 @@ export const StyledRow = styled.div`
   width: 80%;
 
   @media only screen and (max-width: 600px) {
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     display: flex;
   }
