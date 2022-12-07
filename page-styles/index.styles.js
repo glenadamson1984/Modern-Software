@@ -7,7 +7,7 @@ export const StyledHeroBackground = styled.div`
   right: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  height: ${(props) => (props.isDesktop ? "756px" : "773px")};
+  height: ${(props) => (props.isDesktop ? "756px" : "900px")};
 `;
 
 export const StyledHeroContainer = styled.div`
