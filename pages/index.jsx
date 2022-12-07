@@ -54,9 +54,11 @@ const Home = () => {
                 <StyledHeroTitleRed> Modern Companies</StyledHeroTitleRed>
               </StyledHeroDesktop>
               <StyledHeroDescriptionDesktop>
-                We specialise in building software in an agile way. We provide
-                solutions across the stack with an emphasis on quality frontend
-                design.
+                Modern Software has a vast background of technology expertise
+                and provides high-quality and cost-efficient Software
+                Development Services. It allows startups, mid-sized, and
+                enterprise-grade businesses to achieve their goals with the help
+                of a fantastic team.
               </StyledHeroDescriptionDesktop>
               <CallToActionButton
                 variant="secondary"
@@ -169,9 +171,11 @@ const Home = () => {
                 <StyledHeroTitleRed> Modern Companies</StyledHeroTitleRed>
               </StyledHeroTitle>
               <StyledHeroDescription>
-                We specialise in building software in an agile way. We provide
-                solutions across the stack with an emphasis on quality frontend
-                design.
+                Modern Software has a vast background of technology expertise
+                and provides high-quality and cost-efficient Software
+                Development Services. It allows startups, mid-sized, and
+                enterprise-grade businesses to achieve their goals with the help
+                of a fantastic team.
               </StyledHeroDescription>
               <CallToActionButton
                 variant="secondary"

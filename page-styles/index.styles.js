@@ -108,14 +108,15 @@ export const StyledHeroDescription = styled.div`
   text-align: center;
   font: normal normal normal 18px/30px Baloo;
   letter-spacing: 0px;
-  color: #bfbfbf;
+  color: ${colours.black};
   opacity: 1;
   margin: 2rem 0.25rem;
 `;
 
 export const StyledHeroDescriptionDesktop = styled.div`
   text-align: left;
-  font: normal normal normal 18px/30px Baloo;
+  font: normal normal Light 18px/30px Baloo;
+  font-size: 1.25rem;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
