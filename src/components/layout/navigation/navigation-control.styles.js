@@ -30,5 +30,6 @@ export const StyledNav = styled.div`
     color: ${colours.pink};
     animation-name: example;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
 `;
