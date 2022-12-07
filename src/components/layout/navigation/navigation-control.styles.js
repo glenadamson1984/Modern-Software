@@ -23,8 +23,6 @@ export const StyledNav = styled.div`
   color: ${colours.white};
   text-transform: capitalize;
   margin: 0 1rem;
-  // border-top: ${(props) => (props.active ? "2px solid" : "none")};
-  // border-bottom: ${(props) => (props.active ? "2px solid" : "none")};
   padding: 0.25rem;
   border-color: ${(props) => (props.active ? colours.pink : colours.white)};
 
