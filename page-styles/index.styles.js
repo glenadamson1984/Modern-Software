@@ -16,7 +16,7 @@ export const StyledHeroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: ${(props) => (props.isDesktop ? "flex-start" : "center")};
-  top: ${(props) => (props.isDesktop ? "15rem" : "2rem")};
+  top: ${(props) => (props.isDesktop ? "8rem" : "2rem")};
   width: ${(props) => (props.isDesktop ? "40%" : "100%")};
   flex-direction: column;
 
@@ -181,7 +181,6 @@ export const StyledNinjaContainerDesktop = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 0;
-  margin-top: 2rem;
 `;
 
 export const StyledNinjaContainer = styled.div`

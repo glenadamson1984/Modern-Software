@@ -38,10 +38,10 @@ const Home = () => {
           <StyledHeroBackground isDesktop={true}>
             <StyledNinjaContainerDesktop>
               <Image
-                src="/images/hero-img.png"
+                src="/images/Logo/ModernSoftware.png"
                 alt="Modern Software"
-                width={675}
-                height={567}
+                width={600}
+                height={450}
                 layout="fill"
                 position="absolute"
                 objectFit="contain"
@@ -144,21 +144,12 @@ const Home = () => {
       ) : (
         <>
           <StyledHeroBackground isDesktop={false}>
-            <Image
-              src="/images/hero-img-half.png"
-              alt="Modern Software"
-              width={375}
-              height={773}
-              layout="fill"
-              position="absolute"
-              style={{ zIndex: -1 }}
-            />
             <StyledNinjaContainer>
               <Image
-                src="/images/hero-img.png"
+                src="/images/Logo/ModernSoftware.png"
                 alt="Modern Software"
-                width={675}
-                height={567}
+                width={600}
+                height={450}
                 layout="fill"
                 position="absolute"
                 objectFit="contain"
