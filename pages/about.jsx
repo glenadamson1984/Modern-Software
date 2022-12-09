@@ -116,7 +116,7 @@ const About = () => {
             modern software solutions to everyday businesses.
           </div>
           <div className="flex flex-1 justify-center pt-16 px-6">
-            <div className="relative overflow-hidden w-96 h-96 rounded-full">
+            <div className="relative overflow-hidden w-96 h-96 rounded-full hover:animate-zoom">
               <Image
                 src="/images/colab.jpg"
                 alt="We work better together"
@@ -191,7 +191,7 @@ const About = () => {
         <div className="flex flex-col flex-1 pr-20">
           <div className="flex flex-1 justify-center pt-16">
             <div className="relative overflow-hidden w-80 h-80 rounded-full">
-              <div className="absolute">
+              <div className="absolute hover:animate-zoom">
                 <Image
                   src="/images/fun.png"
                   alt="Hello from me!"
