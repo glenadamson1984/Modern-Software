@@ -61,7 +61,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <CallToActionButton variant="secondary" onClick={() => null}>
+            <CallToActionButton onClick={() => null}>
               Download Brochure
             </CallToActionButton>
           </a>
@@ -151,7 +151,7 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CallToActionButton variant="secondary" onClick={() => null}>
+              <CallToActionButton onClick={() => null}>
                 Download Brochure
               </CallToActionButton>
             </a>
