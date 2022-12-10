@@ -54,11 +54,11 @@ const Home = () => {
                 <StyledHeroTitleRed> Modern Companies</StyledHeroTitleRed>
               </StyledHeroDesktop>
               <StyledHeroDescriptionDesktop>
-                Modern Software has a vast background of technology expertise
-                and provides high-quality and cost-efficient Software
-                Development Services. It allows startups, mid-sized, and
-                enterprise-grade businesses to achieve their goals with the help
-                of a fantastic team.
+                Transform your ideas into reality. At Modern Software, we
+                specialize in creating unique, tailored software to help your
+                business stand out from the competition. With our expert team
+                and cutting-edge technology, we'll bring your vision to life.
+                Contact us today to get started!"
               </StyledHeroDescriptionDesktop>
               <CallToActionButton
                 variant="secondary"
