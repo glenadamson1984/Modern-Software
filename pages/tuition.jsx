@@ -2,69 +2,40 @@ import React from "react";
 import { useRouter } from "next/router";
 import SubPageLayout from "../src/components/layout/SubPageLayout";
 import { RemoveSlashFromURl } from "../src/components/layout/navigation/NavigationPaths";
-import styled from "styled-components";
-import { colours } from "../src/utils/style.utils";
 import useWindowSize from "../src/hooks/useWindowSize";
-
-const StyledContainer = styled.div`
-  padding: ${(props) => (props.isDesktop ? "5rem" : "0")};
-`;
-
-const StyledSentence = styled.div`
-  text-align: center;
-  font: normal normal bold 28px/28px Baloo;
-  letter-spacing: 0px;
-  color: ${colours.black};
-  padding: 0.5rem;
-  > span {
-    color: ${colours.pink};
-  }
-`;
+import Article from "../src/components/article/Article";
+import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 
 const Tuition = () => {
   const { pathname } = useRouter();
   const { checkIsDesktop } = useWindowSize();
   const isDesktop = checkIsDesktop();
+  const router = useRouter();
 
   return (
     <SubPageLayout subTitle={RemoveSlashFromURl(pathname)}>
-      <StyledContainer isDesktop={isDesktop}>
-        <StyledSentence>
-          <span>Modern Software</span> delivers a real world tuition experience.
-        </StyledSentence>
-        <StyledSentence>
-          We aim to not only teach you how to code but work with you on a 1 to 1
-          basis.
-        </StyledSentence>
-        <StyledSentence>
-          Setting up a <span>unique course</span> tailored to your speed and
-          skill set and what your unique aims are.
-        </StyledSentence>
-        <StyledSentence>
-          <span>
-            We run these courses followed the scrum methodology with a mix of
-            code you must deliver and topics you need to investigate and provide
-            feedback.
-          </span>
-        </StyledSentence>
-        <StyledSentence>
-          We will show talk you through the jargon you will encounter in the
-          real working world, how to handle interviews, things you need to know
-          and others which you can skim over.
-        </StyledSentence>
-        <StyledSentence>
-          A four week course completely tailored costs around <span>£500 </span>
-          but rest assured you will leave this tuition with the confidence to
-          tackle the world of software at pace.
-        </StyledSentence>
-        <StyledSentence>
-          <span>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            It's time to learn and gain that real experience you need so get in
-            touch now!
-          </span>
-        </StyledSentence>
-      </StyledContainer>
+      <Article
+        isDesktop={isDesktop}
+        headline="Modern Sofware offers an authentic read world experience that prepares individuals and groups for working in the software industry through a series of courses."
+        headlinePosition="left"
+        imagePosition="left"
+        sentence1="We believe that to learn software it's best to learn from those who are lived and breathed it everyday."
+        sentence2="We are passionate about what we do. We offer agile coaching, front-end, back-end and design tuition"
+        sentence3="Our 8 week preparation course is designed to teach your the skills and domain knowledge to kick start your journey into Software Development "
+        sentence4="The full 8 week course costs just £400."
+        imageUrl="/images/teacher.jpg"
+        imageAlt="Let's get started!"
+        imageHeight={400}
+        imageWidth={600}
+      >
+        {isDesktop ? (
+          <div className="w-96 pl-5 pt-16">
+            <CallToActionButton onClick={() => router.push("/contactus")}>
+              Get in Touch
+            </CallToActionButton>
+          </div>
+        ) : null}
+      </Article>
     </SubPageLayout>
   );
 };
