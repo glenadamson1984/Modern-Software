@@ -26,7 +26,7 @@ const About = () => {
       >
         <div className="w-96 pl-5 pt-16">
           <a
-            href="/ebrochure.pdf"
+            href="/modern-software-brochure.pdf"
             alt="alt text"
             target="_blank"
             rel="noopener noreferrer"
