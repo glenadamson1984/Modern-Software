@@ -9,7 +9,6 @@ const Portfolio = () => {
 
   return (
     <SubPageLayout subTitle={RemoveSlashFromURl(pathname)}>
-      <a href={"http://find-my-coach.co.uk/"}>
         <ImageCard
           position="right"
           height={412}
@@ -18,7 +17,6 @@ const Portfolio = () => {
           imageUrl="/images/fmc.png"
           description="We delivered a full end to end project to build out a brand new product - Find My Coach. UX/UI design via Figma, Dynamodb database, NextJS project utilising NextAuthJs and deployed via Vercel."
         />
-      </a>
       <ImageCard
         position="left"
         height={346}
@@ -57,7 +55,6 @@ const Portfolio = () => {
           description="A full stack offering including Frontend and backend development. Consulting on scrum best practices to aid them in getting the best out of their agile processes and aided with architecture discussions to future proof their offering."
         />
       </a>
-      <a href={"https://office-gadgets.co.uk/"}>
         <ImageCard
           position="left"
           title="Office Gadgets"
@@ -66,7 +63,6 @@ const Portfolio = () => {
           imageUrl="/images/gadget.png"
           description="A shopify project to deliver a client with a store for dropshipping. We customised the theme, set up the content and hooked into the dropshipping providers for a quick and easy online store."
         />
-      </a>
     </SubPageLayout>
   );
 };
