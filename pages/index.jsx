@@ -54,13 +54,11 @@ const Home = () => {
                 <StyledHeroTitleRed> Modern Companies</StyledHeroTitleRed>
               </StyledHeroDesktop>
               <StyledHeroDescriptionDesktop>
-                Transform your ideas into reality. At Modern Software, we
+                {`Transform your ideas into reality. At Modern Software, we
                 specialize in creating unique, tailored software to help your
                 business stand out from the competition. With our expert team
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 and cutting-edge technology, we'll bring your vision to life.
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                Contact us today to get started!"
+                Contact us today to get started!`}
               </StyledHeroDescriptionDesktop>
               <CallToActionButton
                 variant="secondary"
