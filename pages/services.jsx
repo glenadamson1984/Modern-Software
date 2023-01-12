@@ -28,7 +28,7 @@ const Services = () => {
     <SubPageLayout subTitle={"What we do"}>
       <StyledRow>
         <ServiceCard
-          imageUrl="/images/10168.jpg"
+          imageUrl="/images/rsz_110168.jpg"
           title="Custom Software Development"
         />
         <ServiceCard
