@@ -7,44 +7,53 @@ import Image from "next/image";
 import styled from "styled-components";
 import { colours } from "../src/utils/style.utils";
 import ServiceCard from "../src/components/image-card/ServiceCard";
-
 export const StyledRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 80%;
-
   @media only screen and (max-width: 600px) {
-    width: 90%;
+    width: 100%;
     flex-direction: column;
     display: flex;
   }
 `;
-
 const Services = () => {
   const { pathname } = useRouter();
-
   return (
     <SubPageLayout subTitle={"What we do"}>
-      <StyledRow>
+      <div className="container-fluid d-flex">
+        <div className="row border">
+          <div className="col-6">
+            <div className="img">
+              <img src="https://gcdtech.com/wp-content/uploads/2021/07/tricord.png" width="100%" />
+            </div>
+          </div>
+          <div className="col-6">
+            <span className="nav-link bg-dark text-light w-50 p-1 mt-2 text-center">success story</span>
+            <h2 className="h-2 mt-2">Tricord Client Portal</h2>
+            <p className="text-dark">Tricord commissioned a project with GCD to develop a ‘Client Portal’ that would enable their customers to gain direct access to their account information.</p>
+          </div>
+        </div>
+      </div>
+      {/* <StyledRow>
         <ServiceCard
-          imageUrl="/images/rsz_110168.jpg"
+          imageUrl="/images/10168.jpg"
           title="Custom Software Development"
         />
         <ServiceCard
           imageUrl="/images/45.jpg"
           title="Web Application Development"
         />
-      </StyledRow>
-      <StyledRow>
+      </StyledRow> */}
+      {/* <StyledRow>
         <ServiceCard imageUrl="/images/42.jpg" title="Mobile App Development" />
         <ServiceCard imageUrl="/images/36.jpg" title="UX & UI Design" />
-      </StyledRow>
+      </StyledRow> */}
       <StyledRow>
         <ServiceCard imageUrl="/images/8600.jpg" title="Software Tuition" />
       </StyledRow>
     </SubPageLayout>
   );
 };
-
 export default Services;
