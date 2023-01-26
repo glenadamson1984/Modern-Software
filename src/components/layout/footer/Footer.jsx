@@ -59,11 +59,11 @@ const Footer = () => {
               width={20}
               height={20}
             />
-            73 Charlestown Rd
+            1 Lisnagrlly manor
             <div style={{ paddingLeft: "20px" }}>Portadown</div>
             <div style={{ paddingLeft: "20px" }}>Craigavon</div>
             <div style={{ paddingLeft: "20px" }}>Co. Armagh</div>
-            <div style={{ paddingLeft: "20px" }}>BT63 5PP</div>
+            <div style={{ paddingLeft: "20px" }}>BT63 5ZX</div>
           </div>
           <div
             style={{
