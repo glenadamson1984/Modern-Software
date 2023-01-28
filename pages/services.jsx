@@ -33,7 +33,7 @@ const Services = () => {
   const fetchServices = async () => {
 
     try {
-      const response = await fetch(`http://localhost:1337/api/services?populate=*`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/services?populate=*`, {
         method: "GET",
         headers: { Accept: "application/json, text/plain, */*", "Content-Type": "application/json" }
       });
@@ -41,10 +41,9 @@ const Services = () => {
       if (response.status === 200) {
         const res = await response?.json();
         setServicesData(res?.data)
-        toast.success("Email sent successfully.", { theme: "colored" });
       }
     } catch (e) {
-      toast.error("Problem sending email. Please try again later.", { theme: "colored" });
+      toast.error("Please try again later.", { theme: "colored" });
     }
   };
 
@@ -60,7 +59,7 @@ const Services = () => {
                 <div className="c-card +default +featured">
 
                   <a href="" className="c-media-box +offset">
-                    <img src={`http://localhost:1337${item.attributes.service_image.data.attributes.url}`} />
+                    <img src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${item?.attributes?.service_image?.data?.attributes?.url}`} />
                   </a>
 
                   <div className="c-card__content +centered">
@@ -69,18 +68,18 @@ const Services = () => {
                     </div>
                     <h2 className="c-heading +h3">
                       <a href="">
-                        {item.attributes.title}
+                        {item?.attributes?.title}
                       </a>
                     </h2>
                     <p className="u-beta@m">
-                      {item.attributes.service_description}
+                      {item?.attributes?.service_description}
                     </p>
-                    {/* <p className="u-lighten">
+                    <p className="u-lighten">
                   Mobile App Development,
                   Native iOS Android Apps,
                   Platform Integrations,
                   UX/UI Design
-                </p> */}
+                </p>
                   </div>
                 </div>
               </div>
@@ -88,7 +87,6 @@ const Services = () => {
           </div>
         )
         )
-
       }
       {/* <div style={{ display: "flex", justifyContent: "center", marginBottom: "40px" }}>
         <CallToActionButton

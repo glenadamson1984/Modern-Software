@@ -37,6 +37,7 @@ const CallToActionButton = ({
       className={animate ? "animate-bounce" : null}
       variant={variant}
       onClick={onClick}
+      disable={true}
     >
       <StyledCallToActionText>{children}</StyledCallToActionText>
     </StyledCallToAction>
