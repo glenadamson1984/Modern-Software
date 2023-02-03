@@ -100,7 +100,7 @@ const Detail = () => {
                 <div className="o-grid-item +span-2@m u-hide@m-">
                   <div className="u-fill-shade">
                     <div className="u-pad-x2 u-fill-shade u-align-center">
-                      <img src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${portfolioData?.attributes?.image?.data?.attributes?.url}`}
+                      <img src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${portfolioData?.attributes?.right_logo?.data?.attributes?.url}`}
                         className="style-svg c-hero__logo  " alt=" logo" />
                     </div>
                     <div className="u-hide@m- u-pad-x2">
@@ -161,7 +161,7 @@ const Detail = () => {
                     <h3 className="has-text-align-center">The Solution</h3>
                   </div>
 
-                  <p className="has-text-align-center has-medium-font-size">A reimagined and redesigned collection of native apps were developed and launched, for use across both iOS and Android mobile and tablet devices.</p>
+                  <p className="has-text-align-center has-medium-font-size">{`${portfolioData?.attributes?.solution_description}`}</p>
 
                   <div style={{ height: "37px" }} aria-hidden="true" className="wp-block-spacer"></div>
 
@@ -170,7 +170,7 @@ const Detail = () => {
                       <img
                         decoding="async"
                         alt="INM apps"
-                        src="https://gcdtech.com/wp-content/uploads/2020/12/Group-44-1-1920x1181.png"
+                        src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${portfolioData?.attributes?.solution_image_1?.data?.attributes?.url}`}
                       />
                     </figure>
                   </div>
@@ -189,10 +189,10 @@ const Detail = () => {
 
                   <div style={{ height: "37px" }} aria-hidden="true" className="wp-block-spacer"></div>
 
-                  <p className="has-text-align-center has-medium-font-size">
+                  {/* <p className="has-text-align-center has-medium-font-size">
                     Developed in Swift &amp; Kotlin respectively, the new apps were designed with user experience at their core. The apps provide readers with access to the latest breaking news, as well as local and international news articles
                     across all sectors, including sport, business, lifestyle and entertainment from both the Irish Independent and the Sunday Independent.
-                  </p>
+                  </p> */}
 
                   <div style={{ height: "37px" }} aria-hidden="true" className="wp-block-spacer"></div>
 
@@ -208,12 +208,12 @@ const Detail = () => {
                             <img
                               decoding="async"
                               className="wp-image-5223 ls-is-cached lazyloaded"
-                              src="https://gcdtech.com/wp-content/uploads/2020/12/breaking.png"
+                              src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${portfolioData?.attributes?.key_feature_image_1?.data?.attributes?.url}`}
                             />
                           </figure>
                         </div>
 
-                        <p className="has-text-align-center has-medium-font-size">Breaking news alerts</p>
+                        <p className="has-text-align-center has-medium-font-size">{`${portfolioData?.attributes?.key_feature_description_1}`}</p>
                       </div>
 
                       <div className="grids-area grids-a-d8e319e4-ed8f-4d17-abd0-bd7b8a115645">
@@ -222,12 +222,12 @@ const Detail = () => {
                             <img
                               decoding="async"
                               alt="app notifications"
-                              src="https://gcdtech.com/wp-content/uploads/2020/12/notifications.png"
+                              src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${portfolioData?.attributes?.key_feature_image_2?.data?.attributes?.url}`}
                             />
                           </figure>
                         </div>
 
-                        <p className="has-text-align-center has-medium-font-size">Push notifications&nbsp;</p>
+                        <p className="has-text-align-center has-medium-font-size">{`${portfolioData?.attributes?.key_feature_description_2}`}&nbsp;</p>
                       </div>
 
                       <div className="grids-area grids-a-3849c978-6a06-4856-ab4e-a4c8628411ec">
@@ -235,17 +235,17 @@ const Detail = () => {
                           <figure className="aligncenter size-large">
                             <img
                               decoding="async"
-                              src="https://gcdtech.com/wp-content/uploads/2020/12/settings.png"
+                              src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${portfolioData?.attributes?.key_feature_image_3?.data?.attributes?.url}`}
                             />
                           </figure>
                         </div>
 
-                        <p className="has-text-align-center has-medium-font-size">Personalised news</p>
+                        <p className="has-text-align-center has-medium-font-size">{`${portfolioData?.attributes?.key_feature_description_3}`}</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="grids-section grids-s-a26457d6-5d54-419a-a328-e08a1d7ab354 grids-is-stretch">
+                  {/* <div className="grids-section grids-s-a26457d6-5d54-419a-a328-e08a1d7ab354 grids-is-stretch">
                     <div className="grids-s-w_i">
                       <div className="grids-area grids-a-2e43797d-a240-403b-8a8b-a3c7b510514c">
                         <div className="wp-block-image">
@@ -277,19 +277,19 @@ const Detail = () => {
 
                       <div className="grids-area grids-a-a887b068-6e3a-420a-a508-a86e6ac0bdc5"></div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div style={{ height: "37px" }} aria-hidden="true" className="wp-block-spacer"></div>
 
-                  <p className="has-text-align-center has-medium-font-size">
+                  {/* <p className="has-text-align-center has-medium-font-size">
                     To drive purchases of news subscriptions, an <strong>in app purchase experience</strong> was designed and implemented across both apps to enable readers to frictionlessly sign up and subscribe to read additional and premium
                     content directly within the app itself. This purchasing option was deemed essential due to its ease of use, the immediate access it grants and the fact that it remains the most popular method by which people purchase within
                     apps.
-                  </p>
+                  </p> */}
 
                   <div style={{ height: "37px" }} aria-hidden="true" className="wp-block-spacer"></div>
 
-                  <div className="wp-block-image">
+                  {/* <div className="wp-block-image">
                     <figure className="aligncenter size-large">
                       <img
                         decoding="async"
@@ -298,14 +298,14 @@ const Detail = () => {
                         className="wp-image-5198 lazyload"
                       />
                     </figure>
-                  </div>
+                  </div> */}
 
                   <div style={{ height: "37px" }} aria-hidden="true" className="wp-block-spacer"></div>
 
-                  <p className="has-text-align-center has-medium-font-size">
+                  {/* <p className="has-text-align-center has-medium-font-size">
                     To cater for those readers who subscribed outside of the app and to provide a consistent experience across all platforms, a login function was developed within the app itself to allow subscribers to login using their
                     existing web credentials and access their premium content.&nbsp;&nbsp;
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -317,14 +317,13 @@ const Detail = () => {
                     <h3 className="has-text-align-center">The Results</h3>
                   </div>
 
-                  <p className="has-text-align-center has-medium-font-size">The apps have proved to be a resounding success for Independent.ie.&nbsp;</p>
+                  {/* <p className="has-text-align-center has-medium-font-size">The apps have proved to be a resounding success for Independent.ie.&nbsp;</p> */}
 
                   <p className="has-text-align-center has-medium-font-size">
-                    The apps are delivering the most engaged audience across all Independent.ie digital platforms, with app users visiting <strong>more frequently</strong> (x5 times more) and <strong>reading&nbsp;50% more articles</strong> on
-                    every visit, compared to web.
+                  {`${portfolioData?.attributes?.result_discription}`}
                   </p>
 
-                  <div className="grids-section grids-s-de11c13e-a9d9-435b-911c-67cdb7e12b6d grids-is-stretch">
+                  {/* <div className="grids-section grids-s-de11c13e-a9d9-435b-911c-67cdb7e12b6d grids-is-stretch">
                     <div className="grids-s-w_i">
                       <div className="grids-area grids-a-ee7204e5-2f72-47d9-8bf1-c5a7d204b807">
                         <div className="c-heading s-cms-content u-marg-bottom">
@@ -342,14 +341,14 @@ const Detail = () => {
                         <p className="has-text-align-center">more articles read</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <p className="has-text-align-center has-medium-font-size">
+                  {/* <p className="has-text-align-center has-medium-font-size">
                     The introduction of in-app purchasing has also proven to be the most effective driver for purchases of news subscriptions, with over <strong>42%</strong> of all subscriptions originating via in-app purchases, despite the
                     apps accounting for only <strong>9%</strong> of overall digital readership. The frictionless method, coupled with the highly engaged behaviour, is a recipe for success it would seem!&nbsp;&nbsp;
-                  </p>
+                  </p> */}
 
-                  <p className="has-text-align-center has-medium-font-size">To top it all off, the Independent.ie app has been recognised and awarded as ‘News App of the Year’ at the prestigious UK App Awards.&nbsp;</p>
+                  {/* <p className="has-text-align-center has-medium-font-size">To top it all off, the Independent.ie app has been recognised and awarded as ‘News App of the Year’ at the prestigious UK App Awards.&nbsp;</p> */}
 
                   <div style={{ height: "33px" }} aria-hidden="true" className="wp-block-spacer"></div>
 
@@ -359,7 +358,7 @@ const Detail = () => {
                         decoding="async"
                         alt="UK App Awards Logo"
                         className="wp-image-4984 ls-is-cached lazyloaded"
-                        src="https://gcdtech.com/wp-content/uploads/2020/11/uk-app-awards-2020-logo-1.png"
+                        src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${portfolioData?.attributes?.result_image?.data?.attributes?.url}`}
                       />
                     </figure>
                   </div>
@@ -367,7 +366,7 @@ const Detail = () => {
               </div>
             </div>
 
-            <div id="" className="c-quote u-pad-x3 u-pad u-pad-x4@m u-pad-x5@l u-fill-grey">
+            {/* <div id="" className="c-quote u-pad-x3 u-pad u-pad-x4@m u-pad-x5@l u-fill-grey">
               <blockquote className="o-wrap +narrow">
                 <span className="c-quote__authors-pic">
                   <img
@@ -388,7 +387,7 @@ const Detail = () => {
                   </div>
                 </footer>
               </blockquote>
-            </div>
+            </div> */}
 
             <div className="u-pad-top-x3 u-pad-top-x4@m u-pad-top-x5@l u-pad-bottom-x3 u-pad-bottom-x4@m u-pad-bottom-x5@l u-fill-white">
               <div className="o-wrap">
@@ -398,9 +397,8 @@ const Detail = () => {
                     <div className="c-media-text__text">
                       <p>
                         <span style={{ fontWeight: "400" }}>
-                          Independent.ie is the online publication for the Irish Independent, delivering both national and global news across various websites and app platforms. Owned and operated by Independent News &amp; Media (a subsidiary
-                          of the international media organisation MediaHuis), the publication is one of many publishing brands within the group, which includes Belfast Telegraph, Sunday Independent, Sunday World, Evening Herald and a range of
-                          regional titles.
+                        {`${portfolioData?.attributes?.company_description}`}
+
                         </span>
                       </p>
                     </div>

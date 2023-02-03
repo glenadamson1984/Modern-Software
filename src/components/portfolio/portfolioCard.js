@@ -67,7 +67,7 @@ const PortfolioCard = () => {
                 totalRecord !== portfolioData.length  &&
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: "40px" }}>
                     <CallToActionButton onClick={async (e) => { setPage(page + 1) }}>
-                        Expand
+                        see more
                     </CallToActionButton>
                 </div>
             }
