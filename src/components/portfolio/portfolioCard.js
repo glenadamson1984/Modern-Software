@@ -51,7 +51,7 @@ const PortfolioCard = () => {
                                             <div className="u-marg-bottom"><span className="c-pill ">Project</span></div>
                                             <h2 className="c-heading +h3"><Link href={`/portfolio/${item?.id}`}>{`${item?.attributes?.title}`}</Link></h2>
                                             <p className="u-beta@m">{item.attributes?.description}</p>
-                                            <p className="u-lighten">
+                                            <p className="u-lighten-short">
                                             {item.attributes?.short_description}
                                             </p>
                                         </div>

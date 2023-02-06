@@ -7718,8 +7718,12 @@ figcaption,.wp-block-image figcaption{
     color:#2b2f32 !important
 }
 .u-lighten,.has-brand-grey-color{
-    color:#7a8693
+    color:#2b2f32
 }
+.u-lighten-short,.has-brand-grey-color{
+    color:#6d696b
+}
+
 .u-white{
     color:white
 }
