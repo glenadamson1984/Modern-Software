@@ -11,7 +11,6 @@ import PortfolioDetailCompanyOverview from "../../src/components/portfolioDetail
 import PortfolioDetailSuccessStories from "../../src/components/portfolioDetail/PortfolioDetailSuccessStories";
 import PortfolioDetailStartProject from "../../src/components/portfolioDetail/PortfolioDetailStartProject";
 
-
 export const StyledRow = styled.div`
   display: flex;
   flex-direction: row;
@@ -26,30 +25,35 @@ export const StyledRow = styled.div`
 
 const Detail = () => {
   const router = useRouter();
-  const [portfolioData, setPortfolioData] = useState(Object)
-  const [threePortfolioData, setThreePortfolioData] = useState([])
+  const [portfolioData, setPortfolioData] = useState(Object);
+  const [threePortfolioData, setThreePortfolioData] = useState([]);
 
-  let { id } = router.query
+  let { id } = router.query;
 
   useEffect(() => {
     if (id) {
-      fetchPortfolio()
-      fetchThreePortfolio()
+      fetchPortfolio();
+      fetchThreePortfolio();
     }
-  }, [router.query])
+  }, [router.query]);
 
   const fetchPortfolio = async () => {
-
     try {
-      let queryPrams = `populate=*`
-      const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/portfolios/${id}?${queryPrams}`, {
-        method: "GET",
-        headers: { Accept: "application/json, text/plain, */*", "Content-Type": "application/json" }
-      });
+      let queryPrams = `populate=*`;
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/portfolios/${id}?${queryPrams}`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.status === 200) {
         const res = await response?.json();
-        setPortfolioData(res?.data)
+        setPortfolioData(res?.data);
       }
     } catch (e) {
       toast.error("Please try again later.", { theme: "colored" });
@@ -58,16 +62,21 @@ const Detail = () => {
 
   const fetchThreePortfolio = async () => {
     try {
-      let queryPrams = `populate=*&pagination[page]=${1}&pagination[pageSize]=3`
-      const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/portfolios?${queryPrams}`,
+      let queryPrams = `populate=*&pagination[page]=${1}&pagination[pageSize]=3`;
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/portfolios?${queryPrams}`,
         {
           method: "GET",
-          headers: { Accept: "application/json, text/plain, */*", "Content-Type": "application/json" }
-        });
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.status === 200) {
         const res = await response?.json();
-        setThreePortfolioData(res?.data)
+        setThreePortfolioData(res?.data);
       }
     } catch (e) {
       toast.error("Please try again later.", { theme: "colored" });
@@ -76,8 +85,7 @@ const Detail = () => {
 
   return (
     <>
-      {
-        Object.keys(portfolioData)?.length > 0 &&
+      {Object.keys(portfolioData)?.length > 0 && (
         <div className="casestudy-template-default single single-casestudy">
           <div className="u-fill-site " style={{ backgroundColor: "#80cea7" }}>
             <PortfolioDetailHeader portfolioData={portfolioData} />
@@ -85,40 +93,16 @@ const Detail = () => {
               <PortfolioDetailChallenge portfolioData={portfolioData} />
               <PortfolioDetailSolution portfolioData={portfolioData} />
               <PortfolioDetailResult portfolioData={portfolioData} />
-
-              {/* <div id="" className="c-quote u-pad-x3 u-pad u-pad-x4@m u-pad-x5@l u-fill-grey">
-              <blockquote className="o-wrap +narrow">
-                <span className="c-quote__authors-pic">
-                  <img
-                    decoding="async"
-                    alt="Henry Minogue Profile Picture"
-                    className="ls-is-cached lazyloaded"
-                    src="https://gcdtech.com/wp-content/uploads/2020/12/1517721650930-100x80.jpg"
-                  />
-                </span>
-                <footer className="c-quote__details">
-                  <p className="c-quote__quote u-beta@m">
-                    I am delighted that our technology partner GCD has been recognised for the great work they do alongside our internal technology and product team here in INM, as we collectively mature our digital offerings to be where our
-                    customers expect us to be, while exceeding their expectations when we get there. A well merited recognition for the GCD team.
-                  </p>
-                  <div className="u-translucent u-marg-top">
-                    <strong>Henry Minogue</strong>
-                    <p>CIO at Independent News &amp; Media</p>
-                  </div>
-                </footer>
-              </blockquote>
-            </div> */}
               <PortfolioDetailCompanyOverview portfolioData={portfolioData} />
-              <PortfolioDetailSuccessStories threePortfolioData = {threePortfolioData} />
+              <PortfolioDetailSuccessStories
+                threePortfolioData={threePortfolioData}
+              />
               <PortfolioDetailStartProject />
             </div>
-
           </div>
         </div>
-      }
-
+      )}
     </>
-
   );
 };
 export default Detail;
