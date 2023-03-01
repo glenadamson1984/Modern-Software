@@ -86,13 +86,13 @@ const FooterDesktop = () => {
                 paddingTop: "1rem",
               }}
             >
-              <Image
-                src="/images/phone.png"
-                alt="Modern Software"
-                width={20}
-                height={20}
-              />
-              02838334830
+              {/*<Image*/}
+              {/*  src="/images/phone.png"*/}
+              {/*  alt="Modern Software"*/}
+              {/*  width={20}*/}
+              {/*  height={20}*/}
+              {/*/>*/}
+              {/*02838334830*/}
             </StyledAddressContainerDesktop>
           </StyledContactUsContainerDesktop>
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -117,13 +117,13 @@ const FooterDesktop = () => {
                 paddingTop: "1rem",
               }}
             >
-              <Image
-                src="/images/phone.png"
-                alt="Modern Software"
-                width={20}
-                height={20}
-              />
-              07921568808
+              {/*<Image*/}
+              {/*  src="/images/phone.png"*/}
+              {/*  alt="Modern Software"*/}
+              {/*  width={20}*/}
+              {/*  height={20}*/}
+              {/*/>*/}
+              {/*07921568808*/}
             </StyledAddressContainerDesktop>
           </div>
         </StyledFooterContentRowDesktop>

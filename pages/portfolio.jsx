@@ -9,14 +9,14 @@ const Portfolio = () => {
 
   return (
     <SubPageLayout subTitle={RemoveSlashFromURl(pathname)}>
-        <ImageCard
-          position="right"
-          height={412}
-          width={604}
-          title="Find My Coach"
-          imageUrl="/images/fmc.png"
-          description="We delivered a full end to end project to build out a brand new product - Find My Coach. UX/UI design via Figma, Dynamodb database, NextJS project utilising NextAuthJs and deployed via Vercel."
-        />
+      {/*<ImageCard*/}
+      {/*  position="right"*/}
+      {/*  height={412}*/}
+      {/*  width={604}*/}
+      {/*  title="Find My Coach"*/}
+      {/*  imageUrl="/images/fmc.png"*/}
+      {/*  description="We delivered a full end to end project to build out a brand new product - Find My Coach. UX/UI design via Figma, Dynamodb database, NextJS project utilising NextAuthJs and deployed via Vercel."*/}
+      {/*/>*/}
       <ImageCard
         position="left"
         height={346}
@@ -55,14 +55,14 @@ const Portfolio = () => {
           description="A full stack offering including Frontend and backend development. Consulting on scrum best practices to aid them in getting the best out of their agile processes and aided with architecture discussions to future proof their offering."
         />
       </a>
-        <ImageCard
-          position="left"
-          title="Office Gadgets"
-          height={330}
-          width={508}
-          imageUrl="/images/gadget.png"
-          description="A shopify project to deliver a client with a store for dropshipping. We customised the theme, set up the content and hooked into the dropshipping providers for a quick and easy online store."
-        />
+      <ImageCard
+        position="left"
+        title="Office Gadgets"
+        height={330}
+        width={508}
+        imageUrl="/images/gadget.png"
+        description="A shopify project to deliver a client with a store for dropshipping. We customised the theme, set up the content and hooked into the dropshipping providers for a quick and easy online store."
+      />
     </SubPageLayout>
   );
 };
