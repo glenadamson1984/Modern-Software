@@ -42,85 +42,85 @@ const Footer = () => {
           </a>
         </div>
       </StyledLinks>
-      <StyledAddressContainer>
-        <div>
-          <StyledOfficeLocationContainer>
-            NI Office
-          </StyledOfficeLocationContainer>
-          <div
-            style={{
-              font: "normal normal normal 16px/26px Baloo",
-              color: "#FFFFFF",
-            }}
-          >
-            <Image
-              src="/images/map-pin.png"
-              alt="Modern Software"
-              width={20}
-              height={20}
-            />
-            1 Lisnagrlly manor
-            <div style={{ paddingLeft: "20px" }}>Portadown</div>
-            <div style={{ paddingLeft: "20px" }}>Craigavon</div>
-            <div style={{ paddingLeft: "20px" }}>Co. Armagh</div>
-            <div style={{ paddingLeft: "20px" }}>BT63 5ZX</div>
-          </div>
-          <div
-            style={{
-              font: "normal normal normal 16px/26px Baloo",
-              paddingTop: "1rem",
-              color: "#FFFFFF",
-            }}
-          >
-            {/*<Image*/}
-            {/*  src="/images/phone.png"*/}
-            {/*  alt="Modern Software"*/}
-            {/*  width={20}*/}
-            {/*  height={20}*/}
-            {/*/>*/}
-            {/*02838334830*/}
-          </div>
-        </div>
-        <div>
-          <StyledOfficeLocationContainer>
-            England Office
-          </StyledOfficeLocationContainer>
+      {/*<StyledAddressContainer>*/}
+      {/*  <div>*/}
+      {/*    <StyledOfficeLocationContainer>*/}
+      {/*      NI Office*/}
+      {/*    </StyledOfficeLocationContainer>*/}
+      {/*    <div*/}
+      {/*      style={{*/}
+      {/*        font: "normal normal normal 16px/26px Baloo",*/}
+      {/*        color: "#FFFFFF",*/}
+      {/*      }}*/}
+      {/*    >*/}
+      {/*      <Image*/}
+      {/*        src="/images/map-pin.png"*/}
+      {/*        alt="Modern Software"*/}
+      {/*        width={20}*/}
+      {/*        height={20}*/}
+      {/*      />*/}
+      {/*      1 Lisnagrlly manor*/}
+      {/*      <div style={{ paddingLeft: "20px" }}>Portadown</div>*/}
+      {/*      <div style={{ paddingLeft: "20px" }}>Craigavon</div>*/}
+      {/*      <div style={{ paddingLeft: "20px" }}>Co. Armagh</div>*/}
+      {/*      <div style={{ paddingLeft: "20px" }}>BT63 5ZX</div>*/}
+      {/*    </div>*/}
+      {/*    <div*/}
+      {/*      style={{*/}
+      {/*        font: "normal normal normal 16px/26px Baloo",*/}
+      {/*        paddingTop: "1rem",*/}
+      {/*        color: "#FFFFFF",*/}
+      {/*      }}*/}
+      {/*    >*/}
+      {/*      <Image*/}
+      {/*        src="/images/phone.png"*/}
+      {/*        alt="Modern Software"*/}
+      {/*        width={20}*/}
+      {/*        height={20}*/}
+      {/*      />*/}
+      {/*      02838334830*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*  <div>*/}
+      {/*    <StyledOfficeLocationContainer>*/}
+      {/*      England Office*/}
+      {/*    </StyledOfficeLocationContainer>*/}
 
-          <div
-            style={{
-              font: "normal normal normal 16px/26px Baloo",
-              color: "#FFFFFF",
-            }}
-          >
-            <Image
-              src="/images/map-pin.png"
-              alt="Modern Software"
-              width={20}
-              height={20}
-            />
-            320 Firecrest Court
-            <div style={{ paddingLeft: "20px" }}>Centre Park</div>
-            <div style={{ paddingLeft: "20px" }}>Warrington</div>
-            <div style={{ paddingLeft: "20px" }}>Cheshire</div>
-            <div style={{ paddingLeft: "20px" }}>WA1 1RG</div>
-          </div>
-          <div
-            style={{
-              font: "normal normal normal 16px/26px Baloo",
-              paddingTop: "1rem",
-              color: "#FFFFFF",
-            }}
-          >
-            {/*<Image*/}
-            {/*  src="/images/phone.png"*/}
-            {/*  alt="Modern Software"*/}
-            {/*  width={20}*/}
-            {/*  height={20}*/}
-            {/*/>*/}
-            {/*07921568808*/}
-          </div>
-        </div>
-      </StyledAddressContainer>
+      {/*    <div*/}
+      {/*      style={{*/}
+      {/*        font: "normal normal normal 16px/26px Baloo",*/}
+      {/*        color: "#FFFFFF",*/}
+      {/*      }}*/}
+      {/*    >*/}
+      {/*      <Image*/}
+      {/*        src="/images/map-pin.png"*/}
+      {/*        alt="Modern Software"*/}
+      {/*        width={20}*/}
+      {/*        height={20}*/}
+      {/*      />*/}
+      {/*      320 Firecrest Court*/}
+      {/*      <div style={{ paddingLeft: "20px" }}>Centre Park</div>*/}
+      {/*      <div style={{ paddingLeft: "20px" }}>Warrington</div>*/}
+      {/*      <div style={{ paddingLeft: "20px" }}>Cheshire</div>*/}
+      {/*      <div style={{ paddingLeft: "20px" }}>WA1 1RG</div>*/}
+      {/*    </div>*/}
+      {/*    <div*/}
+      {/*      style={{*/}
+      {/*        font: "normal normal normal 16px/26px Baloo",*/}
+      {/*        paddingTop: "1rem",*/}
+      {/*        color: "#FFFFFF",*/}
+      {/*      }}*/}
+      {/*    >*/}
+      {/*      <Image*/}
+      {/*        src="/images/phone.png"*/}
+      {/*        alt="Modern Software"*/}
+      {/*        width={20}*/}
+      {/*        height={20}*/}
+      {/*      />*/}
+      {/*      07921568808*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</StyledAddressContainer>*/}
       <div
         style={{
           padding: "2rem 4rem",
@@ -164,7 +164,7 @@ const Footer = () => {
           color: "#FFFFFF",
         }}
       >
-        Copyright @2022 Modern Software
+        Copyright @2023 Modern Software
       </div>
     </StyledContainer>
   );
