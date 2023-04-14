@@ -13,3 +13,8 @@ I had a choice between sendgrid and AWS SES and sendgrid seemed a lot simpler an
 expected so I have used that for now.
 
 Make sure to save your SENDGRID_API_KEY as an environment variable.
+
+for strapi if the instance goes down go to the instance 
+
+cd modern-software-strapi
+strapi start
