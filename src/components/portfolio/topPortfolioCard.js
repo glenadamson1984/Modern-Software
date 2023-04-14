@@ -53,9 +53,12 @@ const TopPortfolioCard = () => {
                   />
                 </Link>
 
-                <div className="c-card__content +centered">
+                <div
+                  style={{ marginLeft: "10px" }}
+                  className="c-card__content +centered"
+                >
                   <div className="u-marg-bottom">
-                    <span className="c-pill u-fill-primary">Project</span>
+                    <span className="c-pill u-fill-primary">Projects</span>
                   </div>
                   <h2 className="c-heading +h3">
                     <Link href={`/portfolio/${topPortfolioData?.id}`}>
