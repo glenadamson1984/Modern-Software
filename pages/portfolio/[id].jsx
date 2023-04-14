@@ -93,7 +93,7 @@ const Detail = () => {
               <PortfolioDetailChallenge portfolioData={portfolioData} />
               <PortfolioDetailSolution portfolioData={portfolioData} />
               <PortfolioDetailResult portfolioData={portfolioData} />
-              <PortfolioDetailCompanyOverview portfolioData={portfolioData} />
+              {/*<PortfolioDetailCompanyOverview portfolioData={portfolioData} />*/}
               <PortfolioDetailSuccessStories
                 threePortfolioData={threePortfolioData}
               />
