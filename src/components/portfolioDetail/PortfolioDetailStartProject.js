@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const PortfolioDetailStartProject = (props) => {
   return (
@@ -16,13 +17,9 @@ const PortfolioDetailStartProject = (props) => {
             With a few details we’ll be able to kickstart your custom software
             project.
           </p>
-          <a
-            className="c-button +arrow-animation +1 +large@m"
-            href="/contactus"
-            target="_self"
-          >
-            Start a Project
-          </a>
+          <Link href="/contactus">
+            <a>Start A Project</a>
+          </Link>
         </div>
         <div className="c-start-a-project__image u-hide@m- a-bounce-in-bottom js-anim a-stacked__child +600">
           <img
