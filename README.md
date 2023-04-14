@@ -14,7 +14,11 @@ expected so I have used that for now.
 
 Make sure to save your SENDGRID_API_KEY as an environment variable.
 
+STRAPI DEPLOYMENT
 for strapi if the instance goes down go to the instance 
 
 cd modern-software-strapi
 strapi start
+
+LOG IN TO STRAPI
+https://strapi.modern-software.co.uk/admin/
