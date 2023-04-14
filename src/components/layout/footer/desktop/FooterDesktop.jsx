@@ -64,68 +64,68 @@ const FooterDesktop = () => {
               </StyledNormalFontContainerDesktop>
             </div>
           </StyledContactUsContainerDesktop>
-          <StyledContactUsContainerDesktop>
-            <StyledOfficeLocationContainer>
-              Northern Ireland
-            </StyledOfficeLocationContainer>
-            <StyledAddressContainerDesktop>
-              <Image
-                src="/images/map-pin.png"
-                alt="Modern Software"
-                width={20}
-                height={20}
-              />
-              73 Charlestown Rd
-              <div style={{ paddingLeft: "20px" }}>Portadown</div>
-              <div style={{ paddingLeft: "20px" }}>Craigavon</div>
-              <div style={{ paddingLeft: "20px" }}>Co. Armagh</div>
-              <div style={{ paddingLeft: "20px" }}>BT63 5PP</div>
-            </StyledAddressContainerDesktop>
-            <StyledAddressContainerDesktop
-              style={{
-                paddingTop: "1rem",
-              }}
-            >
-              <Image
-                src="/images/phone.png"
-                alt="Modern Software"
-                width={20}
-                height={20}
-              />
-              02838334830
-            </StyledAddressContainerDesktop>
-          </StyledContactUsContainerDesktop>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <StyledOfficeLocationContainer>
-              England
-            </StyledOfficeLocationContainer>
-            <StyledAddressContainerDesktop>
-              <Image
-                src="/images/map-pin.png"
-                alt="Modern Software"
-                width={20}
-                height={20}
-              />
-              320 Firecrest Court
-              <div style={{ paddingLeft: "20px" }}>Centre Park</div>
-              <div style={{ paddingLeft: "20px" }}>Warrington</div>
-              <div style={{ paddingLeft: "20px" }}>Cheshire</div>
-              <div style={{ paddingLeft: "20px" }}>WA1 1RG</div>
-            </StyledAddressContainerDesktop>
-            <StyledAddressContainerDesktop
-              style={{
-                paddingTop: "1rem",
-              }}
-            >
-              <Image
-                src="/images/phone.png"
-                alt="Modern Software"
-                width={20}
-                height={20}
-              />
-              07921568808
-            </StyledAddressContainerDesktop>
-          </div>
+          {/*<StyledContactUsContainerDesktop>*/}
+          {/*  <StyledOfficeLocationContainer>*/}
+          {/*    Northern Ireland*/}
+          {/*  </StyledOfficeLocationContainer>*/}
+          {/*  <StyledAddressContainerDesktop>*/}
+          {/*    <Image*/}
+          {/*      src="/images/map-pin.png"*/}
+          {/*      alt="Modern Software"*/}
+          {/*      width={20}*/}
+          {/*      height={20}*/}
+          {/*    />*/}
+          {/*    1 Lisnagrilly Manor*/}
+          {/*    <div style={{ paddingLeft: "20px" }}>Portadown</div>*/}
+          {/*    <div style={{ paddingLeft: "20px" }}>Craigavon</div>*/}
+          {/*    <div style={{ paddingLeft: "20px" }}>Co. Armagh</div>*/}
+          {/*    <div style={{ paddingLeft: "20px" }}>BT63 5ZX</div>*/}
+          {/*  </StyledAddressContainerDesktop>*/}
+          {/*  <StyledAddressContainerDesktop*/}
+          {/*    style={{*/}
+          {/*      paddingTop: "1rem",*/}
+          {/*    }}*/}
+          {/*  >*/}
+          {/*    <Image*/}
+          {/*      src="/images/phone.png"*/}
+          {/*      alt="Modern Software"*/}
+          {/*      width={20}*/}
+          {/*      height={20}*/}
+          {/*    />*/}
+          {/*    02838334830*/}
+          {/*  </StyledAddressContainerDesktop>*/}
+          {/*</StyledContactUsContainerDesktop>*/}
+          {/*<div style={{ display: "flex", flexDirection: "column" }}>*/}
+          {/*  <StyledOfficeLocationContainer>*/}
+          {/*    England*/}
+          {/*  </StyledOfficeLocationContainer>*/}
+          {/*  <StyledAddressContainerDesktop>*/}
+          {/*    <Image*/}
+          {/*      src="/images/map-pin.png"*/}
+          {/*      alt="Modern Software"*/}
+          {/*      width={20}*/}
+          {/*      height={20}*/}
+          {/*    />*/}
+          {/*    320 Firecrest Court*/}
+          {/*    <div style={{ paddingLeft: "20px" }}>Centre Park</div>*/}
+          {/*    <div style={{ paddingLeft: "20px" }}>Warrington</div>*/}
+          {/*    <div style={{ paddingLeft: "20px" }}>Cheshire</div>*/}
+          {/*    <div style={{ paddingLeft: "20px" }}>WA1 1RG</div>*/}
+          {/*  </StyledAddressContainerDesktop>*/}
+          {/*  <StyledAddressContainerDesktop*/}
+          {/*    style={{*/}
+          {/*      paddingTop: "1rem",*/}
+          {/*    }}*/}
+          {/*  >*/}
+          {/*    <Image*/}
+          {/*      src="/images/phone.png"*/}
+          {/*      alt="Modern Software"*/}
+          {/*      width={20}*/}
+          {/*      height={20}*/}
+          {/*    />*/}
+          {/*    07921568808*/}
+          {/*  </StyledAddressContainerDesktop>*/}
+          {/*</div>*/}
         </StyledFooterContentRowDesktop>
         <StyledFooterContentSocialsRowDesktop>
           {isDesktopWideScreen && (
@@ -136,7 +136,7 @@ const FooterDesktop = () => {
             />
           )}
           <StyledAddressContainerDesktop>
-            Copyright @2022 Modern Software
+            Copyright @2023 Modern Software
           </StyledAddressContainerDesktop>
           <StyledSocialIconsContainerDesktop>
             {/*<Image*/}
