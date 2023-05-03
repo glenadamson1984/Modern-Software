@@ -1,17 +1,17 @@
 export const NavigationItems = [
   "Home",
-  "Services",
-  "About",
   "Portfolio",
+  "Services",
   "Tuition",
+  "About",
 ];
 
 export const NavigationItemsMobile = [
   "Home",
-  "Services",
-  "About",
   "Portfolio",
+  "Services",
   "Tuition",
+  "About",
   "Contact Us",
 ];
 
