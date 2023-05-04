@@ -14,8 +14,9 @@ const Pricing = () => {
         <div>Pricing</div>
         <StyledUnderline />
       </StyledSubHeader>
-      <div className="flex justify-center px-10 py-24 bg-white">
-        {isDesktop ? (
+
+      {isDesktop ? (
+        <div className="flex justify-center px-10 py-24 bg-white">
           <div className="flex flex-col items-center justify-center w-4/5 rounded bg-green">
             <div
               className="pt-10"
@@ -72,10 +73,59 @@ const Pricing = () => {
               </div>
             </div>
           </div>
-        ) : (
-          <div></div>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className=" bg-green">
+          <div
+            className="p-10"
+            style={{ font: "normal normal normal 18px/18px Baloo" }}
+          >
+            Complete pricing transparency for your convience. NDA&#39;s signed
+            for every project.
+          </div>
+          <div className="flex flex-col justify-between p-10 mb-10 text-black bg-white rounded-t">
+            <div>
+              <div style={{ font: "normal normal normal 24px Baloo" }}>
+                Hire a resource
+              </div>
+              <div className="flex justify-between">
+                <div>ReactJS</div>
+                <div>£300/day</div>
+              </div>
+              <div className="flex justify-between">
+                <div>React Native</div>
+                <div>£300/day</div>
+              </div>
+              <div className="flex justify-between">
+                <div>AWS architecture</div>
+                <div>£300/day</div>
+              </div>
+              <div className="flex justify-between">
+                <div>UI Design</div>
+                <div>£250/day</div>
+              </div>
+            </div>
+
+            <div className="mt-10">
+              <div style={{ font: "normal normal normal 24px Baloo" }}>
+                Hire a Package
+              </div>
+              <div className="flex justify-between">
+                <div>Fullstack ReactJS + Node JS</div>
+                <div>£400/day</div>
+              </div>
+              <div className="flex justify-between">
+                <div>Fullstack React Native + Node JS</div>
+                <div>£400/day</div>
+              </div>
+              <div className="flex justify-between">
+                <div>Fullstack with Architecture</div>
+                <div>£400/day</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
