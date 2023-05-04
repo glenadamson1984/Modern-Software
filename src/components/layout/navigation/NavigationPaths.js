@@ -2,7 +2,7 @@ export const NavigationItems = [
   "Home",
   "Portfolio",
   "Services",
-  "Tuition",
+  "Pricing",
   "About",
 ];
 
