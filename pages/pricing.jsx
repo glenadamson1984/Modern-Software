@@ -27,8 +27,8 @@ const Pricing = () => {
               className="p-10"
               style={{ font: "normal normal normal 18px/18px Baloo" }}
             >
-              Complete pricing transparency for your convience. NDA's signed for
-              every project.
+              Complete pricing transparency for your convience. NDA&#39;s signed
+              for every project.
             </div>
             <div className="flex justify-between w-3/5 p-10 mb-10 text-black bg-white rounded-t">
               <div className="w-2/5">
