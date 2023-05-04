@@ -30,7 +30,7 @@ const Pricing = () => {
               Complete pricing transparency for your convience. NDA's signed for
               every project.
             </div>
-            <div className="flex justify-between w-3/5 p-10 text-black bg-white rounded-t">
+            <div className="flex justify-between w-3/5 p-10 mb-10 text-black bg-white rounded-t">
               <div className="w-2/5">
                 <div style={{ font: "normal normal normal 24px Baloo" }}>
                   Hire a resource
