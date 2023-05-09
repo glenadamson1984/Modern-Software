@@ -87,7 +87,7 @@ const Detail = () => {
     <>
       {Object.keys(portfolioData)?.length > 0 && (
         <div className="casestudy-template-default single single-casestudy">
-          <div className="u-fill-site " style={{ backgroundColor: "#80cea7" }}>
+          <div className="u-fill-site " style={{ backgroundColor: "#7bcda4" }}>
             <PortfolioDetailHeader portfolioData={portfolioData} />
             <div className="s-cms-content">
               <PortfolioDetailChallenge portfolioData={portfolioData} />

@@ -135,7 +135,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #80cea7;
+  background-color: #7bcda4;
   transition: transform 1.25s cubic-bezier(0.4, 0.01, 0.11, 1.01) 0.25s;
   transform: scaleX(1);
   transform-origin: left;
@@ -3413,7 +3413,7 @@ td {
 }
 .c-card.\+featured {
   grid-gap: 0;
-  background-color: #80cea7;
+  background-color: #7bcda4;
   color: white;
 }
 .c-card.\+featured .c-heading a {
@@ -5265,7 +5265,7 @@ figcaption,
     background: #f5f8fa;
   }
   .c-start-a-project.\+on-white-background:after {
-    background: #80cea7;
+    background: #7bcda4;
   }
 }
 .c-start-a-project__content {

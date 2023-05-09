@@ -25,7 +25,7 @@ module.exports = {
       whiteBorder: "#e8e8e8",
       red: "#E51F28",
       pink: "#ff408b",
-      green: "#80cea7",
+      green: "#7bcda4",
       black: "#232323",
       darkGrey: "#262626",
       grey: "#6B6B6B",

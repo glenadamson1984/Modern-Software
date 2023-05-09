@@ -1,21 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Baloo:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @font-face {
-  font-family: 'Baloo';
-  src: url('/fonts/Baloo-Regular.ttf');
+  font-family: "Baloo";
+  src: url("/fonts/Baloo-Regular.ttf");
 }
 
-@import url('./theme.css');
+@import url("./theme.css");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Avenir Next W00","Avenir Next",Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "Avenir Next W00", "Avenir Next", Avenir, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #fff;
-  background-color: #80cea7;
+  background-color: #7bcda4;
 }
 
 a {
@@ -27,4 +29,25 @@ a {
   box-sizing: border-box;
 }
 
-article, header, footer, h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, table, form, fieldset, figure, pre {margin-bottom: 16px;}
+article,
+header,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+table,
+form,
+fieldset,
+figure,
+pre {
+  margin-bottom: 16px;
+}

@@ -24,10 +24,10 @@ const Footer = () => {
   return (
     <StyledContainer>
       <Image
-        src="/images/Logo/footer.png"
+        src="/images/Logo/ModernSoftwareLogo.png"
         alt="Modern Software"
-        width={235}
-        height={90.25}
+        width={355}
+        height={112.5}
       />
       <StyledSubTitle>Contact Us</StyledSubTitle>
       <StyledLinks>
