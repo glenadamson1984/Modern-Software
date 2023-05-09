@@ -25,7 +25,7 @@ const Footer = () => {
     <StyledContainer>
       <Image
         src="/images/Logo/ModernSoftwareLogo.png"
-        alt="Modern Software"
+        alt="Modern Software Logo"
         width={355}
         height={112.5}
       />
