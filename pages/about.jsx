@@ -24,7 +24,7 @@ const About = () => {
         imageHeight={400}
         imageWidth={400}
       >
-        <div className="w-96 pl-5 pt-16">
+        <div className="pt-16 pl-5 w-96">
           <a
             href="/modern-software-brochure.pdf"
             alt="alt text"
@@ -44,7 +44,7 @@ const About = () => {
         sentence2="We discuss up front what your solution might look like in basic terms and we strip out the unnecessary features that can be added later on. We then work together in a fully agile following the principles of scrum to deliver your MVP."
         sentence3="Once your MVP is delivered the benefits are enormous, you can see your solution start to take shape and begin to get a feel for the more refined requirements."
         sentence4="We then proceed to a second phase of the software delivery which looks in building upon the MVP to create your final solution."
-        imageUrl="/images/fun.png"
+        imageUrl="/images/Logo/simple.jpg"
         imageAlt="Hello from me!"
         imageHeight={479}
         imageWidth={455}
