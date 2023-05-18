@@ -69,7 +69,7 @@ const Home = () => {
                 </StyledHeroDescriptionDesktop>
               </div>
               <CallToActionButton
-                variant="secondary"
+                variant="primary"
                 onClick={() => router.push("/contactus")}
               >
                 Discuss Your Project
@@ -177,7 +177,7 @@ const Home = () => {
                 of a fantastic team.
               </StyledHeroDescription>
               <CallToActionButton
-                variant="secondary"
+                variant="primary"
                 onClick={() => router.push("/contactus")}
               >
                 Discuss Your Project
