@@ -71,7 +71,7 @@ export const StyledHeroTitle = styled.div`
   text-align: center;
   font: normal normal bold 32px/42px Baloo;
   letter-spacing: 0px;
-  color: ${colours.white};
+  color: ${colours.black};
   margin-top: 2rem;
 `;
 
