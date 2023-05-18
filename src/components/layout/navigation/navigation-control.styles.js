@@ -19,17 +19,19 @@ export const StyledNav = styled.div`
   text-align: left;
   font: normal normal normal 20px/26px Baloo;
   letter-spacing: 0px;
-  color: ${(props) => (props.active ? colours.pink : colours.white)};
-  color: ${colours.white};
+  color: ${(props) => (props.active ? colours.black : colours.pink)};
+  color: ${colours.black};
   text-transform: capitalize;
   margin: 0 1rem;
   padding: 0.25rem;
-  border-color: ${(props) => (props.active ? colours.pink : colours.white)};
+  border-color: ${(props) => (props.active ? colours.black : colours.pink)};
 
   &:hover {
     color: ${colours.pink};
-    animation-name: example;
+    ${
+      "" /* animation-name: example;
     animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
+    }
   }
 `;

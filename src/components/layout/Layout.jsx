@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
             <StyledNavigationContainer>
               <NavigationControl />
               <CallToActionButton
-                animate={true}
-                variant="secondary"
+                animate={false}
+                variant="primary"
                 onClick={() => router.push("/contactus")}
               >
                 Get in Touch

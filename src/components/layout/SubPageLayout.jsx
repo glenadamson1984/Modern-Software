@@ -9,7 +9,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: ${colours.offWhite} 0 0 no-repeat padding-box;
+  background: ${colours.white} 0 0 no-repeat padding-box;
   opacity: 1;
   color: ${colours.black};
 `;

@@ -54,7 +54,7 @@ const Services = () => {
   return (
     <SubPageLayout subTitle={"What we do"}>
       {servicesData?.map((item, index) => (
-        <div key={index} className="grid gap-20 mt-40">
+        <div key={index} className="grid gap-20">
           <div className="case-study u-pad-bottom-x3 u-pad-bottom-x4@m u-pad-bottom-x5@l">
             <div className="o-wrap">
               <div className="c-card +default +featured">

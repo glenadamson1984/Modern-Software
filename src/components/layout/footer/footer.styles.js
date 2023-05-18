@@ -14,6 +14,7 @@ export const StyledContainer = styled.div`
 export const StyledSubTitle = styled.div`
   padding: 2rem 0;
   font: normal normal medium 20px/26px Baloo;
+  color: ${colours.white};
 `;
 
 export const StyledLinks = styled.div`
@@ -61,6 +62,7 @@ export const StyledLogoTitle = styled.div`
 
 export const StyledContainerDesktop = styled.div`
   position: relative;
+  background-color: ${colours.green};
 `;
 
 export const StyledBackgroundImageDesktop = styled.div`
@@ -71,7 +73,7 @@ export const StyledBackgroundImageDesktop = styled.div`
 export const StyledFooterContentContainerDesktop = styled.div`
   display: flex;
   flex-direction: column;
-
+  color: ${colours.green};
   ${media.forDesktop} {
     padding: 1rem 8rem 0 8rem;
   }
@@ -102,6 +104,7 @@ export const StyledFooterContentSocialsRowDesktop = styled.div`
 export const StyledNormalFontContainerDesktop = styled.div`
   position: relative;
   font: normal normal normal 18px/24px Baloo;
+  color: ${colours.white};
 `;
 
 export const StyledContactUsContainerDesktop = styled.div`

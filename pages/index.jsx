@@ -54,12 +54,20 @@ const Home = () => {
                 <StyledHeroTitleRed> Modern Companies</StyledHeroTitleRed>
               </StyledHeroDesktop>
               <StyledHeroDescriptionDesktop>
-                {`Transform your ideas into reality. At Modern Software, we
+                {`Transform your ideas into reality.`}
+              </StyledHeroDescriptionDesktop>
+              <StyledHeroDescriptionDesktop>
+                {`At Modern Software, we
                 specialize in creating unique, tailored software to help your
-                business stand out from the competition. With our expert team
+                business stand out from the competition.`}
+              </StyledHeroDescriptionDesktop>
+              <div style={{ marginBottom: "2rem" }}>
+                <StyledHeroDescriptionDesktop>
+                  {`With our expert team
                 and cutting-edge technology, we'll bring your vision to life.
                 Contact us today to get started!`}
-              </StyledHeroDescriptionDesktop>
+                </StyledHeroDescriptionDesktop>
+              </div>
               <CallToActionButton
                 variant="secondary"
                 onClick={() => router.push("/contactus")}
@@ -148,8 +156,8 @@ const Home = () => {
               <Image
                 src="/images/Logo/ModernSoftware.png"
                 alt="Modern Software"
-                width={600}
-                height={450}
+                width={150}
+                height={112.5}
                 layout="fill"
                 position="absolute"
                 objectFit="contain"

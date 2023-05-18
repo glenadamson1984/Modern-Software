@@ -98,6 +98,7 @@ export const StyledHeroDesktop = styled.div`
   font: normal normal bold 60px/79px Baloo;
   letter-spacing: 0px;
   opacity: 1;
+  color: ${colours.black};
 `;
 
 export const StyledHeroTitleRed = styled.span`
@@ -115,18 +116,18 @@ export const StyledHeroDescription = styled.div`
 
 export const StyledHeroDescriptionDesktop = styled.div`
   text-align: left;
-  font: normal normal normal 18px/30px Baloo;
+  font: normal normal normal 22px/30px Baloo;
   letter-spacing: 0px;
-  color: #ffffff;
+  color: ${colours.black};
   opacity: 1;
-  margin: 2rem 0;
+  margin-top: 2rem;
 `;
 
 export const StyledOurServicesDescriptionDesktop = styled.div`
   text-align: center;
   font: normal normal normal 18px/30px Baloo;
   letter-spacing: 0px;
-  color: #bfbfbf;
+  color: ${colours.black};
   opacity: 1;
 
   ${media.forDesktop} {

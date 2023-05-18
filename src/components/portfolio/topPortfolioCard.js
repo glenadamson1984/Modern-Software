@@ -40,7 +40,7 @@ const TopPortfolioCard = () => {
   return (
     <>
       {Object.keys(topPortfolioData)?.length > 0 && (
-        <div className="grid gap-20 mt-40">
+        <div className="grid gap-20">
           <div className="case-study u-pad-bottom-x3 u-pad-bottom-x4@m u-pad-bottom-x5@l">
             <div className="o-wrap">
               <div className="c-card +default +featured">

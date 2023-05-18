@@ -16,8 +16,8 @@ const Pricing = () => {
       </StyledSubHeader>
 
       {isDesktop ? (
-        <div className="flex justify-center px-10 py-24 bg-white">
-          <div className="flex flex-col items-center justify-center w-4/5 rounded bg-green">
+        <div className="flex justify-center px-20 pb-24 bg-white">
+          <div className="flex flex-col items-center justify-center w-full rounded bg-green">
             <div
               className="pt-10"
               style={{ font: "normal normal normal 36px/36px Baloo" }}
