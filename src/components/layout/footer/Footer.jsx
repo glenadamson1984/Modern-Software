@@ -49,7 +49,7 @@ const Footer = () => {
       {/*    </StyledOfficeLocationContainer>*/}
       {/*    <div*/}
       {/*      style={{*/}
-      {/*        font: "normal normal normal 16px/26px Baloo",*/}
+      {/*        font: "normal normal normal 16px/26px Inter",*/}
       {/*        color: "#FFFFFF",*/}
       {/*      }}*/}
       {/*    >*/}
@@ -67,7 +67,7 @@ const Footer = () => {
       {/*    </div>*/}
       {/*    <div*/}
       {/*      style={{*/}
-      {/*        font: "normal normal normal 16px/26px Baloo",*/}
+      {/*        font: "normal normal normal 16px/26px Inter",*/}
       {/*        paddingTop: "1rem",*/}
       {/*        color: "#FFFFFF",*/}
       {/*      }}*/}
@@ -88,7 +88,7 @@ const Footer = () => {
 
       {/*    <div*/}
       {/*      style={{*/}
-      {/*        font: "normal normal normal 16px/26px Baloo",*/}
+      {/*        font: "normal normal normal 16px/26px Inter",*/}
       {/*        color: "#FFFFFF",*/}
       {/*      }}*/}
       {/*    >*/}
@@ -106,7 +106,7 @@ const Footer = () => {
       {/*    </div>*/}
       {/*    <div*/}
       {/*      style={{*/}
-      {/*        font: "normal normal normal 16px/26px Baloo",*/}
+      {/*        font: "normal normal normal 16px/26px Inter",*/}
       {/*        paddingTop: "1rem",*/}
       {/*        color: "#FFFFFF",*/}
       {/*      }}*/}
@@ -160,7 +160,7 @@ const Footer = () => {
       {/*<div>contact privacy notice cookie policy</div>*/}
       <div
         style={{
-          font: "normal normal normal 16px/21px Baloo",
+          font: "normal normal normal 16px/21px Inter",
           color: "#FFFFFF",
         }}
       >

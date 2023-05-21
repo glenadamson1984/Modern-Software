@@ -37,7 +37,7 @@ export const StyledCard = styled.div`
 `;
 export const StyledTitle = styled.div`
   text-align: center;
-  font: normal normal bold 28px/28px Baloo;
+  font: normal normal bold 28px/28px Inter;
   letter-spacing: 0px;
   color: ${colours.pink};
   padding-bottom: 1rem;

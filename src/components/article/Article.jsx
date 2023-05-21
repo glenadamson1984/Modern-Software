@@ -20,22 +20,22 @@ const Article = ({
     return (
       <div className="pb-10">
         {headline && (
-          <div className="font-baloo text-pink text-4xl pt-16 sm:pt-8 px-6 font-thin sm:flex-1">
+          <div className="font-Inter text-pink text-4xl pt-16 sm:pt-8 px-6 font-thin sm:flex-1">
             {headline}
           </div>
         )}
         {sentence1 && (
-          <div className="font-baloo text-xl pt-16 sm:pt-8 px-6 font-thin">
+          <div className="font-Inter text-xl pt-16 sm:pt-8 px-6 font-thin">
             {sentence1}
           </div>
         )}
         {sentence2 && (
-          <div className="font-baloo text-xl pt-16 px-6 font-thin">
+          <div className="font-Inter text-xl pt-16 px-6 font-thin">
             {sentence2}
           </div>
         )}
         {sentence3 && (
-          <div className="font-baloo  text-xl pt-16 px-6 font-thin">
+          <div className="font-Inter  text-xl pt-16 px-6 font-thin">
             {sentence3}
           </div>
         )}
@@ -52,7 +52,7 @@ const Article = ({
           </div>
         )}
         {sentence4 && (
-          <div className="font-baloo text-xl pt-16 px-6 font-thin">
+          <div className="font-Inter text-xl pt-16 px-6 font-thin">
             {sentence4}
           </div>
         )}
@@ -65,7 +65,7 @@ const Article = ({
     <div className="flex flex-row items-center pb-10">
       <div className="flex-1 flex-col pl-20">
         {headline && headlinePosition === "left" && (
-          <div className="font-baloo text-pink text-4xl pt-8 px-6 font-thin ">
+          <div className="font-Inter text-pink text-4xl pt-8 px-6 font-thin ">
             {headline}
           </div>
         )}
@@ -83,16 +83,16 @@ const Article = ({
         )}
         {imagePosition !== "left" && (
           <>
-            <div className="font-baloo text-xl pt-16 sm:pt-8 px-6 font-thin ">
+            <div className="font-Inter text-xl pt-16 sm:pt-8 px-6 font-thin ">
               {sentence1}
             </div>
-            <div className="font-baloo text-xl pt-8 px-6 font-thin">
+            <div className="font-Inter text-xl pt-8 px-6 font-thin">
               {sentence2}
             </div>
-            <div className="font-baloo  text-xl pt-8 px-6 font-thin">
+            <div className="font-Inter  text-xl pt-8 px-6 font-thin">
               {sentence3}
             </div>
-            <div className="font-baloo text-xl pt-8 px-6 font-thin">
+            <div className="font-Inter text-xl pt-8 px-6 font-thin">
               {sentence4}
             </div>
           </>
@@ -101,7 +101,7 @@ const Article = ({
 
       <div className="flex flex-col flex-1 pr-20">
         {headline && headlinePosition === "right" && (
-          <div className="font-baloo text-pink text-4xl pt-8 px-6 font-thin ">
+          <div className="font-Inter text-pink text-4xl pt-8 px-6 font-thin ">
             {headline}
           </div>
         )}
@@ -119,16 +119,16 @@ const Article = ({
         )}
         {imagePosition !== "right" && (
           <>
-            <div className="font-baloo text-xl pt-16 sm:pt-8 px-6 font-thin ">
+            <div className="font-Inter text-xl pt-16 sm:pt-8 px-6 font-thin ">
               {sentence1}
             </div>
-            <div className="font-baloo text-xl pt-8 px-6 font-thin">
+            <div className="font-Inter text-xl pt-8 px-6 font-thin">
               {sentence2}
             </div>
-            <div className="font-baloo  text-xl pt-8 px-6 font-thin">
+            <div className="font-Inter  text-xl pt-8 px-6 font-thin">
               {sentence3}
             </div>
-            <div className="font-baloo text-xl pt-8 px-6 font-thin">
+            <div className="font-Inter text-xl pt-8 px-6 font-thin">
               {sentence4}
             </div>
           </>

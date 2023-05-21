@@ -20,7 +20,7 @@ const StyledCallToAction = styled.div`
 
 const StyledCallToActionText = styled.div`
   text-align: center;
-  font: normal normal medium 20px/26px Baloo;
+  font: normal normal medium 20px/26px Inter;
   font-weight: bold;
   font-size: 20px;
   padding: 0 1rem;

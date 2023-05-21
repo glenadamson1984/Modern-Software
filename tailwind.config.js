@@ -17,7 +17,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      baloo: ["Baloo"],
+      Inter: ["Inter"],
     },
     colors: {
       white: "#fff",

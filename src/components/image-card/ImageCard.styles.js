@@ -3,7 +3,7 @@ import { colours } from "../../utils/style.utils";
 
 export const StyledTitle = styled.div`
   text-align: center;
-  font: normal normal bold 28px/28px Baloo;
+  font: normal normal bold 28px/28px Inter;
   letter-spacing: 0px;
   color: ${colours.pink};
 `;
@@ -12,7 +12,7 @@ export const StyledDescription = styled.div`
   padding: 0.5rem;
   margin: ${(props) => (props.isDesktop ? "5rem" : "0")};
   text-align: center;
-  font: normal normal normal 22px/22px Baloo;
+  font: normal normal normal 22px/22px Inter;
   letter-spacing: 0px;
   color: ${colours.black};
 `;
