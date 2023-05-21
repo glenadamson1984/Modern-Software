@@ -19,7 +19,7 @@ const About = () => {
         sentence2="The alternative bespoke solutions we see are usually rushed to the market to meet the pricing model agreed up front."
         sentence3="Modern Software changes all of this. We believe in agile and in co-operation."
         sentence4="Feel free to check out of brochure below."
-        imageUrl="/images/colab.jpg"
+        imageUrl="/images/business_deal.jpg"
         imageAlt="We work better together"
         imageHeight={400}
         imageWidth={400}
