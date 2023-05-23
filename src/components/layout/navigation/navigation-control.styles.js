@@ -17,7 +17,7 @@ export const StyledNav = styled.div`
   }
 
   text-align: left;
-  font: normal normal normal 20px/26px Inter;
+  font: bold normal normal 20px/26px Inter;
   letter-spacing: 0px;
   color: ${(props) => (props.active ? colours.black : colours.pink)};
   color: ${colours.black};

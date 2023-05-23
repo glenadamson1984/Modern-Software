@@ -20,28 +20,24 @@ const Article = ({
     return (
       <div className="pb-10">
         {headline && (
-          <div className="font-Inter text-pink text-4xl pt-16 sm:pt-8 px-6 font-thin sm:flex-1">
+          <div className="px-6 pt-16 text-4xl font-Inter text-pink sm:pt-8 sm:flex-1">
             {headline}
           </div>
         )}
         {sentence1 && (
-          <div className="font-Inter text-xl pt-16 sm:pt-8 px-6 font-thin">
+          <div className="px-6 pt-16 text-xl font-Inter sm:pt-8 ">
             {sentence1}
           </div>
         )}
         {sentence2 && (
-          <div className="font-Inter text-xl pt-16 px-6 font-thin">
-            {sentence2}
-          </div>
+          <div className="px-6 pt-16 text-xl font-Inter ">{sentence2}</div>
         )}
         {sentence3 && (
-          <div className="font-Inter  text-xl pt-16 px-6 font-thin">
-            {sentence3}
-          </div>
+          <div className="px-6 pt-16 text-xl font-Inter ">{sentence3}</div>
         )}
         {imageUrl && (
-          <div className="flex w-screen justify-center py-10">
-            <div className="relative overflow-hidden w-96 h-96 rounded-full">
+          <div className="flex justify-center w-screen py-10">
+            <div className="relative overflow-hidden rounded-full w-96 h-96">
               <Image
                 src={imageUrl}
                 alt={imageAlt}
@@ -52,9 +48,7 @@ const Article = ({
           </div>
         )}
         {sentence4 && (
-          <div className="font-Inter text-xl pt-16 px-6 font-thin">
-            {sentence4}
-          </div>
+          <div className="px-6 pt-16 text-xl font-Inter ">{sentence4}</div>
         )}
         {children}
       </div>
@@ -63,15 +57,15 @@ const Article = ({
 
   return (
     <div className="flex flex-row items-center pb-10">
-      <div className="flex-1 flex-col pl-20">
+      <div className="flex-col flex-1 pl-20">
         {headline && headlinePosition === "left" && (
-          <div className="font-Inter text-pink text-4xl pt-8 px-6 font-thin ">
+          <div className="px-6 pt-8 text-4xl font-Inter text-pink ">
             {headline}
           </div>
         )}
         {imagePosition === "left" && (
-          <div className="flex flex-1 justify-center pt-16 px-6">
-            <div className="relative overflow-hidden w-96 h-96 rounded-full hover:animate-zoom">
+          <div className="flex justify-center flex-1 px-6 pt-16">
+            <div className="relative overflow-hidden rounded-full w-96 h-96 hover:animate-zoom">
               <Image
                 src={imageUrl}
                 alt={imageAlt}
@@ -83,31 +77,25 @@ const Article = ({
         )}
         {imagePosition !== "left" && (
           <>
-            <div className="font-Inter text-xl pt-16 sm:pt-8 px-6 font-thin ">
+            <div className="px-6 pt-16 text-xl font-Inter sm:pt-8 ">
               {sentence1}
             </div>
-            <div className="font-Inter text-xl pt-8 px-6 font-thin">
-              {sentence2}
-            </div>
-            <div className="font-Inter  text-xl pt-8 px-6 font-thin">
-              {sentence3}
-            </div>
-            <div className="font-Inter text-xl pt-8 px-6 font-thin">
-              {sentence4}
-            </div>
+            <div className="px-6 pt-8 text-xl font-Inter ">{sentence2}</div>
+            <div className="px-6 pt-8 text-xl font-Inter ">{sentence3}</div>
+            <div className="px-6 pt-8 text-xl font-Inter ">{sentence4}</div>
           </>
         )}
       </div>
 
       <div className="flex flex-col flex-1 pr-20">
         {headline && headlinePosition === "right" && (
-          <div className="font-Inter text-pink text-4xl pt-8 px-6 font-thin ">
+          <div className="px-6 pt-8 text-4xl font-Inter text-pink ">
             {headline}
           </div>
         )}
         {imagePosition === "right" && (
-          <div className="flex flex-1 justify-center pt-16 px-6">
-            <div className="relative overflow-hidden w-96 h-96 rounded-full hover:animate-zoom">
+          <div className="flex justify-center flex-1 px-6 pt-16">
+            <div className="relative overflow-hidden rounded-full w-96 h-96 hover:animate-zoom">
               <Image
                 src={imageUrl}
                 alt={imageAlt}
@@ -119,18 +107,12 @@ const Article = ({
         )}
         {imagePosition !== "right" && (
           <>
-            <div className="font-Inter text-xl pt-16 sm:pt-8 px-6 font-thin ">
+            <div className="px-6 pt-16 text-xl font-Inter sm:pt-8 ">
               {sentence1}
             </div>
-            <div className="font-Inter text-xl pt-8 px-6 font-thin">
-              {sentence2}
-            </div>
-            <div className="font-Inter  text-xl pt-8 px-6 font-thin">
-              {sentence3}
-            </div>
-            <div className="font-Inter text-xl pt-8 px-6 font-thin">
-              {sentence4}
-            </div>
+            <div className="px-6 pt-8 text-xl font-Inter ">{sentence2}</div>
+            <div className="px-6 pt-8 text-xl font-Inter ">{sentence3}</div>
+            <div className="px-6 pt-8 text-xl font-Inter ">{sentence4}</div>
           </>
         )}
         {children}
