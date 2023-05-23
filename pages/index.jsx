@@ -156,7 +156,13 @@ const Home = () => {
       ) : (
         <>
           <div style={{ position: "relative" }}>
-            <video autoPlay muted loop src="/assets/coder.mp4"></video>
+            <video
+              playsInline
+              autoPlay
+              muted
+              loop
+              src="/assets/coder.mp4"
+            ></video>
           </div>
           <StyledHeroBackground isDesktop={false}>
             <StyledHeroContainer isDesktop={false}>
