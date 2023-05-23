@@ -155,18 +155,10 @@ const Home = () => {
         </>
       ) : (
         <>
+          <div style={{ position: "relative" }}>
+            <video autoPlay muted loop src="/assets/coder.mp4"></video>
+          </div>
           <StyledHeroBackground isDesktop={false}>
-            <StyledNinjaContainer>
-              <Image
-                src="/images/Logo/ModernSoftware.png"
-                alt="Modern Software"
-                width={150}
-                height={112.5}
-                layout="fill"
-                position="absolute"
-                objectFit="contain"
-              />
-            </StyledNinjaContainer>
             <StyledHeroContainer isDesktop={false}>
               <StyledRedLine isDesktop={false} />
               <StyledHeroTitle>
@@ -187,6 +179,17 @@ const Home = () => {
                 Discuss Your Project
               </CallToActionButton>
             </StyledHeroContainer>
+            <StyledNinjaContainer>
+              <Image
+                src="/images/Logo/ModernSoftware.png"
+                alt="Modern Software"
+                width={150}
+                height={112.5}
+                layout="fill"
+                position="absolute"
+                objectFit="contain"
+              />
+            </StyledNinjaContainer>
           </StyledHeroBackground>
           <StyledOurServicesContainer isDesktop={false}>
             <StyledOurServicesTitle>
