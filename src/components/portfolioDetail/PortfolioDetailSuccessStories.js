@@ -1,7 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const PortfolioDetailSuccessStories = (props) => {
+  const { checkIsDesktop } = useWindowSize();
+  const isDesktop = checkIsDesktop();
   return (
     <div
       className="u-pad-top-x3 u-pad-top-x4@m u-pad-top-x5@l u-fill-white  u-pad-bottom-x3 "
@@ -32,7 +35,7 @@ const PortfolioDetailSuccessStories = (props) => {
                           href={`/portfolio/${item.id}`}
                         >{`${item?.attributes?.title}`}</Link>
                       </h2>
-                      {`${item?.attributes?.description}`}
+                      {isDesktop && `${item?.attributes?.description}`}
                     </div>
                   </div>
                 </div>

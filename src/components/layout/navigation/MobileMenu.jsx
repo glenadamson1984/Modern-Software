@@ -15,8 +15,12 @@ const MobileMenu = ({ showMenu, onMenuClick }) => {
   const router = useRouter();
 
   const navigateToPath = (path) => {
+    console.log(path);
+
+    console.log(path === "Home" ? "/" : ConvertPathNameToURL(path));
+
     router
-      .push(path === "Home" ? "/" : ConvertPathNameToURL(path))
+      .push(path === "Home" ? "/" : `/${ConvertPathNameToURL(path)}`)
       .then(onMenuClick(!showMenu));
   };
 
