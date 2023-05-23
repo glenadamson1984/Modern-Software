@@ -35,6 +35,10 @@ const Home = () => {
     <>
       {isDesktop ? (
         <>
+          <div style={{ position: "relative" }}>
+            <video autoPlay muted loop src="/assets/coder.mp4"></video>
+          </div>
+
           <StyledHeroBackground isDesktop={true}>
             <StyledNinjaContainerDesktop>
               <Image
