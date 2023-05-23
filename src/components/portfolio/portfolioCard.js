@@ -86,7 +86,7 @@ const PortfolioCard = () => {
               setPage(page + 1);
             }}
           >
-            see more
+            See More
           </CallToActionButton>
         </div>
       )}
