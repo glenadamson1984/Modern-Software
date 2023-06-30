@@ -31,12 +31,6 @@ const Pricing = () => {
             integrity, and delivering exceptional results.
           </div> */}
           <div className="flex flex-col items-center justify-center w-full rounded bg-green">
-            {/* <div
-              className="pt-10"
-              style={{ font: "normal normal normal 36px/36px Inter" }}
-            >
-              Pricing Model
-            </div> */}
             <div
               className="p-10"
               style={{ font: "normal normal normal 18px/18px Inter" }}

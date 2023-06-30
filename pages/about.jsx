@@ -3,6 +3,21 @@ import SubPageLayout from "../src/components/layout/SubPageLayout";
 import useWindowSize from "../src/hooks/useWindowSize";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 import Article from "../src/components/article/Article";
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+  background-color: #666;
+  border: medium none;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  left: 0;
+  margin: 0 auto;
+  padding: 8px 16px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+`;
 
 const About = () => {
   const { checkIsDesktop } = useWindowSize();
@@ -10,6 +25,15 @@ const About = () => {
 
   return (
     <SubPageLayout subTitle="Who are we?">
+      <div
+        style={{
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <video src="/assets/about.mp4" controls></video>
+      </div>
       <Article
         isDesktop={isDesktop}
         headline="Modern Software was established in 2021 with the aim to provide modern software solutions to everyday businesses."

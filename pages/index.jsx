@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useWindowSize from "../src/hooks/useWindowSize";
 import Image from "next/image";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
@@ -25,6 +25,7 @@ import {
   StyledServiceRow,
   StyledServiceRowDesktop,
 } from "../page-styles/index.styles";
+import ReactPlayer from "react-player";
 
 const Home = () => {
   const { checkIsDesktop } = useWindowSize();
@@ -35,8 +36,14 @@ const Home = () => {
     <>
       {isDesktop ? (
         <>
-          <div style={{ position: "relative" }}>
-            <video autoPlay muted loop src="/assets/coder.mp4"></video>
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <video autoPlay muted loop src="/assets/about.mp4"></video>
           </div>
 
           <StyledHeroBackground isDesktop={true}>
@@ -158,10 +165,10 @@ const Home = () => {
           <div style={{ position: "relative" }}>
             <video
               playsInline
-              autoPlay
               muted
+              autoPlay
               loop
-              src="/assets/coder.mp4"
+              src="/assets/about.mp4"
             ></video>
           </div>
           <StyledHeroBackground isDesktop={false}>
