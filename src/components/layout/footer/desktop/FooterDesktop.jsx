@@ -64,37 +64,36 @@ const FooterDesktop = () => {
               </StyledNormalFontContainerDesktop>
             </div>
           </StyledContactUsContainerDesktop>
-          {/*<StyledContactUsContainerDesktop>*/}
-          {/*  <StyledOfficeLocationContainer>*/}
-          {/*    Northern Ireland*/}
-          {/*  </StyledOfficeLocationContainer>*/}
-          {/*  <StyledAddressContainerDesktop>*/}
-          {/*    <Image*/}
-          {/*      src="/images/map-pin.png"*/}
-          {/*      alt="Modern Software"*/}
-          {/*      width={20}*/}
-          {/*      height={20}*/}
-          {/*    />*/}
-          {/*    1 Lisnagrilly Manor*/}
-          {/*    <div style={{ paddingLeft: "20px" }}>Portadown</div>*/}
-          {/*    <div style={{ paddingLeft: "20px" }}>Craigavon</div>*/}
-          {/*    <div style={{ paddingLeft: "20px" }}>Co. Armagh</div>*/}
-          {/*    <div style={{ paddingLeft: "20px" }}>BT63 5ZX</div>*/}
-          {/*  </StyledAddressContainerDesktop>*/}
-          {/*  <StyledAddressContainerDesktop*/}
-          {/*    style={{*/}
-          {/*      paddingTop: "1rem",*/}
-          {/*    }}*/}
-          {/*  >*/}
-          {/*    <Image*/}
-          {/*      src="/images/phone.png"*/}
-          {/*      alt="Modern Software"*/}
-          {/*      width={20}*/}
-          {/*      height={20}*/}
-          {/*    />*/}
-          {/*    02838334830*/}
-          {/*  </StyledAddressContainerDesktop>*/}
-          {/*</StyledContactUsContainerDesktop>*/}
+          <StyledContactUsContainerDesktop>
+            <StyledOfficeLocationContainer>
+              Northern Ireland
+            </StyledOfficeLocationContainer>
+            <StyledAddressContainerDesktop>
+              <Image
+                src="/images/map-pin.png"
+                alt="Modern Software"
+                width={20}
+                height={20}
+              />
+              43B Newry Street
+              <div style={{ paddingLeft: "20px" }}>Banbridge</div>
+              <div style={{ paddingLeft: "20px" }}>Co. Down</div>
+              <div style={{ paddingLeft: "20px" }}>BT32 3EA</div>
+            </StyledAddressContainerDesktop>
+            <StyledAddressContainerDesktop
+              style={{
+                paddingTop: "1rem",
+              }}
+            >
+              <Image
+                src="/images/phone.png"
+                alt="Modern Software"
+                width={20}
+                height={20}
+              />
+              02838334830
+            </StyledAddressContainerDesktop>
+          </StyledContactUsContainerDesktop>
           {/*<div style={{ display: "flex", flexDirection: "column" }}>*/}
           {/*  <StyledOfficeLocationContainer>*/}
           {/*    England*/}

@@ -16,7 +16,7 @@ const Logo = () => {
   return (
     <StyledLogo onClick={() => router.push("/")}>
       <Image
-        src="/images/Logo/logoonwhite.png"
+        src="/images/Logo/logoonwhite2.png"
         alt="Modern Software"
         width={355}
         height={112.5}
