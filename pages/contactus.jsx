@@ -179,7 +179,7 @@ const ContactUs = () => {
               </StyledContactDetailTypeTitle>
             </StyledContactDetailType>
             <StyledContactDetail>
-              <StyledContactDetailValue>07921568808</StyledContactDetailValue>
+              <StyledContactDetailValue>02838334830</StyledContactDetailValue>
             </StyledContactDetail>
 
             <StyledContactDetailType>
