@@ -1,0 +1,234 @@
+[
+  {
+    "id": 7,
+    "attributes": {
+      "title": "Terraquest",
+      "description": "We delivered a fully frontend service to help build out the new Northern Ireland Planning Portal suite of web applications. Due for release in 2023 - ReactJS, NextJS, StoryBook",
+      "priority": 1,
+      "short_description": "Mobile App Development, Native iOS Android Apps, Platform Integrations, UX/UI Design",
+      "what_challenge": "The planning permission website for Northern Ireland was in bad need of an update. The website looked old and worn and the database behind the scene took forever to load results. They wanted to modernise and be able to have advanced search capabilities and fast retrieval.",
+      "challenge_1": "Re-design the current portal to make it easily usable on both desktop and mobile.",
+      "challenge_2": "Speed up the database and allow for advanced searching.",
+      "solution_description": "A brand new solution using the best offerings from Azure as well as a robust database which could deliver on performance",
+      "result_discription": "The new app works perfectly on both desktop and mobile and the speed of data retrieval is making many people happy right now!",
+      "company_description": "TerraQuest has been established over 50 years and is a trusted organisation renowned for its expertise in providing innovative and cost-effective data management solutions to both the public and private sectors.",
+      "key_feature_description_1": "React",
+      "key_feature_description_2": "Azure",
+      "key_feature_description_3": "Responsiveness",
+      "image": {
+        "url": "/uploads/take2_9ea5249bf3.jpg"
+      },
+      "right_logo": {
+        "url": "/uploads/Terra_Quest_Logo_1024x338_118b2c40ca.png"
+      },
+      "solution_image_1": {
+        "url": "/uploads/Screenshot_2023_05_03_at_19_52_01_a7377f66d4.png"
+      },
+      "result_image": {
+        "url": "/uploads/Terra_Quest_Logo_1024x338_118b2c40ca.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/react_fa5544d3e6.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/azure_55dfe25990.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/responsiveness_2530412493.png"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "attributes": {
+      "title": "The Restaurant App",
+      "description": "Modern Software are currently working on an exciting new hospitality project. This is a 'first of it's kind' in this sector and will be available for operators to help facilitate consistent service and customer satisfaction.",
+      "priority": 2,
+      "short_description": "Mobile App Development, Native iOS Android Apps, Platform Integrations, UX/UI Design",
+      "what_challenge": "Seeking a software solution to help run their restaurant as effectively as possible",
+      "challenge_1": "Design an app that could aid both customer satisfaction. A customer who has to call the waiter or ask for something whilst seated takes away from the joy that comes with eater in that establishment.",
+      "challenge_2": "To build a project that helps keep the staff managed. No more confusion around table service leads to a more stress free experience for everyone involved.",
+      "solution_description": "We took a long time in discussions detailing the many problems a busy restaurant faces and with each problem we discussed in length the solution. Once finally detailed we produced multiple designs to choose from and worked together to choose the design that was the correct mix or style and function.",
+      "result_discription": "A more streamline process for both customers and staff. We are looking forward to seeing this app in action. Expected Summer 2023",
+      "company_description": "A fabulous restaurant near you!",
+      "key_feature_description_1": "Auto scaling NOSQL database",
+      "key_feature_description_2": "Amplify",
+      "key_feature_description_3": "Toggles and configurability",
+      "image": {
+        "url": "/uploads/VH_2_2945_2_scaled_2_4f1ca7a1b1.jpg"
+      },
+      "right_logo": {
+        "url": "/uploads/Screenshot_2023_04_14_at_15_59_40_0d4db04799.png"
+      },
+      "solution_image_1": {
+        "url": "/uploads/Screenshot_2023_04_14_at_09_11_43_1293a68a37.png"
+      },
+      "result_image": {
+        "url": "/uploads/j_D_Hdhz_A_9881950232.jpg"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/Screenshot_2023_04_14_at_09_16_16_7d67c0a74e.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/Screenshot_2023_04_14_at_09_15_48_f8d926fe56.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/key3_1d925dabfb.png"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "attributes": {
+      "title": "My Golf Buddy",
+      "description": "Generating leads can be difficult in a new business. We decided to check out Bark.com for potential clients. We found a client looking to build a golfing app. As keen golfers we decided to help and built out their entire UI via Figma.",
+      "priority": 7,
+      "short_description": "UX/UI Design",
+      "what_challenge": "A great idea at least for the social golfer, we needed to create a responsive design on a budget.",
+      "challenge_1": "Generate potential leads on bark.com and secure a client.",
+      "challenge_2": "Deliver a UI/UX design via Figma.",
+      "solution_description": "We worked with the client to capture his ideas and to be able to generate them into a responsive UI design.",
+      "result_discription": "A fully responsive UI / UX implementation",
+      "company_description": "Bark is a world-leading services marketplace with over 5m customers in 8 countries around the world.",
+      "key_feature_description_1": "Figma",
+      "key_feature_description_2": "Web",
+      "key_feature_description_3": "Mobile",
+      "image": {
+        "url": "/uploads/golfbuddy_077f2e0687.jpg"
+      },
+      "right_logo": {
+        "url": "/uploads/Screenshot_2023_05_03_at_20_57_57_ae42deaa2b.png"
+      },
+      "solution_image_1": {
+        "url": "/uploads/Screenshot_2023_05_03_at_21_04_24_d1de4249d3.png"
+      },
+      "result_image": null,
+      "key_feature_image_1": {
+        "url": "/uploads/figma_f0aca7e854.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/web_eceba8df23.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/mobile_bc1b394b4d.jpeg"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "attributes": {
+      "title": "Loughall Youth FC",
+      "description": "Due to the ever increasing popularity of Loughgall Youth F.C the administration to run the club was stopping them from spending the time where they needed it most. Following a few seasons of struggling with paper consent forms they approached use to fully automate this experience.",
+      "priority": 10,
+      "short_description": "Automation & Admin processing",
+      "what_challenge": "Each season at Loughall youth, the team have the tireless admin of collecting and processing data consent forms.",
+      "challenge_1": "Reduce Admin by automation of consent forms.",
+      "challenge_2": "Allow these consent forms to be completed via mobile, web or email.",
+      "solution_description": "Sometimes the biggest problems are solved with the smallest of fixes. Rather than build out an expensive system for our client we were able to achieve what they needed simply with the introduction of Google Forms.",
+      "result_discription": "The apps are delivering the most engaged audience across all Independent.ie digital platforms, with app users visiting more frequently.",
+      "company_description": "Independent.ie is the online publication for the Irish Independent, delivering both national and global news across various websites and app platforms.",
+      "key_feature_description_1": "Google Forms",
+      "key_feature_description_2": "Automation",
+      "key_feature_description_3": "Reduce Admin",
+      "image": {
+        "url": "/uploads/Screenshot_2023_05_04_at_09_43_36_fb8aad4706.png"
+      },
+      "right_logo": {
+        "url": "/uploads/Screenshot_2023_05_04_at_09_55_25_a0503079c1.png"
+      },
+      "solution_image_1": {
+        "url": "/uploads/edit_google_forms_05be6e9b9d53d1d1680b6ab56f4753b7_4d470f76dc99e18ad75087b1b8410ea9_5ee7ca81ee.png"
+      },
+      "result_image": {
+        "url": "/uploads/Screenshot_2023_05_04_at_09_55_25_a0503079c1.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/googleforms2_502101ba2d.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/automation_0acd9cabbf.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/admin_5e183b2ec7.png"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "attributes": {
+      "title": "Office Gadgets",
+      "description": "A shopify project to deliver a client with a store for dropshipping. We customised the theme, set up the content and hooked into the dropshipping providers for a quick and easy online store.",
+      "priority": 9,
+      "short_description": "Shopify, Dropshiping and custom Theme",
+      "what_challenge": "Our client wanted some help setting up a shopify store specialising in office equipment and gadgets.",
+      "challenge_1": "Configure a shopify store that matched the theme for the client.",
+      "challenge_2": "Set up dropshipping. For those unfamiliar with the concept of dropshipping. It is an order fulfillment method where a business doesn't keep the products it sells in stock.",
+      "solution_description": "A very simple solution that took less than a day to bring all the parts together. At Modern Software we work quickly and effectively.",
+      "result_discription": "A quick and effective store which connects to dropshipping suppliers and handles payments.",
+      "company_description": "Office gadgets is a small online store provided office gadgets and equipments to the UK market.",
+      "key_feature_description_1": "Shopify",
+      "key_feature_description_2": "Dropshipping",
+      "key_feature_description_3": "Payments",
+      "image": {
+        "url": "/uploads/officegadgets_f6ffc9ff49.png"
+      },
+      "right_logo": {
+        "url": "/uploads/Screenshot_2023_05_04_at_08_36_50_2e1e713b05.png"
+      },
+      "solution_image_1": {
+        "url": "/uploads/officegadgets_f6ffc9ff49.png"
+      },
+      "result_image": {
+        "url": "/uploads/Screenshot_2023_05_04_at_08_36_50_2e1e713b05.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/shopify_e87bd59c28.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/dropshipping_c2fb31d9cc.webp"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/payments_93a8402467.png"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "attributes": {
+      "title": "Sensoteq",
+      "description": "A full stack offering including Frontend and backend development. Consulting on scrum best practices to aid them in getting the best out of their agile processes.",
+      "priority": 5,
+      "short_description": "Mobile App Development, Native iOS Android Apps, Platform Integrations, Web development, Node.JS, Scrum Leadership",
+      "what_challenge": "The biggest challenge for Sensoteq was having good man power. Their company is rapidly growing as is the code base.",
+      "challenge_1": "Introduce a proper SCRUM process to their business.",
+      "challenge_2": "Add value to their very scientific code base and aid in the rollout of additional graphs and analysis",
+      "solution_description": "The solution was to discuss and implement a proper SCRUM process using modern tools such as JIRA and Planning Poker",
+      "result_discription": "This software was fantastic and continues to be with the addition of our contributions which is credit in itself.",
+      "company_description": "Sensoteq is a market leader in industrial wireless sensing for condition monitoring, promoting a highly innovative and boundaryless ethos.",
+      "key_feature_description_1": "JIRA",
+      "key_feature_description_2": "SCRUM",
+      "key_feature_description_3": "D3",
+      "image": {
+        "url": "/uploads/Screenshot_2023_05_03_at_20_16_29_2aac229d21.png"
+      },
+      "right_logo": {
+        "url": "/uploads/sensoteq_9a753d1970.webp"
+      },
+      "solution_image_1": {
+        "url": "/uploads/Screenshot_2023_05_03_at_20_20_43_f9e33513fd.png"
+      },
+      "result_image": {
+        "url": "/uploads/sensoteq_9a753d1970.webp"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/images_5b52359240.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/scrum_c25ee27d4e.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/d3_011dab137e.jpeg"
+      }
+    }
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "attributes": {
+      "title": "Custom Software Development",
+      "service_description": "Custom software development involves creating software solutions that are tailored to meet the specific needs of a business or organization. This process involves designing, developing, testing, and deploying software that is unique to the client's requirements. Custom software development is beneficial because it allows businesses to have software solutions that are specifically designed to fit their unique needs, workflows, and business processes.",
+      "service_image": {
+        "url": "/uploads/Modern_Software_2_Web_Application_Development_a1a6b873f3.jpg"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "attributes": {
+      "title": "Mobile App Development",
+      "service_description": "Mobile app development is the process of creating software applications that are designed to run on mobile devices such as smartphones and tablets. This type of development involves various stages including planning, designing, development, testing, and deployment. Mobile app development can be either native, which involves building apps for a specific mobile platform, or cross-platform, which enables the development of apps that can run on multiple platforms.",
+      "service_image": {
+        "url": "/uploads/Modern_Software_2_Mobile_App_Development_0cebbf7b2f.jpg"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "attributes": {
+      "title": "UX & UI Design Development",
+      "service_description": "UX (User Experience) and UI (User Interface) design development are essential elements in creating effective digital products. UX design involves creating a seamless user experience by ensuring that the product is easy to use, efficient, and enjoyable. The process includes conducting user research, creating user personas, and designing user flows to ensure that the user journey is intuitive and effective.",
+      "service_image": {
+        "url": "/uploads/Modern_Software_2_UX_UI_Design_Development_9516eec748.jpg"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "attributes": {
+      "title": "Web Application Development",
+      "service_description": "Web application development involves creating software applications that are accessed through a web browser, without requiring the user to download or install any software. The process of web application development involves designing, developing, testing, and deploying web-based software applications. Web applications can be designed for various purposes such as e-commerce, social networking, project management, and many others.",
+      "service_image": {
+        "url": "/uploads/Modern_Software_2_Custom_Software_Development_db015abfbc.jpg"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "attributes": {
+      "title": "Software Tuition",
+      "service_description": "Software tuition involves providing education and training to individuals or groups on how to use specific software applications effectively. This type of training can be delivered in various formats such as in-person, online, or through written tutorials. Software tuition can be customized to meet the specific needs of the learner and can cover basic to advanced features of the software.",
+      "service_image": {
+        "url": "/uploads/Modern_Software_2_Software_Tuition_3eb136a740.jpg"
+      }
+    }
+  }
+]

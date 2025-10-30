@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { toast } from "react-toastify";
+import React from "react";
 import { useRouter } from "next/router";
 import SubPageLayout from "../../src/components/layout/SubPageLayout";
 import useWindowSize from "../../src/hooks/useWindowSize";
+
+// ✅ ADD THIS: Import static data
+import servicesData from "../../data/services.json";
 
 const Detail = () => {
   const router = useRouter();
@@ -10,45 +12,32 @@ const Detail = () => {
   const isDesktop = checkIsDesktop();
 
   let { id } = router.query;
-  const [servicesData, setServicesData] = useState("");
 
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        let queryPrams = `populate=*`;
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/services/${id}?${queryPrams}`,
-          {
-            method: "GET",
-            headers: {
-              Accept: "application/json, text/plain, */*",
-              "Content-Type": "application/json",
-            },
-          }
-        );
+  // ✅ CHANGED: Find service by ID from static data
+  const serviceData = servicesData.find((s) => s.id === parseInt(id));
 
-        if (response.status === 200) {
-          const res = await response?.json();
-          setServicesData(res?.data);
-        }
-      } catch (e) {
-        toast.error("Please try again later.", { theme: "colored" });
-      }
-    };
+  // ❌ REMOVED: All this fetching logic
+  // const [servicesData, setServicesData] = useState("");
+  // useEffect(() => {
+  //   const fetchServices = async () => { ... };
+  //   fetchServices();
+  // }, [id]);
 
-    fetchServices();
-  }, [id]);
+  // Handle case where service doesn't exist
+  if (!serviceData) {
+    return <div>Service not found</div>;
+  }
 
   if (!isDesktop) {
     return (
       <SubPageLayout subTitle={"How we work?"}>
         <div className="pb-10">
           <div className="px-6 pt-16 text-4xl font-Inter text-pink sm:pt-8 sm:flex-1">
-            {servicesData?.attributes?.title}
+            {serviceData?.attributes?.title}
           </div>
 
           <div className="px-6 pt-16 text-xl font-Inter sm:pt-8">
-            {servicesData?.attributes?.service_description}
+            {serviceData?.attributes?.service_description}
           </div>
         </div>
         <div className="flex flex-row items-center pb-10">
@@ -127,10 +116,10 @@ const Detail = () => {
       <div className="flex flex-row items-center pb-10">
         <div className="flex-col flex-1 pl-20">
           <div className="px-6 pt-8 text-4xl font-Inter text-pink ">
-            {servicesData?.attributes?.title}
+            {serviceData?.attributes?.title}
           </div>
           <div className="px-6 pt-16 text-xl font-Inter sm:pt-8 ">
-            {servicesData?.attributes?.service_description}
+            {serviceData?.attributes?.service_description}
           </div>
         </div>
       </div>
@@ -204,4 +193,5 @@ const Detail = () => {
     </SubPageLayout>
   );
 };
+
 export default Detail;

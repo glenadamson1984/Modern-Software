@@ -22,10 +22,12 @@ const PortfolioDetailSuccessStories = (props) => {
                   <div className="c-card +stacked is-in-view">
                     <Link href={`/portfolio/${item.id}`}>
                       <div className="c-media-box">
+                        {/* ✅ CHANGED: Simplified image URL */}
                         <img
                           decoding="async"
                           className="ls-is-cached lazyloaded"
-                          src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${item?.attributes?.image?.data?.attributes?.url}`}
+                          src={item?.attributes?.image?.url}
+                          alt={item?.attributes?.title}
                         />
                       </div>
                     </Link>

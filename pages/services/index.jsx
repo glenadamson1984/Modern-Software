@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import { RemoveSlashFromURl } from "../../src/components/layout/navigation/NavigationPaths";
 import SubPageLayout from "../../src/components/layout/SubPageLayout";
@@ -7,8 +7,10 @@ import Image from "next/image";
 import styled from "styled-components";
 import { colours } from "../../src/utils/style.utils";
 import ServiceCard from "../../src/components/image-card/ServiceCard";
-import { toast } from "react-toastify";
 import CallToActionButton from "../../src/components/buttons/action/CallToActionButton";
+
+// ✅ ADD THIS: Import static data
+import servicesData from "../../data/services.json";
 
 export const StyledRow = styled.div`
   display: flex;
@@ -21,35 +23,16 @@ export const StyledRow = styled.div`
     display: flex;
   }
 `;
+
 const Services = () => {
   const { pathname } = useRouter();
-  const [servicesData, setServicesData] = useState([]);
 
-  useEffect(() => {
-    fetchServices();
-  }, []);
-
-  const fetchServices = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/services?populate=*`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (response.status === 200) {
-        const res = await response?.json();
-        setServicesData(res?.data);
-      }
-    } catch (e) {
-      toast.error("Please try again later.", { theme: "colored" });
-    }
-  };
+  // ❌ REMOVED: All this fetching logic
+  // const [servicesData, setServicesData] = useState([]);
+  // useEffect(() => {
+  //   fetchServices();
+  // }, []);
+  // const fetchServices = async () => { ... };
 
   return (
     <SubPageLayout subTitle={"What we do"}>
@@ -62,8 +45,12 @@ const Services = () => {
                   href={`/services/${item?.id}`}
                   className="c-media-box +offset"
                 >
-                  <img
-                    src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${item?.attributes?.service_image?.data?.attributes?.url}`}
+                  {/* ✅ CHANGED: Simplified image URL */}
+                  <Image
+                    src={item?.attributes?.service_image?.url}
+                    alt={item?.attributes?.title}
+                    width={800}
+                    height={600}
                   />
                 </a>
                 <div className="c-card__content +centered">
@@ -91,4 +78,5 @@ const Services = () => {
     </SubPageLayout>
   );
 };
+
 export default Services;

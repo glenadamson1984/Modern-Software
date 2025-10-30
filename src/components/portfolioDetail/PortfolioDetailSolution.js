@@ -19,10 +19,11 @@ const PortfolioDetailSolution = (props) => {
 
           <div className="wp-block-image">
             <figure className="aligncenter size-large">
+              {/* ✅ CHANGED: Simplified image URL */}
               <img
                 decoding="async"
                 alt="INM apps"
-                src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${props?.portfolioData?.attributes?.solution_image_1?.data?.attributes?.url}`}
+                src={props?.portfolioData?.attributes?.solution_image_1?.url}
               />
             </figure>
           </div>
@@ -69,10 +70,14 @@ const PortfolioDetailSolution = (props) => {
               <div className="grids-area grids-a-2ba1bad9-c3e4-4f3c-9406-d69424137fb8">
                 <div className="wp-block-image">
                   <figure className="aligncenter size-large">
+                    {/* ✅ CHANGED: Simplified image URL */}
                     <img
                       decoding="async"
                       className="wp-image-5223 ls-is-cached lazyloaded"
-                      src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${props?.portfolioData?.attributes?.key_feature_image_1?.data?.attributes?.url}`}
+                      src={
+                        props?.portfolioData?.attributes?.key_feature_image_1
+                          ?.url
+                      }
                     />
                   </figure>
                 </div>
@@ -83,10 +88,14 @@ const PortfolioDetailSolution = (props) => {
               <div className="grids-area grids-a-d8e319e4-ed8f-4d17-abd0-bd7b8a115645">
                 <div className="wp-block-image">
                   <figure className="aligncenter size-large">
+                    {/* ✅ CHANGED: Simplified image URL */}
                     <img
                       decoding="async"
                       alt="app notifications"
-                      src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${props?.portfolioData?.attributes?.key_feature_image_2?.data?.attributes?.url}`}
+                      src={
+                        props?.portfolioData?.attributes?.key_feature_image_2
+                          ?.url
+                      }
                     />
                   </figure>
                 </div>
@@ -100,9 +109,13 @@ const PortfolioDetailSolution = (props) => {
               <div className="grids-area grids-a-3849c978-6a06-4856-ab4e-a4c8628411ec">
                 <div className="wp-block-image">
                   <figure className="aligncenter size-large">
+                    {/* ✅ CHANGED: Simplified image URL */}
                     <img
                       decoding="async"
-                      src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${props?.portfolioData?.attributes?.key_feature_image_3?.data?.attributes?.url}`}
+                      src={
+                        props?.portfolioData?.attributes?.key_feature_image_3
+                          ?.url
+                      }
                     />
                   </figure>
                 </div>

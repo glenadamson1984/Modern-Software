@@ -1,45 +1,24 @@
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
-import { toast } from "react-toastify";
+import React from "react";
+
+// ✅ ADD THIS: Import static data
+import portfolioData from "../../../data/portfolio.json";
 
 const TopPortfolioCard = () => {
-  let apiCall = useRef();
+  // ✅ CHANGED: Find the top priority portfolio item (priority = 1)
+  const topPortfolioData = portfolioData.find(
+    (p) => p.attributes.priority === 1
+  );
 
-  const [topPortfolioData, setTopPortfolioData] = useState(Object);
-
-  useEffect(() => {
-    fetchTopPortfolio();
-  }, []);
-
-  const fetchTopPortfolio = async () => {
-    try {
-      let queryPrams = `populate=*&filters[priority][$eq]=1`;
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/portfolios?${queryPrams}`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (response.status === 200) {
-        const res = await response?.json();
-
-        console.log({ res });
-
-        setTopPortfolioData(res?.data[0]);
-      }
-    } catch (e) {
-      toast.error("Please try again later.", { theme: "colored" });
-    }
-  };
+  // ❌ REMOVED: All this fetching logic
+  // let apiCall = useRef();
+  // const [topPortfolioData, setTopPortfolioData] = useState(Object);
+  // useEffect(() => { fetchTopPortfolio(); }, []);
+  // const fetchTopPortfolio = async () => { ... };
 
   return (
     <>
-      {Object.keys(topPortfolioData)?.length > 0 && (
+      {topPortfolioData && (
         <div className="grid gap-20">
           <div className="case-study u-pad-bottom-x3 u-pad-bottom-x4@m u-pad-bottom-x5@l">
             <div className="o-wrap">
@@ -48,8 +27,10 @@ const TopPortfolioCard = () => {
                   href={`/portfolio/${topPortfolioData?.id}`}
                   className="c-media-box +offset"
                 >
+                  {/* ✅ CHANGED: Simplified image URL */}
                   <img
-                    src={`${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${topPortfolioData?.attributes?.image?.data?.attributes?.url}`}
+                    src={topPortfolioData?.attributes?.image?.url}
+                    alt={topPortfolioData?.attributes?.title}
                   />
                 </Link>
 
