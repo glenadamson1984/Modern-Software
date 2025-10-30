@@ -3,13 +3,11 @@ import { useRouter } from "next/router";
 import { RemoveSlashFromURl } from "../../src/components/layout/navigation/NavigationPaths";
 import SubPageLayout from "../../src/components/layout/SubPageLayout";
 import ImageCard from "../../src/components/image-card/ImageCard";
-import Image from "next/image";
 import styled from "styled-components";
 import { colours } from "../../src/utils/style.utils";
 import ServiceCard from "../../src/components/image-card/ServiceCard";
 import CallToActionButton from "../../src/components/buttons/action/CallToActionButton";
 
-// ✅ ADD THIS: Import static data
 import servicesData from "../../data/services.json";
 
 export const StyledRow = styled.div`
@@ -27,13 +25,6 @@ export const StyledRow = styled.div`
 const Services = () => {
   const { pathname } = useRouter();
 
-  // ❌ REMOVED: All this fetching logic
-  // const [servicesData, setServicesData] = useState([]);
-  // useEffect(() => {
-  //   fetchServices();
-  // }, []);
-  // const fetchServices = async () => { ... };
-
   return (
     <SubPageLayout subTitle={"What we do"}>
       {servicesData?.map((item, index) => (
@@ -45,12 +36,9 @@ const Services = () => {
                   href={`/services/${item?.id}`}
                   className="c-media-box +offset"
                 >
-                  {/* ✅ CHANGED: Simplified image URL */}
-                  <Image
+                  <img
                     src={item?.attributes?.service_image?.url}
                     alt={item?.attributes?.title}
-                    width={800}
-                    height={600}
                   />
                 </a>
                 <div className="c-card__content +centered">
@@ -62,9 +50,6 @@ const Services = () => {
                       {item?.attributes?.title}
                     </a>
                   </h2>
-                  {/* <p className="u-beta@m">
-                    {item?.attributes?.service_description}
-                  </p> */}
                   <p className="u-lighten">
                     Mobile App Development, Native iOS Android Apps, Platform
                     Integrations, UX/UI Design
