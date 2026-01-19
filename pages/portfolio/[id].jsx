@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import useWindowSize from "../../src/hooks/useWindowSize";
 import PortfolioDetailHeader from "../../src/components/portfolioDetail/PortfolioDetailHeader";
 import PortfolioDetailChallenge from "../../src/components/portfolioDetail/PortfolioDetailChallenge";
 import PortfolioDetailSolution from "../../src/components/portfolioDetail/PortfolioDetailSolution";
@@ -11,6 +12,8 @@ import allPortfolioData from "../../data/portfolio.json";
 
 const Detail = () => {
   const router = useRouter();
+  const { checkIsDesktop } = useWindowSize();
+  const isDesktop = checkIsDesktop();
   const { id } = router.query;
 
   const portfolioData = allPortfolioData.find((p) => p.id === parseInt(id));
@@ -33,7 +36,10 @@ const Detail = () => {
         canonicalUrl={`/portfolio/${id}`}
         ogImage={portfolioData?.attributes?.main_image || "/images/Modern Software-2_Custom Software Development.jpg"}
       />
-      <div className="casestudy-template-default single single-casestudy" style={{ marginTop: "-70px" }}>
+      <div 
+        className="casestudy-template-default single single-casestudy" 
+        style={{ marginTop: isDesktop ? "-70px" : "0" }}
+      >
         <div className="u-fill-site " style={{ backgroundColor: "#7bcda4" }}>
           <PortfolioDetailHeader portfolioData={portfolioData} />
           <div className="s-cms-content">
