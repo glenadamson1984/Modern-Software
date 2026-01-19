@@ -42,7 +42,7 @@ export const StyledServicesHeroContent = styled.div`
 export const StyledServicesHeroTitle = styled.h1.withConfig({
   shouldForwardProp: (prop) => prop !== "isDesktop",
 })`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "72px" : "48px")};
   line-height: 1.1;
   font-weight: 700;

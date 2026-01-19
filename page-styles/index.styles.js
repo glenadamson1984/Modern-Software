@@ -43,7 +43,7 @@ export const StyledHeroContainer = styled.div`
 `;
 
 export const StyledHeroTitle = styled.h1`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "72px" : "42px")};
   line-height: ${(props) => (props.isDesktop ? "1.1" : "1.2")};
   font-weight: 700;
@@ -147,7 +147,7 @@ export const StyledFeaturesContainer = styled.div`
 export const StyledSectionTitle = styled.h2.withConfig({
   shouldForwardProp: (prop) => prop !== "isDesktop" && prop !== "light",
 })`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "56px" : "36px")};
   line-height: 1.2;
   font-weight: 700;
@@ -223,7 +223,7 @@ export const StyledFeaturedWorkSection = styled.div`
 `;
 
 export const StyledFeaturedWorkTitle = styled.h2`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: 36px;
   line-height: 1.2;
   font-weight: 700;
@@ -369,7 +369,7 @@ export const StyledProcessStep = styled.div`
 `;
 
 export const StyledProcessNumber = styled.div`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: 700;
   color: ${colours.darkGreen};

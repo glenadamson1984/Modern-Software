@@ -15,7 +15,7 @@ export const StyledContactHeroContent = styled.div`
 `;
 
 export const StyledContactHeroTitle = styled.h1`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "64px" : "42px")};
   font-weight: 700;
   line-height: 1.2;
@@ -57,7 +57,7 @@ export const StyledContactForm = styled.div`
 `;
 
 export const StyledFormTitle = styled.h2`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "36px" : "28px")};
   font-weight: 700;
   color: ${colours.black};
@@ -149,7 +149,7 @@ export const StyledContactDetails = styled.div`
 `;
 
 export const StyledContactDetailsTitle = styled.h2`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "36px" : "28px")};
   font-weight: 700;
   color: ${colours.black};

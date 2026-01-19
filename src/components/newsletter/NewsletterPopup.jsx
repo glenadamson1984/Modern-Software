@@ -91,7 +91,7 @@ const StyledIconWrapper = styled.div`
 `;
 
 const StyledTitle = styled.h2`
-  font-family: "Baloo", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: ${colours.black};

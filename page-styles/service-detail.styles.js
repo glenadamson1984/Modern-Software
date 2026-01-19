@@ -18,7 +18,7 @@ export const StyledServiceDetailHeroContainer = styled.div`
 export const StyledServiceDetailTitle = styled.h1.withConfig({
   shouldForwardProp: (prop) => prop !== "isDesktop",
 })`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "56px" : "40px")};
   line-height: 1.2;
   font-weight: 700;
@@ -54,7 +54,7 @@ export const StyledHowWeWorkContainer = styled.div`
 export const StyledHowWeWorkTitle = styled.h2.withConfig({
   shouldForwardProp: (prop) => prop !== "isDesktop",
 })`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "48px" : "36px")};
   line-height: 1.2;
   font-weight: 700;

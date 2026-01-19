@@ -44,7 +44,7 @@ const StyledAboutHeroContent = styled.div`
 `;
 
 const StyledAboutHeroTitle = styled.h1`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "72px" : "48px")};
   line-height: 1.1;
   font-weight: 700;
@@ -80,7 +80,7 @@ const StyledAboutIntro = styled.div`
 `;
 
 const StyledAboutTitle = styled.h2`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "48px" : "36px")};
   font-weight: 700;
   color: ${colours.black};
@@ -208,7 +208,7 @@ const StyledAboutContentColumn = styled.div`
 const StyledAboutContentHeadline = styled.h2.withConfig({
   shouldForwardProp: (prop) => prop !== "isDesktop",
 })`
-  font-family: "Baloo", serif;
+  font-family: "Poppins", sans-serif;
   font-size: ${(props) => (props.isDesktop ? "42px" : "32px")};
   line-height: 1.2;
   font-weight: 700;
