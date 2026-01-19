@@ -57,9 +57,9 @@ const Portfolio = () => {
   return (
     <>
       <SEO
-        title="Our Portfolio - Modern Software | Case Studies & Projects"
-        description="Explore our portfolio of custom software solutions. From web applications to mobile apps, see how we've helped businesses transform their operations with modern technology."
-        keywords="portfolio, case studies, web applications, mobile apps, software projects, custom software examples, React projects, Next.js projects"
+        title="Portfolio - Website Design Projects Northern Ireland | Web Designer Portadown"
+        description="View our portfolio of website design and custom software projects for businesses across Northern Ireland. See how we've helped local businesses in Portadown, Banbridge, and beyond grow with professional websites."
+        keywords="website design portfolio Northern Ireland, web designer portfolio Portadown, web design projects NI, small business websites Northern Ireland, local web designer projects"
         canonicalUrl="/portfolio"
       />
       {/* Featured Work Hero Section */}

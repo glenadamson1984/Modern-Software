@@ -191,12 +191,14 @@ export const StyledProjectImage = styled.div.withConfig({
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   background: ${colours.lightGrey};
+  line-height: 0;
 
   img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
+    vertical-align: bottom;
   }
 `;
 

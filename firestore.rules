@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Leads collection - only authenticated users can read/write
+    match /leads/{leadId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Alternative: Restrict to specific user UID
+    // Replace YOUR_USER_UID with your actual Firebase Auth UID
+    // match /leads/{leadId} {
+    //   allow read, write: if request.auth != null && request.auth.uid == 'YOUR_USER_UID';
+    // }
+  }
+}

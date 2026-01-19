@@ -29,9 +29,9 @@ const Services = () => {
   return (
     <>
       <SEO
-        title="Our Services - Custom Software Development | Modern Software"
-        description="We offer comprehensive software development services including custom web applications, mobile app development, API integration, and cloud solutions. Tailored to your business needs."
-        keywords="software development services, web development, mobile app development, API integration, cloud solutions, custom software services"
+        title="Website Design Services Northern Ireland | Small Business Web Design NI"
+        description="Professional website design and development services for small businesses in Northern Ireland. Serving Portadown, Banbridge, Lurgan, Armagh, and Craigavon. Affordable web design, custom software, and business solutions."
+        keywords="website design services Northern Ireland, small business web design NI, web designer Portadown, web designer Banbridge, web designer Lurgan, affordable website design, custom software Northern Ireland, local web designer"
         canonicalUrl="/services"
       />
       {/* Services Hero Section */}

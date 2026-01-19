@@ -5,6 +5,7 @@ import CallToActionButton from "../src/components/buttons/action/CallToActionBut
 import { useRouter } from "next/router";
 import portfolioData from "../data/portfolio.json";
 import SEO from "../src/components/SEO";
+import { colours } from "../src/utils/style.utils";
 import {
   StyledHeroBackground,
   StyledHeroContainer,
@@ -38,11 +39,11 @@ import {
   StyledProjectImage,
   StyledProcessSection,
   StyledProcessContainer,
+  StyledProcessDescription,
   StyledProcessGrid,
   StyledProcessStep,
   StyledProcessNumber,
   StyledProcessTitle,
-  StyledProcessDescription,
 } from "../page-styles/index.styles";
 
 const Home = () => {
@@ -79,9 +80,9 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Modern Software - Custom Software Development | Northern Ireland"
-        description="Bespoke software solutions designed with intent. We build custom web applications, mobile apps, and business systems that remove friction and drive growth. Based in Northern Ireland."
-        keywords="custom software development, web applications, mobile app development, React, Next.js, .NET, AWS, Northern Ireland, bespoke software, business software solutions"
+        title="Web Designer Portadown | Website Designer Northern Ireland | Small Business Web Design NI"
+        description="Professional website design and custom software solutions for small businesses in Northern Ireland. Local web designer serving Portadown, Banbridge, Lurgan, Armagh, and Craigavon. Affordable web design for small businesses in NI."
+        keywords="web designer Portadown, website designer Northern Ireland, website designer Banbridge, website designer Armagh, website designer Craigavon, small business website NI, small business web design Northern Ireland, local business website designer, affordable website design NI, website for small business Northern Ireland, web designer Lurgan, custom software development Northern Ireland"
         canonicalUrl="/"
         structuredData={structuredData}
       />
@@ -109,10 +110,12 @@ const Home = () => {
         )}
         <StyledHeroContainer isDesktop={isDesktop}>
           <StyledHeroTitle isDesktop={isDesktop}>
-            Software, designed with intent.
+            Web Designer for Small Businesses in Northern Ireland
           </StyledHeroTitle>
           <StyledHeroDescription isDesktop={isDesktop}>
-            Bespoke business systems that remove friction and drive growth.
+            Professional website design and custom software solutions for small
+            businesses. Serving Portadown, Banbridge, Lurgan, Armagh, and
+            Craigavon. Help your business grow with a website that works.
           </StyledHeroDescription>
           <StyledHeroButtons>
             <CallToActionButton
@@ -328,8 +331,20 @@ const Home = () => {
         )}
         <StyledProcessContainer>
           <StyledSectionTitle isDesktop={isDesktop}>
-            Our Process
+            How We Help Small Businesses in Northern Ireland
           </StyledSectionTitle>
+          <StyledProcessDescription
+            isDesktop={isDesktop}
+            style={{
+              textAlign: "center",
+              marginBottom: "3rem",
+              color: colours.white,
+              opacity: 0.9,
+            }}
+          >
+            From Portadown to Banbridge, we work with local businesses across
+            Northern Ireland to create professional websites that drive growth.
+          </StyledProcessDescription>
           <StyledProcessGrid isDesktop={isDesktop}>
             <StyledProcessStep>
               <StyledProcessNumber>1</StyledProcessNumber>

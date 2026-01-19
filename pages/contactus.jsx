@@ -106,9 +106,9 @@ const ContactUs = () => {
   return (
     <>
       <SEO
-        title="Contact Us - Get In Touch | Modern Software"
-        description="Get in touch with Modern Software to discuss your custom software project. We're based in Northern Ireland and ready to help transform your business with modern technology."
-        keywords="contact Modern Software, get in touch, software development consultation, Northern Ireland software company"
+        title="Contact Us - Web Designer Portadown | Get a Quote for Your Website"
+        description="Get in touch with Modern Software for professional website design in Northern Ireland. Based in Northern Ireland, serving Portadown, Banbridge, Lurgan, Armagh, and Craigavon. Free consultation for small businesses."
+        keywords="contact web designer Portadown, get website quote Northern Ireland, small business web design consultation NI, local web designer contact, affordable website design quote"
         canonicalUrl="/contactus"
       />
       <ToastContainer />

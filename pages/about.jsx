@@ -290,6 +290,12 @@ const About = () => {
 
   return (
     <>
+      <SEO
+        title="About Us - Local Web Designer Northern Ireland | Website Designer Portadown"
+        description="Modern Software is a local website design company based in Northern Ireland, serving small businesses across Portadown, Banbridge, Lurgan, Armagh, and Craigavon. We help local businesses grow with professional, affordable websites."
+        keywords="local web designer Northern Ireland, website designer Portadown, small business web designer NI, about Modern Software, Northern Ireland web design company"
+        canonicalUrl="/about"
+      />
       {/* About Hero Section */}
       <StyledAboutHero isDesktop={isDesktop}>
         {isDesktop && (

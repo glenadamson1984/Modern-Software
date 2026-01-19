@@ -8,6 +8,7 @@ import {
   StyledContactInfo,
   StyledContactItem,
   StyledSectionTitle,
+  StyledSectionDescription,
 } from "../../../page-styles/index.styles";
 
 const ContactFooter = () => {
@@ -19,8 +20,21 @@ const ContactFooter = () => {
     <StyledContactSection isDesktop={isDesktop}>
       <StyledContactContainer>
         <StyledSectionTitle isDesktop={isDesktop} light>
-          Let&apos;s discuss your project
+          Need a Professional Website for Your Small Business?
         </StyledSectionTitle>
+        <StyledSectionDescription
+          isDesktop={isDesktop}
+          light
+          style={{
+            marginTop: "1rem",
+            fontSize: isDesktop ? "18px" : "16px",
+            opacity: 0.9,
+          }}
+        >
+          Serving businesses across Northern Ireland including Portadown,
+          Banbridge, Lurgan, Armagh, and Craigavon. Let&apos;s discuss how we
+          can help your business grow.
+        </StyledSectionDescription>
         <div
           style={{
             marginTop: "2rem",
