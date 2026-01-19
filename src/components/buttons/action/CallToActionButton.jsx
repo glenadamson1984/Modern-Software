@@ -2,19 +2,42 @@ import React from "react";
 import styled from "styled-components";
 import { colours } from "../../../utils/style.utils";
 
-const StyledCallToAction = styled.div`
-  background: ${colours.pink};
+const StyledCallToAction = styled.div.attrs((props) => ({
+  "data-variant": props.variant,
+}))`
+  background: ${(props) => {
+    const variant = props["data-variant"] || "primary";
+    return variant === "darkGreen"
+      ? `${colours.darkGreen}`
+      : variant === "secondary"
+      ? `${colours.white}`
+      : `${colours.pink}`;
+  }};
   border-radius: 30px;
   opacity: 1;
   padding: 1rem;
   cursor: pointer;
-  color: ${colours.white};
+  color: ${(props) => {
+    const variant = props["data-variant"] || "primary";
+    return variant === "secondary" ? `${colours.black}` : `${colours.white}`;
+  }};
+  transition: all 0.3s ease;
 
   &:hover {
-    background: ${(props) =>
-      props.variant === "secondary" ? `${colours.white}` : `${colours.black}`};
-    color: ${(props) =>
-      props.variant === "secondary" ? `${colours.black}` : `${colours.white}`};
+    background: ${(props) => {
+      const variant = props["data-variant"] || "primary";
+      return variant === "secondary"
+        ? `${colours.darkGreen}`
+        : variant === "darkGreen"
+        ? `${colours.pink}`
+        : `${colours.darkGreen}`;
+    }};
+    color: ${(props) => {
+      const variant = props["data-variant"] || "primary";
+      return variant === "secondary" ? `${colours.white}` : `${colours.white}`;
+    }};
+    transform: scale(1.05);
+    transition: all 0.3s ease;
   }
 `;
 
@@ -35,9 +58,8 @@ const CallToActionButton = ({
   return (
     <StyledCallToAction
       className={animate ? "animate-bounce" : null}
-      variant={variant}
+      data-variant={variant}
       onClick={onClick}
-      disable={true}
     >
       <StyledCallToActionText>{children}</StyledCallToActionText>
     </StyledCallToAction>

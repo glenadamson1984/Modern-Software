@@ -1,20 +1,11 @@
 import Link from "next/link";
 import React from "react";
-
-// ✅ ADD THIS: Import static data
 import portfolioData from "../../../data/portfolio.json";
 
 const TopPortfolioCard = () => {
-  // ✅ CHANGED: Find the top priority portfolio item (priority = 1)
   const topPortfolioData = portfolioData.find(
     (p) => p.attributes.priority === 1
   );
-
-  // ❌ REMOVED: All this fetching logic
-  // let apiCall = useRef();
-  // const [topPortfolioData, setTopPortfolioData] = useState(Object);
-  // useEffect(() => { fetchTopPortfolio(); }, []);
-  // const fetchTopPortfolio = async () => { ... };
 
   return (
     <>
@@ -27,7 +18,6 @@ const TopPortfolioCard = () => {
                   href={`/portfolio/${topPortfolioData?.id}`}
                   className="c-media-box +offset"
                 >
-                  {/* ✅ CHANGED: Simplified image URL */}
                   <img
                     src={topPortfolioData?.attributes?.image?.url}
                     alt={topPortfolioData?.attributes?.title}

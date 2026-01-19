@@ -12,6 +12,7 @@ import {
   StyledOfficeLocationContainer,
   StyledSocialIconsContainerDesktop,
   StyledSubTitle,
+  StyledFooterLinks,
 } from "../footer.styles";
 import Image from "next/image";
 import { StyledLogoTitle } from "../../logo/logo.styles";
@@ -19,6 +20,7 @@ import { colours } from "../../../../utils/style.utils";
 import useWindowSize from "../../../../hooks/useWindowSize";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { NavigationItems, ConvertPathNameToURL } from "../../navigation/NavigationPaths";
 
 const FooterDesktop = () => {
   const { checkIsDesktop, checkIsDesktopWideScreen } = useWindowSize();
@@ -39,12 +41,49 @@ const FooterDesktop = () => {
       {/*</StyledBackgroundImageDesktop>*/}
       <StyledFooterContentContainerDesktop>
         <StyledFooterContentRowDesktop>
-          <div style={{ cursor: "pointer" }} onClick={() => router.push("/")}>
+          <div 
+            style={{ 
+              cursor: "pointer",
+              background: colours.darkGrey,
+              borderRadius: "12px",
+              padding: "0.75rem 1rem",
+              display: "inline-block",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2)",
+              transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+              position: "relative",
+              overflow: "hidden",
+              alignSelf: "flex-start"
+            }} 
+            onClick={() => router.push("/")}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-4px) scale(1.02)";
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(255, 64, 139, 0.3), 0 0 20px rgba(255, 64, 139, 0.1)";
+              const img = e.currentTarget.querySelector("img");
+              if (img) {
+                img.style.filter = "brightness(1.15) contrast(1.1)";
+                img.style.transform = "scale(1.02)";
+              }
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0) scale(1)";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2)";
+              const img = e.currentTarget.querySelector("img");
+              if (img) {
+                img.style.filter = "brightness(1.05) contrast(1.05)";
+                img.style.transform = "scale(1)";
+              }
+            }}
+          >
             <Image
-              src="/images/Logo/ModernSoftwareLogo.png"
+              src="/images/Logo/logoonwhite2.png"
               alt="Modern Software"
               width={355}
               height={112.5}
+              style={{ 
+                borderRadius: "8px",
+                transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                filter: "brightness(1.05) contrast(1.05)"
+              }}
             />
           </div>
           <StyledContactUsContainerDesktop>
@@ -69,29 +108,36 @@ const FooterDesktop = () => {
               Northern Ireland
             </StyledOfficeLocationContainer>
             <StyledAddressContainerDesktop>
-              <Image
-                src="/images/map-pin.png"
-                alt="Modern Software"
-                width={20}
-                height={20}
-              />
-              43B Newry Street
-              <div style={{ paddingLeft: "20px" }}>Banbridge</div>
-              <div style={{ paddingLeft: "20px" }}>Co. Down</div>
-              <div style={{ paddingLeft: "20px" }}>BT32 3EA</div>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem" }}>
+                <Image
+                  src="/images/map-pin.png"
+                  alt="Modern Software"
+                  width={20}
+                  height={20}
+                  style={{ marginTop: "2px", flexShrink: 0 }}
+                />
+                <div style={{ display: "flex", flexDirection: "column", lineHeight: "1.6" }}>
+                  <div>43B Newry Street</div>
+                  <div>Banbridge</div>
+                  <div>Co. Down</div>
+                  <div>BT32 3EA</div>
+                </div>
+              </div>
             </StyledAddressContainerDesktop>
             <StyledAddressContainerDesktop
               style={{
                 paddingTop: "1rem",
               }}
             >
-              <Image
-                src="/images/phone.png"
-                alt="Modern Software"
-                width={20}
-                height={20}
-              />
-              02838334830
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <Image
+                  src="/images/phone.png"
+                  alt="Modern Software"
+                  width={20}
+                  height={20}
+                />
+                <div>02838334830</div>
+              </div>
             </StyledAddressContainerDesktop>
           </StyledContactUsContainerDesktop>
           {/*<div style={{ display: "flex", flexDirection: "column" }}>*/}
@@ -166,6 +212,23 @@ const FooterDesktop = () => {
             </a>
           </StyledSocialIconsContainerDesktop>
         </StyledFooterContentSocialsRowDesktop>
+        <StyledFooterLinks>
+          {NavigationItems.map((item, index) => (
+            <Link
+              key={index}
+              href={
+                item === "Home"
+                  ? "/"
+                  : `/${ConvertPathNameToURL(item)}`
+              }
+            >
+              <a>{item}</a>
+            </Link>
+          ))}
+          <Link href="/contactus">
+            <a>Contact</a>
+          </Link>
+        </StyledFooterLinks>
       </StyledFooterContentContainerDesktop>
     </StyledContainerDesktop>
   );

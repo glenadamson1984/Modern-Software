@@ -1,24 +1,14 @@
 import React, { useState } from "react";
 import CallToActionButton from "../buttons/action/CallToActionButton";
 import Link from "next/link";
-
-// ✅ ADD THIS: Import static data
 import allPortfolioData from "../../../data/portfolio.json";
 
 const PortfolioCard = () => {
-  // ✅ CHANGED: Filter and sort portfolio data (exclude priority=1, sort by priority)
   const portfolioItems = allPortfolioData
     .filter((item) => item.attributes.priority !== 1)
     .sort((a, b) => a.attributes.priority - b.attributes.priority);
 
   const [displayCount, setDisplayCount] = useState(3);
-
-  // ❌ REMOVED: All this fetching logic
-  // const [portfolioData, setPortfolioData] = useState([]);
-  // const [page, setPage] = useState(1);
-  // const [totalRecord, setTotalRecore] = useState(0);
-  // useEffect(() => { fetchPortfolio(page); }, [page]);
-  // const fetchPortfolio = async (page) => { ... };
 
   // Get items to display based on current count
   const displayedItems = portfolioItems.slice(0, displayCount);
@@ -37,7 +27,6 @@ const PortfolioCard = () => {
                 href={`/portfolio/${item?.id}`}
                 className="c-media-box +offset"
               >
-                {/* ✅ CHANGED: Simplified image URL */}
                 <img
                   src={item?.attributes?.image?.url}
                   alt={item?.attributes?.title}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Rachel",
+    "company": "FitTrack Pro",
+    "quote": "Modern Software transformed our fitness platform. The team's expertise in React Native and real-time data synchronization has been outstanding. Our trainers love the new system!",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Sarah Mitchell",
+    "company": "Glamour Studio",
+    "quote": "The booking system Modern Software built for us has revolutionized how we manage our salons. No-show rates dropped by 35% and customer satisfaction is at an all-time high.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "James Thompson",
+    "company": "Furniture Forge",
+    "quote": "The 3D visualization feature has been a game-changer. Our online sales increased by 250% and customers love being able to see their custom furniture before ordering.",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Dr. Emily Chen",
+    "company": "Wellness Connect",
+    "quote": "Modern Software delivered a HIPAA-compliant platform that exceeded our expectations. The telemedicine capabilities have improved patient access significantly.",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "name": "Michael O'Brien",
+    "company": "Terraquest",
+    "quote": "The new Planning Portal is fast, intuitive, and works perfectly on both desktop and mobile. Modern Software's expertise in React and Azure made all the difference.",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "name": "Lisa Anderson",
+    "company": "EduPath Learning",
+    "quote": "Student engagement increased by 30% after implementing the new learning management system. The interactive features and analytics are exactly what we needed.",
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "name": "David Park",
+    "company": "Loweconex",
+    "quote": "Conex OS has transformed our asset monitoring operations. Response times improved by 60% and the intuitive dashboard makes it easy to identify issues quickly.",
+    "rating": 5
+  },
+  {
+    "id": 8,
+    "name": "Emma Wilson",
+    "company": "Gourmet Table",
+    "quote": "The app Modern Software developed for us is truly innovative. It's streamlined our restaurant operations and both customers and staff love using it.",
+    "rating": 5
+  }
+]

@@ -1,63 +1,70 @@
 import styled from "styled-components";
 import { colours, media } from "../src/utils/style.utils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export const StyledContactHero = styled.div`
+  background: ${colours.white};
+  padding: ${(props) => (props.isDesktop ? "120px 80px 80px" : "80px 40px 60px")};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StyledContactHeroContent = styled.div`
+  max-width: 800px;
+  text-align: center;
+`;
+
+export const StyledContactHeroTitle = styled.h1`
+  font-family: "Baloo", serif;
+  font-size: ${(props) => (props.isDesktop ? "64px" : "42px")};
+  font-weight: 700;
+  line-height: 1.2;
+  color: ${colours.black};
+  margin: 0 0 1.5rem 0;
+
+  span {
+    color: ${colours.pink};
+  }
+`;
+
+export const StyledContactHeroSubtitle = styled.p`
+  font-family: "Inter", sans-serif;
+  font-size: ${(props) => (props.isDesktop ? "20px" : "18px")};
+  line-height: 1.6;
+  color: ${colours.grey};
+  margin: 0;
+`;
+
+export const StyledContactSection = styled.section`
+  background: ${colours.white};
+  padding: ${(props) => (props.isDesktop ? "80px 80px 120px" : "60px 40px 80px")};
+`;
+
+export const StyledContactContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: ${(props) => (props.isDesktop ? "grid" : "flex")};
+  grid-template-columns: ${(props) => (props.isDesktop ? "1fr 1fr" : "1fr")};
+  gap: ${(props) => (props.isDesktop ? "80px" : "60px")};
+  flex-direction: column;
+`;
 
 export const StyledContactForm = styled.div`
-  ${media.forDesktop} {
-    background: #ffffff 0 0 no-repeat padding-box;
-    box-shadow: 0 0 40px #00000014;
-    opacity: 1;
-    padding: 50px;
-  }
-
-  margin: 100px;
-  border-radius: 15px;
+  background: ${colours.white};
+  border-radius: 16px;
+  padding: ${(props) => (props.isDesktop ? "50px" : "40px 30px")};
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 `;
 
-export const StyledContactDetails = styled.div`
-  background: ${colours.white} 0 0 no-repeat padding-box;
-  opacity: 1;
-`;
-
-export const StyledContactDetailsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 2rem;
-`;
-
-export const StyledContactDetailType = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 50px;
-`;
-
-export const StyledContactDetail = styled.div`
-  display: flex;
-  justify-content: flex-start;
-`;
-
-export const StyledContactDetailValue = styled.div`
-  width: 100%;
-  margin-left: 75px;
-  color: ${colours.grey};
-`;
-
-export const StyledContactDetailTypeTitle = styled.div`
-  margin-left: 50px;
-  color: ${colours.pink};
-  font-size: 20px;
-  font: normal normal bold 20px/30px Inter;
-`;
-
-export const StyledTitle = styled.div`
+export const StyledFormTitle = styled.h2`
+  font-family: "Baloo", serif;
+  font-size: ${(props) => (props.isDesktop ? "36px" : "28px")};
+  font-weight: 700;
+  color: ${colours.black};
+  margin: 0 0 2rem 0;
   text-align: center;
-  font: normal normal bold 48px/36px Inter;
-  letter-spacing: 0px;
-  color: #232323;
-  text-transform: capitalize;
-  margin: 0 100px 25px 100px;
 
-  > span {
+  span {
     color: ${colours.pink};
   }
 `;
@@ -65,49 +72,156 @@ export const StyledTitle = styled.div`
 export const StyledFieldSet = styled.fieldset`
   border: none;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  position: relative;
 `;
 
-export const StyledIcon = styled(FontAwesomeIcon)`
+export const StyledIcon = styled.div`
   position: absolute;
-  padding: 10px;
-  height: 20px;
-  width: 20px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   color: ${colours.grey};
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledInput = styled.input`
   width: 100%;
-  padding: 10px 0px 10px 50px;
-  border: none;
+  padding: 16px 20px 16px 60px;
+  border: 2px solid ${colours.offWhite};
   background: ${colours.offWhite};
-  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: ${colours.black};
+
+  &:focus {
+    outline: none;
+    border-color: ${colours.pink};
+    background: ${colours.white};
+  }
+
+  &::placeholder {
+    color: ${colours.grey};
+  }
 `;
 
 export const StyledTextArea = styled.textarea`
   width: 100%;
-  padding: 10px 0px 10px 50px;
-  border: none;
+  padding: 16px 20px 16px 60px;
+  border: 2px solid ${colours.offWhite};
   background: ${colours.offWhite};
-  font-size: 20px;
-`;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  resize: vertical;
+  min-height: 120px;
+  color: ${colours.black};
 
-export const StyledSentMessage = styled.div`
-  color: ${colours.pink};
-  font: normal normal bold 48px/36px Inter;
-  text-align: center;
+  &:focus {
+    outline: none;
+    border-color: ${colours.pink};
+    background: ${colours.white};
+  }
+
+  &::placeholder {
+    color: ${colours.grey};
+  }
 `;
 
 export const StyledErrorMessage = styled.div`
-  color: red;
-  margin-left: 50px;
-  font: normal normal bold 20px/30px Inter;
+  color: ${colours.pink};
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
 `;
 
-export const StyledMessageContainer = styled.div`
+export const StyledContactDetails = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const StyledContactDetailsTitle = styled.h2`
+  font-family: "Baloo", serif;
+  font-size: ${(props) => (props.isDesktop ? "36px" : "28px")};
+  font-weight: 700;
+  color: ${colours.black};
+  margin: 0 0 2rem 0;
+
+  span {
+    color: ${colours.pink};
+  }
+`;
+
+export const StyledContactDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const StyledContactDetailItem = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: ${colours.offWhite};
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: ${colours.white};
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+`;
+
+export const StyledContactDetailIcon = styled.div`
+  width: 50px;
+  height: 50px;
+  display: flex;
   align-items: center;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  justify-content: center;
+  background: ${colours.pink};
+  border-radius: 12px;
+  color: ${colours.white};
+  font-size: 24px;
+  flex-shrink: 0;
+`;
+
+export const StyledContactDetailContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+export const StyledContactDetailType = styled.h3`
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: ${colours.black};
+  margin: 0;
+`;
+
+export const StyledContactDetailValue = styled.div`
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: ${colours.grey};
+  margin: 0;
+
+  a {
+    color: ${colours.pink};
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: ${colours.darkGreen};
+    }
+  }
 `;

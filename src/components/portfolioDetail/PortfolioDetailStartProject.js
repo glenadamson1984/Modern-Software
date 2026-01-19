@@ -4,7 +4,8 @@ import Link from "next/link";
 const PortfolioDetailStartProject = (props) => {
   return (
     <div
-      className="c-start-a-project u-fill-white a-color-wipe u-white +on-white-background u-pos-rel is-in-view"
+      className="c-start-a-project a-color-wipe u-white +on-white-background u-pos-rel is-in-view"
+      style={{ backgroundColor: "#7bcda4" }}
       id="start-a-project-block_5ea757f1010b2"
     >
       <div className="o-wrap u-flex u-align-items-center u-pos-rel">

@@ -1,66 +1,105 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { RemoveSlashFromURl } from "../../src/components/layout/navigation/NavigationPaths";
-import SubPageLayout from "../../src/components/layout/SubPageLayout";
-import ImageCard from "../../src/components/image-card/ImageCard";
-import styled from "styled-components";
-import { colours } from "../../src/utils/style.utils";
-import ServiceCard from "../../src/components/image-card/ServiceCard";
-import CallToActionButton from "../../src/components/buttons/action/CallToActionButton";
-
+import useWindowSize from "../../src/hooks/useWindowSize";
 import servicesData from "../../data/services.json";
-
-export const StyledRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80%;
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-  }
-`;
+import Link from "next/link";
+import SEO from "../../src/components/SEO";
+import {
+  StyledServicesHero,
+  StyledServicesHeroContent,
+  StyledServicesHeroTitle,
+  StyledServicesHeroSubtitle,
+  StyledServicesSection,
+  StyledServicesContainer,
+  StyledServicesGrid,
+  StyledServiceCard,
+  StyledServiceImageWrapper,
+  StyledServiceImage,
+  StyledServiceContent,
+  StyledServiceBadge,
+  StyledServiceTitle,
+  StyledServiceDescription,
+} from "../../page-styles/services.styles";
 
 const Services = () => {
-  const { pathname } = useRouter();
+  const { checkIsDesktop } = useWindowSize();
+  const isDesktop = checkIsDesktop();
+  const router = useRouter();
 
   return (
-    <SubPageLayout subTitle={"What we do"}>
-      {servicesData?.map((item, index) => (
-        <div key={index} className="grid gap-20">
-          <div className="case-study u-pad-bottom-x3 u-pad-bottom-x4@m u-pad-bottom-x5@l">
-            <div className="o-wrap">
-              <div className="c-card +default +featured">
-                <a
-                  href={`/services/${item?.id}`}
-                  className="c-media-box +offset"
-                >
-                  <img
+    <>
+      <SEO
+        title="Our Services - Custom Software Development | Modern Software"
+        description="We offer comprehensive software development services including custom web applications, mobile app development, API integration, and cloud solutions. Tailored to your business needs."
+        keywords="software development services, web development, mobile app development, API integration, cloud solutions, custom software services"
+        canonicalUrl="/services"
+      />
+      {/* Services Hero Section */}
+      <StyledServicesHero isDesktop={isDesktop}>
+        {isDesktop && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              zIndex: 0,
+              opacity: 0.6,
+            }}
+          >
+            <source
+              src="/videos/7263301-uhd_3840_2160_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+        )}
+        <StyledServicesHeroContent>
+          <StyledServicesHeroTitle isDesktop={isDesktop}>
+            Our Services
+          </StyledServicesHeroTitle>
+          <StyledServicesHeroSubtitle isDesktop={isDesktop}>
+            Tailored software solutions designed to drive your business forward
+          </StyledServicesHeroSubtitle>
+        </StyledServicesHeroContent>
+      </StyledServicesHero>
+
+      {/* Services Grid Section */}
+      <StyledServicesSection isDesktop={isDesktop}>
+        <StyledServicesContainer>
+          <StyledServicesGrid isDesktop={isDesktop}>
+            {servicesData?.map((item) => (
+              <StyledServiceCard
+                key={item.id}
+                isDesktop={isDesktop}
+                onClick={() => router.push(`/services/${item.id}`)}
+              >
+                <StyledServiceImageWrapper isDesktop={isDesktop}>
+                  <StyledServiceImage
                     src={item?.attributes?.service_image?.url}
                     alt={item?.attributes?.title}
                   />
-                </a>
-                <div className="c-card__content +centered">
-                  <div className="u-marg-bottom">
-                    <span className="c-pill u-fill-primary">Service</span>
-                  </div>
-                  <h2 className="c-heading +h3">
-                    <a href={`/services/${item?.id}`}>
-                      {item?.attributes?.title}
-                    </a>
-                  </h2>
-                  <p className="u-lighten">
-                    Mobile App Development, Native iOS Android Apps, Platform
-                    Integrations, UX/UI Design
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
-    </SubPageLayout>
+                </StyledServiceImageWrapper>
+                <StyledServiceContent isDesktop={isDesktop}>
+                  <StyledServiceBadge>Service</StyledServiceBadge>
+                  <StyledServiceTitle isDesktop={isDesktop}>
+                    {item?.attributes?.title}
+                  </StyledServiceTitle>
+                  <StyledServiceDescription isDesktop={isDesktop}>
+                    {item?.attributes?.service_description}
+                  </StyledServiceDescription>
+                </StyledServiceContent>
+              </StyledServiceCard>
+            ))}
+          </StyledServicesGrid>
+        </StyledServicesContainer>
+      </StyledServicesSection>
+    </>
   );
 };
 

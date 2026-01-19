@@ -2,7 +2,6 @@ export const NavigationItems = [
   "Home",
   "Portfolio",
   "Services",
-  "Pricing",
   "About",
 ];
 
@@ -10,7 +9,6 @@ export const NavigationItemsMobile = [
   "Home",
   "Portfolio",
   "Services",
-  "Pricing",
   "Tuition",
   "About",
   "Contact Us",

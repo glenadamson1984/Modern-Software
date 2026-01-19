@@ -20,8 +20,10 @@ export const colours = {
   red: "#E51F28",
   pink: "#ff408b",
   green: "#7bcda4",
+  darkGreen: "#1a4d3a",
   black: "#232323",
   darkGrey: "#262626",
+  lightGrey: "#f8f8f8",
   grey: "#6B6B6B",
   darkWhite: "#BFBFBF",
 };

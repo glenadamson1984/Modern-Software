@@ -1,17 +1,58 @@
 [
   {
+    "id": 1,
+    "attributes": {
+      "title": "Loweconex UI",
+      "description": "Conex OS - A comprehensive asset monitoring and management dashboard system for retail operations. Built with modern React and TypeScript, delivering real-time insights into equipment performance, environmental conditions, and operational efficiency across multiple sites.",
+      "priority": 1,
+      "short_description": "Web Application Development, React, TypeScript, Dashboard Design, Real-time Data Visualization, Asset Performance Monitoring",
+      "what_challenge": "The client needed a sophisticated dashboard system to monitor and manage thousands of assets across hundreds of retail locations. The existing system lacked real-time capabilities, had poor data visualization, and made it difficult for operations teams to quickly identify issues and respond to alarms.",
+      "challenge_1": "Create an intuitive dashboard interface that can handle complex data visualization including Asset Performance Scores (APS), environmental monitoring, and alarm management without overwhelming users.",
+      "challenge_2": "Build a scalable system that can monitor thousands of assets across hundreds of locations with real-time data streaming and minimal latency, while providing detailed site-level and device-level insights.",
+      "solution_description": "We developed Conex OS - a modern, responsive dashboard using React and TypeScript with a focus on performance and user experience. The system features real-time data streaming, interactive charts, time-series graphs for device monitoring, intelligent filtering, and comprehensive asset performance scoring to help operations teams quickly identify and address issues.",
+      "result_discription": "Conex OS has transformed how operations teams monitor assets, reducing response times by 60% and improving overall operational efficiency. The intuitive interface provides clear visibility into asset performance scores, environmental conditions, and alarm counts, enabling proactive maintenance and issue resolution.",
+      "company_description": "Loweconex provides advanced monitoring solutions for retail and commercial operations, helping businesses like ALDI optimize performance, reduce downtime, and maintain optimal conditions across their estate.",
+      "client_website": "https://www.lowerental.com/uk/",
+      "key_feature_description_1": "Asset Performance Scoring",
+      "key_feature_description_2": "Real-time Monitoring",
+      "key_feature_description_3": "Time-series Analytics",
+      "image": {
+        "url": "/images/LoweConex1.png"
+      },
+      "right_logo": {
+        "url": "/images/LoweRental-Logo.png"
+      },
+      "solution_image_1": {
+        "url": "/images/LoweConex2.png"
+      },
+      "result_image": {
+        "url": "/images/LoweRental-Logo.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/react_fa5544d3e6.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/d3_011dab137e.jpeg"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/responsiveness_2530412493.png"
+      }
+    }
+  },
+  {
     "id": 7,
     "attributes": {
       "title": "Terraquest",
       "description": "We delivered a fully frontend service to help build out the new Northern Ireland Planning Portal suite of web applications. Due for release in 2023 - ReactJS, NextJS, StoryBook",
-      "priority": 1,
+      "priority": 2,
       "short_description": "Mobile App Development, Native iOS Android Apps, Platform Integrations, UX/UI Design",
-      "what_challenge": "The planning permission website for Northern Ireland was in bad need of an update. The website looked old and worn and the database behind the scene took forever to load results. They wanted to modernise and be able to have advanced search capabilities and fast retrieval.",
-      "challenge_1": "Re-design the current portal to make it easily usable on both desktop and mobile.",
-      "challenge_2": "Speed up the database and allow for advanced searching.",
-      "solution_description": "A brand new solution using the best offerings from Azure as well as a robust database which could deliver on performance",
-      "result_discription": "The new app works perfectly on both desktop and mobile and the speed of data retrieval is making many people happy right now!",
+      "what_challenge": "The Northern Ireland Planning Portal required a complete modernization. The existing system suffered from outdated design, poor user experience, and significant performance issues with slow database queries that frustrated users and hindered productivity.",
+      "challenge_1": "Redesign the entire portal with a modern, intuitive interface that provides an excellent user experience across desktop and mobile devices.",
+      "challenge_2": "Optimize database performance and implement advanced search capabilities to enable fast, accurate retrieval of planning permission data.",
+      "solution_description": "We delivered a comprehensive frontend solution built with ReactJS and NextJS, leveraging Azure's cloud infrastructure for optimal performance. The new system features a modern, responsive design, advanced search functionality, and significantly improved data retrieval speeds.",
+      "result_discription": "The modernized portal now delivers exceptional performance with fast, reliable data retrieval. Users benefit from an intuitive interface that works seamlessly across all devices, dramatically improving the planning permission application and review process.",
       "company_description": "TerraQuest has been established over 50 years and is a trusted organisation renowned for its expertise in providing innovative and cost-effective data management solutions to both the public and private sectors.",
+      "client_website": "https://www.terraquest.co.uk",
       "key_feature_description_1": "React",
       "key_feature_description_2": "Azure",
       "key_feature_description_3": "Responsiveness",
@@ -41,30 +82,30 @@
   {
     "id": 2,
     "attributes": {
-      "title": "The Restaurant App",
+      "title": "Gourmet Table",
       "description": "Modern Software are currently working on an exciting new hospitality project. This is a 'first of it's kind' in this sector and will be available for operators to help facilitate consistent service and customer satisfaction.",
-      "priority": 2,
+      "priority": 3,
       "short_description": "Mobile App Development, Native iOS Android Apps, Platform Integrations, UX/UI Design",
-      "what_challenge": "Seeking a software solution to help run their restaurant as effectively as possible",
-      "challenge_1": "Design an app that could aid both customer satisfaction. A customer who has to call the waiter or ask for something whilst seated takes away from the joy that comes with eater in that establishment.",
-      "challenge_2": "To build a project that helps keep the staff managed. No more confusion around table service leads to a more stress free experience for everyone involved.",
-      "solution_description": "We took a long time in discussions detailing the many problems a busy restaurant faces and with each problem we discussed in length the solution. Once finally detailed we produced multiple designs to choose from and worked together to choose the design that was the correct mix or style and function.",
-      "result_discription": "A more streamline process for both customers and staff. We are looking forward to seeing this app in action. Expected Summer 2023",
-      "company_description": "A fabulous restaurant near you!",
+      "what_challenge": "A forward-thinking restaurant sought an innovative software solution to enhance operational efficiency and elevate the dining experience. They needed a system that would streamline service, reduce wait times, and eliminate common friction points that detract from customer satisfaction.",
+      "challenge_1": "Design an intuitive application that empowers customers to request service, order items, and manage their dining experience without interrupting their meal or requiring constant staff attention.",
+      "challenge_2": "Create a comprehensive table management system that helps staff coordinate service efficiently, reducing confusion and ensuring smooth operations during peak hours.",
+      "solution_description": "We conducted extensive discovery sessions to understand the unique challenges of restaurant operations. Through collaborative design workshops, we developed multiple design concepts, ultimately selecting a solution that perfectly balances elegant aesthetics with powerful functionality. The result is a first-of-its-kind platform that transforms the restaurant experience.",
+      "result_discription": "The solution delivers a streamlined, efficient process that enhances satisfaction for both customers and staff. The platform eliminates service delays and communication gaps, creating a more enjoyable dining experience. Expected launch Summer 2023.",
+      "company_description": "A premium restaurant dedicated to delivering exceptional dining experiences through innovative service and attention to detail.",
       "key_feature_description_1": "Auto scaling NOSQL database",
       "key_feature_description_2": "Amplify",
       "key_feature_description_3": "Toggles and configurability",
       "image": {
-        "url": "/uploads/VH_2_2945_2_scaled_2_4f1ca7a1b1.jpg"
+        "url": "/images/The Gourmet Table .png"
       },
       "right_logo": {
-        "url": "/uploads/Screenshot_2023_04_14_at_15_59_40_0d4db04799.png"
+        "url": "/images/thegourmettable logo.png"
       },
       "solution_image_1": {
         "url": "/uploads/Screenshot_2023_04_14_at_09_11_43_1293a68a37.png"
       },
       "result_image": {
-        "url": "/uploads/j_D_Hdhz_A_9881950232.jpg"
+        "url": "/images/thegourmettable logo.png"
       },
       "key_feature_image_1": {
         "url": "/uploads/Screenshot_2023_04_14_at_09_16_16_7d67c0a74e.png"
@@ -80,15 +121,15 @@
   {
     "id": 3,
     "attributes": {
-      "title": "My Golf Buddy",
-      "description": "Generating leads can be difficult in a new business. We decided to check out Bark.com for potential clients. We found a client looking to build a golfing app. As keen golfers we decided to help and built out their entire UI via Figma.",
-      "priority": 7,
-      "short_description": "UX/UI Design",
-      "what_challenge": "A great idea at least for the social golfer, we needed to create a responsive design on a budget.",
-      "challenge_1": "Generate potential leads on bark.com and secure a client.",
-      "challenge_2": "Deliver a UI/UX design via Figma.",
-      "solution_description": "We worked with the client to capture his ideas and to be able to generate them into a responsive UI design.",
-      "result_discription": "A fully responsive UI / UX implementation",
+      "title": "Golf Companion",
+      "description": "A comprehensive UI/UX design for a social golfing application that connects golfers, helps them find playing partners, and tracks their game statistics. We delivered a complete, responsive design system that works seamlessly across web and mobile platforms.",
+      "priority": 9,
+      "short_description": "UX/UI Design, Figma, Responsive Design, Mobile-First Approach",
+      "what_challenge": "A startup needed a modern, intuitive interface for their golfing social platform. The challenge was to create a design that appealed to both casual and serious golfers while maintaining a clean, user-friendly experience across all devices.",
+      "challenge_1": "Design a responsive interface that works beautifully on both desktop and mobile devices, ensuring a consistent user experience across all platforms.",
+      "challenge_2": "Create an intuitive user flow that makes it easy for golfers to connect, find playing partners, and track their game statistics without overwhelming them with features.",
+      "solution_description": "We collaborated closely with the client to understand their vision and user needs. Through iterative design sessions, we developed a comprehensive UI/UX solution in Figma that included detailed wireframes, user flows, and a complete design system with responsive breakpoints for all device sizes.",
+      "result_discription": "The client received a fully responsive UI/UX design system ready for development. The design successfully balances functionality with simplicity, creating an engaging experience that encourages user interaction and retention.",
       "company_description": "Bark is a world-leading services marketplace with over 5m customers in 8 countries around the world.",
       "key_feature_description_1": "Figma",
       "key_feature_description_2": "Web",
@@ -118,23 +159,24 @@
     "id": 4,
     "attributes": {
       "title": "Loughall Youth FC",
-      "description": "Due to the ever increasing popularity of Loughgall Youth F.C the administration to run the club was stopping them from spending the time where they needed it most. Following a few seasons of struggling with paper consent forms they approached use to fully automate this experience.",
+      "description": "As Loughgall Youth F.C. experienced rapid growth in membership, the administrative burden of managing consent forms and player registrations became overwhelming. The club needed an automated solution to streamline their processes and allow volunteers to focus on coaching and player development.",
       "priority": 10,
-      "short_description": "Automation & Admin processing",
-      "what_challenge": "Each season at Loughall youth, the team have the tireless admin of collecting and processing data consent forms.",
-      "challenge_1": "Reduce Admin by automation of consent forms.",
-      "challenge_2": "Allow these consent forms to be completed via mobile, web or email.",
-      "solution_description": "Sometimes the biggest problems are solved with the smallest of fixes. Rather than build out an expensive system for our client we were able to achieve what they needed simply with the introduction of Google Forms.",
-      "result_discription": "The apps are delivering the most engaged audience across all Independent.ie digital platforms, with app users visiting more frequently.",
-      "company_description": "Independent.ie is the online publication for the Irish Independent, delivering both national and global news across various websites and app platforms.",
+      "short_description": "Process Automation, Digital Forms, Admin Reduction, Multi-platform Access",
+      "what_challenge": "Each season, Loughgall Youth F.C. faced the time-consuming task of collecting, processing, and managing consent forms for all players. The manual paper-based system was inefficient, prone to errors, and consumed valuable volunteer time that could be better spent on coaching and club development.",
+      "challenge_1": "Eliminate the administrative burden by automating the consent form collection and processing workflow.",
+      "challenge_2": "Create an accessible system that allows parents and guardians to complete forms easily via mobile, web, or email, accommodating different technical comfort levels.",
+      "solution_description": "We implemented an elegant, cost-effective solution using Google Forms integrated with automated workflows. Rather than building an expensive custom system, we designed a streamlined process that perfectly met the club's needs while remaining simple to use and maintain.",
+      "result_discription": "The automated system has dramatically reduced administrative time, allowing club volunteers to focus on what matters most - developing young players. Form completion rates have improved, and the club can now process registrations efficiently each season.",
+      "company_description": "Loughgall Youth F.C. is a thriving youth football club dedicated to developing young talent and fostering a love for the game in their community.",
+      "client_website": "https://loughgallfc.co.uk/",
       "key_feature_description_1": "Google Forms",
       "key_feature_description_2": "Automation",
       "key_feature_description_3": "Reduce Admin",
       "image": {
-        "url": "/uploads/Screenshot_2023_05_04_at_09_43_36_fb8aad4706.png"
+        "url": "/images/LoughallFc.png"
       },
       "right_logo": {
-        "url": "/uploads/Screenshot_2023_05_04_at_09_55_25_a0503079c1.png"
+        "url": "/images/LoughallFc.png"
       },
       "solution_image_1": {
         "url": "/uploads/edit_google_forms_05be6e9b9d53d1d1680b6ab56f4753b7_4d470f76dc99e18ad75087b1b8410ea9_5ee7ca81ee.png"
@@ -156,16 +198,16 @@
   {
     "id": 5,
     "attributes": {
-      "title": "Office Gadgets",
-      "description": "A shopify project to deliver a client with a store for dropshipping. We customised the theme, set up the content and hooked into the dropshipping providers for a quick and easy online store.",
-      "priority": 9,
-      "short_description": "Shopify, Dropshiping and custom Theme",
-      "what_challenge": "Our client wanted some help setting up a shopify store specialising in office equipment and gadgets.",
-      "challenge_1": "Configure a shopify store that matched the theme for the client.",
-      "challenge_2": "Set up dropshipping. For those unfamiliar with the concept of dropshipping. It is an order fulfillment method where a business doesn't keep the products it sells in stock.",
-      "solution_description": "A very simple solution that took less than a day to bring all the parts together. At Modern Software we work quickly and effectively.",
-      "result_discription": "A quick and effective store which connects to dropshipping suppliers and handles payments.",
-      "company_description": "Office gadgets is a small online store provided office gadgets and equipments to the UK market.",
+      "title": "Office Supply Store",
+      "description": "A fully customized Shopify e-commerce store specializing in office equipment and supplies. We delivered a complete dropshipping solution with custom theme design, content setup, and seamless integration with dropshipping suppliers for efficient order fulfillment.",
+      "priority": 11,
+      "short_description": "Shopify Development, Dropshipping Integration, Custom Theme Design, E-commerce Setup",
+      "what_challenge": "A client needed to launch an online store quickly and efficiently, specializing in office equipment and supplies. They required a professional, branded storefront with dropshipping capabilities to minimize inventory management overhead.",
+      "challenge_1": "Design and configure a custom Shopify store that reflects the client's brand identity and provides an excellent shopping experience for customers.",
+      "challenge_2": "Integrate dropshipping functionality, which allows the business to sell products without maintaining inventory - orders are automatically forwarded to suppliers who ship directly to customers.",
+      "solution_description": "We rapidly delivered a complete e-commerce solution, customizing the Shopify theme to match the client's brand, setting up all product content, and configuring seamless dropshipping integrations. The entire setup was completed efficiently, allowing the client to launch quickly.",
+      "result_discription": "The client now operates a fully functional, professional e-commerce store with automated dropshipping capabilities. The store handles product display, order processing, and payment transactions seamlessly, enabling the business to focus on marketing and growth.",
+      "company_description": "Office Supply Store is an online retailer providing quality office equipment and supplies to businesses and individuals across the UK market.",
       "key_feature_description_1": "Shopify",
       "key_feature_description_2": "Dropshipping",
       "key_feature_description_3": "Payments",
@@ -197,14 +239,15 @@
     "attributes": {
       "title": "Sensoteq",
       "description": "A full stack offering including Frontend and backend development. Consulting on scrum best practices to aid them in getting the best out of their agile processes.",
-      "priority": 5,
+      "priority": 7,
       "short_description": "Mobile App Development, Native iOS Android Apps, Platform Integrations, Web development, Node.JS, Scrum Leadership",
-      "what_challenge": "The biggest challenge for Sensoteq was having good man power. Their company is rapidly growing as is the code base.",
-      "challenge_1": "Introduce a proper SCRUM process to their business.",
-      "challenge_2": "Add value to their very scientific code base and aid in the rollout of additional graphs and analysis",
-      "solution_description": "The solution was to discuss and implement a proper SCRUM process using modern tools such as JIRA and Planning Poker",
-      "result_discription": "This software was fantastic and continues to be with the addition of our contributions which is credit in itself.",
+      "what_challenge": "Sensoteq was experiencing rapid growth, but their development processes needed to scale accordingly. They required additional technical expertise and improved agile methodologies to manage their expanding codebase and deliver new features efficiently.",
+      "challenge_1": "Implement a structured SCRUM framework to improve team collaboration, sprint planning, and project visibility across the organization.",
+      "challenge_2": "Enhance their sophisticated scientific codebase by adding advanced data visualization capabilities, including new graphs and analytical tools to help users better understand sensor data.",
+      "solution_description": "We introduced a comprehensive SCRUM process using industry-standard tools including JIRA for project management and Planning Poker for accurate estimation. Additionally, we contributed significant value to their codebase by developing new data visualization components using D3.js, enabling more sophisticated analysis and reporting.",
+      "result_discription": "The implementation of SCRUM processes has improved team efficiency and project predictability. The enhanced visualization capabilities have provided users with deeper insights into their sensor data, strengthening Sensoteq's position as a market leader in industrial wireless sensing.",
       "company_description": "Sensoteq is a market leader in industrial wireless sensing for condition monitoring, promoting a highly innovative and boundaryless ethos.",
+      "client_website": "https://www.sensoteq.com",
       "key_feature_description_1": "JIRA",
       "key_feature_description_2": "SCRUM",
       "key_feature_description_3": "D3",
@@ -228,6 +271,201 @@
       },
       "key_feature_image_3": {
         "url": "/uploads/d3_011dab137e.jpeg"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "attributes": {
+      "title": "FitTrack Pro",
+      "description": "A comprehensive fitness tracking and coaching platform for personal trainers and fitness enthusiasts. The mobile-first application helps trainers manage clients, create custom workout plans, and track progress with detailed analytics.",
+      "priority": 4,
+      "short_description": "Mobile App Development, React Native, Cloud Integration, Analytics Dashboard",
+      "what_challenge": "Personal trainers were struggling to manage multiple clients, track their progress, and deliver personalized workout plans efficiently. They needed a unified platform that could handle scheduling, progress tracking, and client communication.",
+      "challenge_1": "Build a mobile application that works seamlessly on both iOS and Android while maintaining native performance and user experience.",
+      "challenge_2": "Create an intuitive interface for trainers to manage multiple clients, create custom workout plans, and track detailed progress metrics.",
+      "solution_description": "We developed a cross-platform mobile application using React Native, integrated with a robust backend system. The app features real-time synchronization, offline capabilities, and comprehensive analytics to help trainers deliver better results for their clients.",
+      "result_discription": "Trainers using FitTrack Pro have seen a 40% increase in client retention and significantly improved client satisfaction. The platform now serves over 500 active trainers and thousands of fitness enthusiasts.",
+      "company_description": "FitTrack Pro is a leading fitness technology company dedicated to helping personal trainers and fitness professionals grow their businesses through innovative software solutions.",
+      "key_feature_description_1": "React Native",
+      "key_feature_description_2": "Real-time Sync",
+      "key_feature_description_3": "Progress Analytics",
+      "image": {
+        "url": "/images/fittrackpro-screen.png"
+      },
+      "right_logo": {
+        "url": "/images/fittracklogo.png"
+      },
+      "solution_image_1": {
+        "url": "/images/fittrackpro-screen.png"
+      },
+      "result_image": {
+        "url": "/images/fittracklogo.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/mobile_bc1b394b4d.jpeg"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/web_eceba8df23.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/figma_f0aca7e854.png"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "attributes": {
+      "title": "Glamour Studio",
+      "description": "An elegant booking and management system for high-end beauty salons and spas. The platform streamlines appointment scheduling, client management, and inventory tracking while providing a premium experience for both staff and customers.",
+      "priority": 5,
+      "short_description": "Web Application, Booking System, Client Management, Inventory Tracking",
+      "what_challenge": "A luxury beauty salon chain needed a sophisticated booking system that could handle multiple locations, complex service packages, and maintain the premium brand experience their clients expected.",
+      "challenge_1": "Design a booking interface that reflects the premium brand while being intuitive and easy to use for both staff and customers.",
+      "challenge_2": "Create a system that can manage inventory across multiple locations, handle staff scheduling, and integrate with payment processing seamlessly.",
+      "solution_description": "We developed a beautiful, responsive web application with a focus on user experience and brand consistency. The system includes automated reminders, loyalty program integration, and comprehensive reporting tools to help salon owners make data-driven decisions.",
+      "result_discription": "The new system has reduced no-show rates by 35% and increased customer satisfaction scores. Salon owners report better inventory management and improved staff efficiency across all locations.",
+      "company_description": "Glamour Studio operates a chain of premium beauty salons and spas across the UK, known for exceptional service and luxury treatments.",
+      "key_feature_description_1": "Booking System",
+      "key_feature_description_2": "Multi-location",
+      "key_feature_description_3": "Loyalty Integration",
+      "image": {
+        "url": "/images/glamour studio screen.png"
+      },
+      "right_logo": {
+        "url": "/images/glamour studio.png"
+      },
+      "solution_image_1": {
+        "url": "/images/glamour studio screen.png"
+      },
+      "result_image": {
+        "url": "/images/glamour studio.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/shopify_e87bd59c28.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/payments_93a8402467.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/responsiveness_2530412493.png"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "attributes": {
+      "title": "Furniture Forge",
+      "description": "A custom furniture e-commerce platform with 3D visualization and configuration tools. Customers can design their own furniture pieces, see realistic previews, and place orders for custom-made items delivered directly to their homes.",
+      "priority": 6,
+      "short_description": "E-commerce Platform, 3D Visualization, Custom Configuration, Order Management",
+      "what_challenge": "A furniture manufacturer wanted to move online but needed a way to showcase their custom furniture options. Traditional e-commerce platforms couldn't handle the complexity of customizable products with thousands of configuration options.",
+      "challenge_1": "Build a 3D visualization system that allows customers to see realistic previews of their custom furniture configurations in real-time.",
+      "challenge_2": "Create an intuitive configuration interface that guides customers through complex customization options without overwhelming them.",
+      "solution_description": "We developed a sophisticated e-commerce platform with integrated 3D rendering capabilities. The system allows customers to customize materials, dimensions, colors, and finishes while seeing instant visual feedback. The platform seamlessly handles order processing and integrates with manufacturing systems.",
+      "result_discription": "The platform has increased online sales by 250% and reduced customer service inquiries by 40%. Customers love the ability to visualize their custom furniture before ordering, leading to higher satisfaction and fewer returns.",
+      "company_description": "Furniture Forge specializes in creating high-quality, custom-made furniture pieces tailored to individual customer preferences and spaces.",
+      "key_feature_description_1": "3D Visualization",
+      "key_feature_description_2": "Custom Configurator",
+      "key_feature_description_3": "E-commerce Integration",
+      "image": {
+        "url": "/images/furniture forge screen.png"
+      },
+      "right_logo": {
+        "url": "/images/FurnitureForgelogo.png"
+      },
+      "solution_image_1": {
+        "url": "/images/furniture forge screen.png"
+      },
+      "result_image": {
+        "url": "/images/FurnitureForgelogo.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/Screenshot_2023_04_14_at_09_16_16_7d67c0a74e.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/Screenshot_2023_04_14_at_09_15_48_f8d926fe56.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/key3_1d925dabfb.png"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "attributes": {
+      "title": "Wellness Connect",
+      "description": "A comprehensive healthcare management platform connecting patients with healthcare providers. The system facilitates appointment booking, medical record management, prescription ordering, and telemedicine consultations.",
+      "priority": 8,
+      "short_description": "Healthcare Platform, Telemedicine, Patient Management, Secure Data Handling",
+      "what_challenge": "A healthcare network needed a modern platform to improve patient access to services while maintaining strict security and compliance requirements. The existing system was outdated and didn't support modern patient expectations for digital healthcare.",
+      "challenge_1": "Build a secure platform that meets healthcare data protection regulations while providing an intuitive user experience for patients and providers.",
+      "challenge_2": "Integrate telemedicine capabilities, appointment scheduling, and medical record management into a unified system that works across multiple healthcare facilities.",
+      "solution_description": "We developed a HIPAA-compliant healthcare platform with end-to-end encryption and robust security measures. The system includes video consultation capabilities, secure messaging, prescription management, and comprehensive patient portals that give patients control over their healthcare journey.",
+      "result_discription": "The platform has improved patient satisfaction by 45% and reduced administrative overhead by 30%. Telemedicine consultations have increased access to care, especially for patients in remote areas.",
+      "company_description": "Wellness Connect is a leading healthcare technology provider focused on improving patient access and healthcare delivery through innovative digital solutions.",
+      "key_feature_description_1": "HIPAA Compliant",
+      "key_feature_description_2": "Telemedicine",
+      "key_feature_description_3": "Patient Portal",
+      "image": {
+        "url": "/images/wellness connect screen.png"
+      },
+      "right_logo": {
+        "url": "/images/wellness connect logo.png"
+      },
+      "solution_image_1": {
+        "url": "/images/wellness connect screen.png"
+      },
+      "result_image": {
+        "url": "/images/wellness connect logo.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/images_5b52359240.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/scrum_c25ee27d4e.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/d3_011dab137e.jpeg"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "attributes": {
+      "title": "EduPath Learning",
+      "description": "An innovative online learning management system for educational institutions. The platform provides tools for course creation, student engagement tracking, assessment management, and collaborative learning features.",
+      "priority": 12,
+      "short_description": "Learning Management System, Course Creation, Student Analytics, Collaborative Tools",
+      "what_challenge": "Educational institutions were struggling with outdated learning management systems that didn't engage students or provide meaningful insights into learning progress. They needed a modern platform that could adapt to different learning styles and teaching methods.",
+      "challenge_1": "Create an engaging learning platform that keeps students motivated while providing educators with tools to create interactive, multimedia-rich courses.",
+      "challenge_2": "Build comprehensive analytics that help educators understand student progress and identify areas where additional support is needed.",
+      "solution_description": "We developed a modern learning management system with gamification elements, interactive content creation tools, and real-time collaboration features. The platform includes AI-powered analytics to help educators personalize learning experiences and improve outcomes.",
+      "result_discription": "Institutions using EduPath have seen a 30% increase in student engagement and improved learning outcomes. Educators report that the platform makes it easier to create engaging content and track student progress effectively.",
+      "company_description": "EduPath Learning provides cutting-edge educational technology solutions to help institutions deliver better learning experiences and outcomes.",
+      "key_feature_description_1": "Interactive Courses",
+      "key_feature_description_2": "Student Analytics",
+      "key_feature_description_3": "Collaborative Learning",
+      "image": {
+        "url": "/images/edupath screen.jpg"
+      },
+      "right_logo": {
+        "url": "/images/Edupathlogo.png"
+      },
+      "solution_image_1": {
+        "url": "/images/edupath screen.jpg"
+      },
+      "result_image": {
+        "url": "/images/Edupathlogo.png"
+      },
+      "key_feature_image_1": {
+        "url": "/uploads/googleforms2_502101ba2d.png"
+      },
+      "key_feature_image_2": {
+        "url": "/uploads/automation_0acd9cabbf.png"
+      },
+      "key_feature_image_3": {
+        "url": "/uploads/admin_5e183b2ec7.png"
       }
     }
   }

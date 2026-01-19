@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { colours } from "../../../utils/style.utils";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import {
+  StyledBackdrop,
   StyledContainer,
   StyledIconContainer,
+  StyledCloseButton,
   StyledNavigationContainer,
   StyledNavigationLink,
 } from "./mobile-menu.styles";
@@ -15,33 +17,38 @@ const MobileMenu = ({ showMenu, onMenuClick }) => {
   const router = useRouter();
 
   const navigateToPath = (path) => {
-    console.log(path);
-
-    console.log(path === "Home" ? "/" : ConvertPathNameToURL(path));
-
     router
       .push(path === "Home" ? "/" : `/${ConvertPathNameToURL(path)}`)
-      .then(onMenuClick(!showMenu));
+      .then(onMenuClick(false));
+  };
+
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onMenuClick(false);
+    }
   };
 
   return (
-    <StyledContainer>
-      <StyledIconContainer>
-        <div onClick={() => onMenuClick(!showMenu)}>
-          <FontAwesomeIcon size="2x" color={colours.black} icon={faXmark} />
-        </div>
-      </StyledIconContainer>
-      <StyledNavigationContainer>
-        {NavigationItemsMobile.map((navigationItem, index) => (
-          <StyledNavigationLink
-            key={index}
-            onClick={() => navigateToPath(navigationItem)}
-          >
-            {navigationItem}
-          </StyledNavigationLink>
-        ))}
-      </StyledNavigationContainer>
-    </StyledContainer>
+    <>
+      <StyledBackdrop onClick={handleBackdropClick} />
+      <StyledContainer>
+        <StyledIconContainer>
+          <StyledCloseButton onClick={() => onMenuClick(false)}>
+            <FontAwesomeIcon size="lg" color={colours.white} icon={faXmark} />
+          </StyledCloseButton>
+        </StyledIconContainer>
+        <StyledNavigationContainer>
+          {NavigationItemsMobile.map((navigationItem, index) => (
+            <StyledNavigationLink
+              key={index}
+              onClick={() => navigateToPath(navigationItem)}
+            >
+              {navigationItem}
+            </StyledNavigationLink>
+          ))}
+        </StyledNavigationContainer>
+      </StyledContainer>
+    </>
   );
 };
 

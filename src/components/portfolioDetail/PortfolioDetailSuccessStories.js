@@ -7,7 +7,8 @@ const PortfolioDetailSuccessStories = (props) => {
   const isDesktop = checkIsDesktop();
   return (
     <div
-      className="u-pad-top-x3 u-pad-top-x4@m u-pad-top-x5@l u-fill-white  u-pad-bottom-x3 "
+      className="u-pad-top-x3 u-pad-top-x4@m u-pad-top-x5@l u-pad-bottom-x3 "
+      style={{ backgroundColor: "#7bcda4" }}
       id="carousel-block_5ea757ba010b1"
     >
       <div className="o-wrap">

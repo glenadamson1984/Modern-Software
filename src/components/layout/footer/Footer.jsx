@@ -8,10 +8,13 @@ import {
   StyledSubTitle,
   StyledContainer,
   StyledLink,
+  StyledFooterLinks,
 } from "./footer.styles";
 import { StyledLogoTitle } from "../logo/logo.styles";
 import FooterDesktop from "./desktop/FooterDesktop";
 import Link from "next/link";
+import { NavigationItems, ConvertPathNameToURL } from "../navigation/NavigationPaths";
+import { colours } from "../../../utils/style.utils";
 
 const Footer = () => {
   const { checkIsDesktop } = useWindowSize();
@@ -23,12 +26,48 @@ const Footer = () => {
 
   return (
     <StyledContainer>
-      <Image
-        src="/images/Logo/ModernSoftwareLogo.png"
-        alt="Modern Software Logo"
-        width={355}
-        height={112.5}
-      />
+      <div
+        style={{
+          background: colours.darkGrey,
+          borderRadius: "12px",
+          padding: "0.75rem 1rem",
+          display: "inline-block",
+          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2)",
+          transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-4px) scale(1.02)";
+          e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(255, 64, 139, 0.3), 0 0 20px rgba(255, 64, 139, 0.1)";
+          const img = e.currentTarget.querySelector("img");
+          if (img) {
+            img.style.filter = "brightness(1.15) contrast(1.1)";
+            img.style.transform = "scale(1.02)";
+          }
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0) scale(1)";
+          e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2)";
+          const img = e.currentTarget.querySelector("img");
+          if (img) {
+            img.style.filter = "brightness(1.05) contrast(1.05)";
+            img.style.transform = "scale(1)";
+          }
+        }}
+      >
+        <Image
+          src="/images/Logo/logoonwhite2.png"
+          alt="Modern Software Logo"
+          width={355}
+          height={112.5}
+          style={{ 
+            borderRadius: "8px",
+            transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+            filter: "brightness(1.05) contrast(1.05)"
+          }}
+        />
+      </div>
       <StyledSubTitle>Contact Us</StyledSubTitle>
       <StyledLinks>
         <StyledLink>
@@ -55,21 +94,30 @@ const Footer = () => {
               color: "#FFFFFF",
             }}
           >
-            <Image
-              src="/images/map-pin.png"
-              alt="Modern Software"
-              width={20}
-              height={20}
-            />
-            43B Newry Street
-            <div style={{ paddingLeft: "20px" }}>Banbridge</div>
-            <div style={{ paddingLeft: "20px" }}>Co. Down</div>
-            <div style={{ paddingLeft: "20px" }}>BT32 3EA</div>
+            <div style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem", justifyContent: "center" }}>
+              <Image
+                src="/images/map-pin.png"
+                alt="Modern Software"
+                width={20}
+                height={20}
+                style={{ marginTop: "2px", flexShrink: 0 }}
+              />
+              <div style={{ display: "flex", flexDirection: "column", lineHeight: "1.6", textAlign: "left" }}>
+                <div>43B Newry Street</div>
+                <div>Banbridge</div>
+                <div>Co. Down</div>
+                <div>BT32 3EA</div>
+              </div>
+            </div>
             <div
               style={{
                 font: "normal normal normal 16px/26px Inter",
                 paddingTop: "1rem",
                 color: "#FFFFFF",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
               }}
             >
               <Image
@@ -78,7 +126,7 @@ const Footer = () => {
                 width={20}
                 height={20}
               />
-              02838334830
+              <div>02838334830</div>
             </div>
           </div>
         </div>
@@ -118,12 +166,30 @@ const Footer = () => {
           />
         </a>
       </div>
-      {/*commenting these links out for now*/}
-      {/*<div>contact privacy notice cookie policy</div>*/}
+      <StyledFooterLinks>
+        {NavigationItems.map((item, index) => (
+          <Link
+            key={index}
+            href={
+              item === "Home"
+                ? "/"
+                : `/${ConvertPathNameToURL(item)}`
+            }
+          >
+            <a>{item}</a>
+          </Link>
+        ))}
+        <Link href="/contactus">
+          <a>Contact</a>
+        </Link>
+      </StyledFooterLinks>
       <div
         style={{
-          font: "normal normal normal 16px/21px Inter",
+          fontFamily: "Inter, sans-serif",
+          fontSize: "14px",
           color: "#FFFFFF",
+          opacity: 0.8,
+          paddingTop: "1rem",
         }}
       >
         Copyright @2023 Modern Software

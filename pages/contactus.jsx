@@ -1,30 +1,35 @@
-import React, { useState, useEffect, useRef } from "react";
-import SubPageLayout from "../src/components/layout/SubPageLayout";
+import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
   faPhone,
   faEnvelope,
   faPen,
-  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import useWindowSize from "../src/hooks/useWindowSize";
+import SEO from "../src/components/SEO";
 import {
+  StyledContactHero,
+  StyledContactHeroContent,
+  StyledContactHeroTitle,
+  StyledContactHeroSubtitle,
+  StyledContactSection,
+  StyledContactContainer,
   StyledContactForm,
-  StyledTitle,
-  StyledContactDetailValue,
-  StyledContactDetail,
-  StyledContactDetails,
+  StyledFormTitle,
   StyledFieldSet,
   StyledIcon,
   StyledInput,
   StyledTextArea,
-  StyledContactDetailTypeTitle,
-  StyledContactDetailType,
-  StyledContactDetailsContainer,
-  StyledSentMessage,
-  StyledMessageContainer,
   StyledErrorMessage,
+  StyledContactDetails,
+  StyledContactDetailsTitle,
+  StyledContactDetailsContainer,
+  StyledContactDetailItem,
+  StyledContactDetailIcon,
+  StyledContactDetailContent,
+  StyledContactDetailType,
+  StyledContactDetailValue,
 } from "../page-styles/contactus.styles";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 import { useRouter } from "next/router";
@@ -99,109 +104,138 @@ const ContactUs = () => {
   }
 
   return (
-    <SubPageLayout subTitle="Contact Us">
+    <>
+      <SEO
+        title="Contact Us - Get In Touch | Modern Software"
+        description="Get in touch with Modern Software to discuss your custom software project. We're based in Northern Ireland and ready to help transform your business with modern technology."
+        keywords="contact Modern Software, get in touch, software development consultation, Northern Ireland software company"
+        canonicalUrl="/contactus"
+      />
       <ToastContainer />
-      <StyledContactForm>
-        <StyledTitle>
-          Send A <span>Message</span>
-        </StyledTitle>
-        {isError && (
-          <StyledErrorMessage>
-            *** Please complete all sections of this form
-          </StyledErrorMessage>
-        )}
+      {/* Contact Hero Section */}
+      <StyledContactHero isDesktop={isDesktop}>
+        <StyledContactHeroContent>
+          <StyledContactHeroTitle isDesktop={isDesktop}>
+            Get In <span>Touch</span>
+          </StyledContactHeroTitle>
+          <StyledContactHeroSubtitle isDesktop={isDesktop}>
+            Have a project in mind? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
+          </StyledContactHeroSubtitle>
+        </StyledContactHeroContent>
+      </StyledContactHero>
 
-        <form>
-          <StyledFieldSet>
-            <StyledIcon icon={faUser} />
-            <StyledInput
-              ref={nameRef}
-              type="text"
-              name="name"
-              placeholder="Name"
-              required
-            />
-          </StyledFieldSet>
-          <StyledFieldSet>
-            <StyledIcon icon={faPhone} />
-            <StyledInput
-              ref={phoneRef}
-              type="text"
-              name="phone"
-              placeholder="Phone Number"
-              required
-            />
-          </StyledFieldSet>
-          <StyledFieldSet>
-            <StyledIcon icon={faEnvelope} />
-            <StyledInput
-              ref={emailRef}
-              type="text"
-              name="email"
-              placeholder="Email Address"
-              required
-            />
-          </StyledFieldSet>
-          <StyledFieldSet>
-            <StyledIcon icon={faPen} />
-            <StyledTextArea
-              ref={messageRef}
-              name="message"
-              rows="4"
-              placeholder="Tell us a little about your project idea or requirements"
-              required
-            />
-          </StyledFieldSet>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <CallToActionButton
-              onClick={async (e) => {
-                await handleSubmit(e);
-              }}
-            >
-              Send
-            </CallToActionButton>
-          </div>
-        </form>
-      </StyledContactForm>
-      {isDesktop && (
-        <StyledContactDetails>
-          <StyledTitle>
-            Or You <span>Can ...</span>
-          </StyledTitle>
-          <StyledContactDetailsContainer>
-            <StyledContactDetailType>
-              <FontAwesomeIcon
-                style={{ height: "25px", width: "25px", color: "#7bcda4" }}
-                icon={faPhone}
-              />
-              <StyledContactDetailTypeTitle>
-                Phone me
-              </StyledContactDetailTypeTitle>
-            </StyledContactDetailType>
-            <StyledContactDetail>
-              <StyledContactDetailValue>02838334830</StyledContactDetailValue>
-            </StyledContactDetail>
+      {/* Contact Form and Details Section */}
+      <StyledContactSection isDesktop={isDesktop}>
+        <StyledContactContainer isDesktop={isDesktop}>
+          {/* Contact Form */}
+          <StyledContactForm isDesktop={isDesktop}>
+            <StyledFormTitle isDesktop={isDesktop}>
+              Send A <span>Message</span>
+            </StyledFormTitle>
+            {isError && (
+              <StyledErrorMessage>
+                Please complete all sections of this form
+              </StyledErrorMessage>
+            )}
 
-            <StyledContactDetailType>
-              <FontAwesomeIcon
-                style={{ height: "25px", width: "25px", color: "#7bcda4" }}
-                icon={faEnvelope}
-              />
-              <StyledContactDetailTypeTitle>
-                Email me
-              </StyledContactDetailTypeTitle>
-            </StyledContactDetailType>
-            <StyledContactDetail>
-              <StyledContactDetailValue>
-                <a href="mailto:info@modern-software.co.uk">
-                  info@modern-software.co.uk
-                </a>
-              </StyledContactDetailValue>
-            </StyledContactDetail>
-          </StyledContactDetailsContainer>
-        </StyledContactDetails>
-      )}
-    </SubPageLayout>
+            <form>
+              <StyledFieldSet>
+                <StyledIcon>
+                  <FontAwesomeIcon icon={faUser} />
+                </StyledIcon>
+                <StyledInput
+                  ref={nameRef}
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+              </StyledFieldSet>
+              <StyledFieldSet>
+                <StyledIcon>
+                  <FontAwesomeIcon icon={faPhone} />
+                </StyledIcon>
+                <StyledInput
+                  ref={phoneRef}
+                  type="text"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                />
+              </StyledFieldSet>
+              <StyledFieldSet>
+                <StyledIcon>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </StyledIcon>
+                <StyledInput
+                  ref={emailRef}
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                />
+              </StyledFieldSet>
+              <StyledFieldSet>
+                <StyledIcon>
+                  <FontAwesomeIcon icon={faPen} />
+                </StyledIcon>
+                <StyledTextArea
+                  ref={messageRef}
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us a little about your project idea or requirements"
+                  required
+                />
+              </StyledFieldSet>
+              <div style={{ display: "flex", justifyContent: "center", marginTop: "1.5rem" }}>
+                <div style={{ maxWidth: "300px", width: "100%" }}>
+                  <CallToActionButton
+                    variant="darkGreen"
+                    onClick={async (e) => {
+                      await handleSubmit(e);
+                    }}
+                  >
+                    Send Message
+                  </CallToActionButton>
+                </div>
+              </div>
+            </form>
+          </StyledContactForm>
+
+          {/* Contact Details */}
+          <StyledContactDetails>
+            <StyledContactDetailsTitle isDesktop={isDesktop}>
+              Or You <span>Can...</span>
+            </StyledContactDetailsTitle>
+            <StyledContactDetailsContainer>
+              <StyledContactDetailItem>
+                <StyledContactDetailIcon>
+                  <FontAwesomeIcon icon={faPhone} />
+                </StyledContactDetailIcon>
+                <StyledContactDetailContent>
+                  <StyledContactDetailType>Phone us</StyledContactDetailType>
+                  <StyledContactDetailValue>+44 28 3037 3007</StyledContactDetailValue>
+                </StyledContactDetailContent>
+              </StyledContactDetailItem>
+
+              <StyledContactDetailItem>
+                <StyledContactDetailIcon>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </StyledContactDetailIcon>
+                <StyledContactDetailContent>
+                  <StyledContactDetailType>Email us</StyledContactDetailType>
+                  <StyledContactDetailValue>
+                    <a href="mailto:info@modernsoftware.co.uk">
+                      info@modernsoftware.co.uk
+                    </a>
+                  </StyledContactDetailValue>
+                </StyledContactDetailContent>
+              </StyledContactDetailItem>
+            </StyledContactDetailsContainer>
+          </StyledContactDetails>
+        </StyledContactContainer>
+      </StyledContactSection>
+    </>
   );
 };
 

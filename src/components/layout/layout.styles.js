@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../../utils/style.utils";
+import { colours, media } from "../../utils/style.utils";
 
 export const StyledBody = styled.body`
   display: flex;
@@ -10,23 +10,28 @@ export const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  margin: 0.5rem 1rem;
+  background: ${colours.darkGrey};
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
   ${media.forDesktop} {
-    margin: 1rem 6rem;
+    padding: 1.25rem 4rem;
   }
 
   ${media.forDesktopWideScreen} {
-    margin: 1rem 6rem;
+    padding: 1.25rem 6rem;
   }
 
   ${media.forBigDesktopAndUp} {
-    margin: 1rem 15rem;
+    padding: 1.25rem 8rem;
   }
 `;
 
 export const StyledNavigationContainer = styled.div`
   display: flex;
   align-items: center;
+  gap: 2rem;
 `;
