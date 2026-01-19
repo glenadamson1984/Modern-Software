@@ -3,7 +3,7 @@ import React from "react";
 import useWindowSize from "../../../hooks/useWindowSize";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { colours } from "../../../utils/style.utils";
+import { colours, media } from "../../../utils/style.utils";
 
 export const StyledLogo = styled.div`
   cursor: pointer;
@@ -15,6 +15,12 @@ export const StyledLogo = styled.div`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
+  flex-shrink: 0;
+  max-width: calc(100% - 60px);
+  
+  ${media.forDesktop} {
+    max-width: none;
+  }
   
   &::before {
     content: "";
@@ -54,6 +60,14 @@ export const StyledLogo = styled.div`
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     /* Adjust brightness/contrast to make logo pop on dark background */
     filter: brightness(1.05) contrast(1.05);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 50px;
+    
+    ${media.forDesktop} {
+      max-height: none;
+    }
   }
   
   &:hover img {

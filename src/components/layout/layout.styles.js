@@ -11,14 +11,17 @@ export const StyledContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   background: ${colours.darkGrey};
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  min-height: 70px;
 
   ${media.forDesktop} {
     padding: 1.25rem 4rem;
+    gap: 2rem;
   }
 
   ${media.forDesktopWideScreen} {

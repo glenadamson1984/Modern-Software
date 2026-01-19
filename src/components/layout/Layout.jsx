@@ -100,7 +100,20 @@ const Layout = ({ children }) => {
               </CallToActionButton>
             </StyledNavigationContainer>
           ) : (
-            <div onClick={() => setShowMenu(!showMenu)}>
+            <div 
+              onClick={() => setShowMenu(!showMenu)}
+              style={{
+                zIndex: 1001,
+                position: "relative",
+                cursor: "pointer",
+                padding: "0.5rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minWidth: "44px",
+                minHeight: "44px",
+              }}
+            >
               <FontAwesomeIcon size="2x" color={colours.pink} icon={faBars} />
             </div>
           )}

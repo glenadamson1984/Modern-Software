@@ -21,7 +21,13 @@ const ContactFooter = () => {
         <StyledSectionTitle isDesktop={isDesktop} light>
           Let&apos;s discuss your project
         </StyledSectionTitle>
-        <div style={{ marginTop: "2rem", display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            marginTop: "2rem",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <div style={{ maxWidth: "300px", width: "100%" }}>
             <CallToActionButton
               variant="darkGreen"
