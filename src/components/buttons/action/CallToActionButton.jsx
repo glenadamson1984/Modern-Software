@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import { colours } from "../../../utils/style.utils";
 
@@ -53,17 +54,31 @@ const CallToActionButton = ({
   children,
   variant = "primary",
   onClick,
+  href,
   animate = false,
 }) => {
-  return (
+  const buttonContent = (
     <StyledCallToAction
       className={animate ? "animate-bounce" : null}
       data-variant={variant}
       onClick={onClick}
+      as={href ? undefined : "div"}
     >
       <StyledCallToActionText>{children}</StyledCallToActionText>
     </StyledCallToAction>
   );
+
+  if (href) {
+    return (
+      <Link href={href} passHref>
+        <a style={{ textDecoration: "none", display: "inline-block" }}>
+          {buttonContent}
+        </a>
+      </Link>
+    );
+  }
+
+  return buttonContent;
 };
 
 export default CallToActionButton;

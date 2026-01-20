@@ -58,10 +58,38 @@ const StyledTableBody = styled.tbody``;
 
 const StyledTableRow = styled.tr`
   border-bottom: 1px solid ${colours.lightGrey};
+  background: ${(props) => {
+    if (props.$isOldLead) {
+      return props.$highlightColor === "pink"
+        ? "rgba(255, 64, 139, 0.15)"
+        : "rgba(26, 77, 58, 0.15)";
+    }
+    return "transparent";
+  }};
+  border-left: ${(props) =>
+    props.$isOldLead ? `3px solid ${props.$highlightColor === "pink" ? colours.pink : colours.darkGreen}` : "none"};
 
   &:hover {
-    background: ${colours.lightGrey};
+    background: ${(props) => {
+      if (props.$isOldLead) {
+        return props.$highlightColor === "pink"
+          ? "rgba(255, 64, 139, 0.25)"
+          : "rgba(26, 77, 58, 0.25)";
+      }
+      return colours.lightGrey;
+    }};
   }
+`;
+
+const StyledOldLeadBadge = styled.span`
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: ${(props) => (props.$highlightColor === "pink" ? colours.pink : colours.darkGreen)};
+  color: ${colours.white};
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
 `;
 
 const StyledTableCell = styled.td`
@@ -147,6 +175,60 @@ const StyledLoading = styled.div`
   font-family: "Inter", sans-serif;
 `;
 
+const StyledPagination = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid ${colours.lightGrey};
+  flex-wrap: wrap;
+  gap: 1rem;
+`;
+
+const StyledPaginationInfo = styled.div`
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  color: ${colours.darkGrey};
+`;
+
+const StyledPaginationControls = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+`;
+
+const StyledPaginationButton = styled.button`
+  padding: 0.5rem 1rem;
+  background: ${colours.white};
+  color: ${colours.darkGrey};
+  border: 1px solid ${colours.lightGrey};
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background: ${colours.pink};
+    color: ${colours.white};
+    border-color: ${colours.pink};
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.active {
+    background: ${colours.darkGreen};
+    color: ${colours.white};
+    border-color: ${colours.darkGreen};
+  }
+`;
+
+
 const formatDate = (timestamp) => {
   if (!timestamp) return "N/A";
   const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
@@ -157,7 +239,27 @@ const formatDate = (timestamp) => {
   });
 };
 
-const LeadsTable = ({ leads, loading, onUpdateLead, filterStatus, onFilterChange }) => {
+const calculateDaysSince = (timestamp) => {
+  if (!timestamp) return null;
+  const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
+  const now = new Date();
+  const diffTime = Math.abs(now - date);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  return diffDays;
+};
+
+const LeadsTable = ({
+  leads,
+  allLeads,
+  loading,
+  onUpdateLead,
+  filterStatus,
+  onFilterChange,
+  currentPage,
+  totalPages,
+  itemsPerPage,
+  onPageChange,
+}) => {
   const [editingStates, setEditingStates] = useState({});
 
   const handleFieldChange = (leadId, field, value) => {
@@ -193,6 +295,72 @@ const LeadsTable = ({ leads, loading, onUpdateLead, filterStatus, onFilterChange
       return editingStates[lead.id][field];
     }
     return lead[field] || "";
+  };
+
+
+  const renderPagination = () => {
+    if (totalPages <= 1) return null;
+
+    const pageNumbers = [];
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    if (endPage - startPage < maxVisiblePages - 1) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pageNumbers.push(i);
+    }
+
+    const startIndex = (currentPage - 1) * itemsPerPage + 1;
+    const endIndex = Math.min(currentPage * itemsPerPage, allLeads?.length || leads.length);
+
+    return (
+      <StyledPagination>
+        <StyledPaginationInfo>
+          Showing {startIndex}-{endIndex} of {allLeads?.length || leads.length} leads
+        </StyledPaginationInfo>
+        <StyledPaginationControls>
+          <StyledPaginationButton
+            onClick={() => onPageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            Previous
+          </StyledPaginationButton>
+          {startPage > 1 && (
+            <>
+              <StyledPaginationButton onClick={() => onPageChange(1)}>1</StyledPaginationButton>
+              {startPage > 2 && <span style={{ padding: "0 0.5rem" }}>...</span>}
+            </>
+          )}
+          {pageNumbers.map((page) => (
+            <StyledPaginationButton
+              key={page}
+              onClick={() => onPageChange(page)}
+              className={currentPage === page ? "active" : ""}
+            >
+              {page}
+            </StyledPaginationButton>
+          ))}
+          {endPage < totalPages && (
+            <>
+              {endPage < totalPages - 1 && <span style={{ padding: "0 0.5rem" }}>...</span>}
+              <StyledPaginationButton onClick={() => onPageChange(totalPages)}>
+                {totalPages}
+              </StyledPaginationButton>
+            </>
+          )}
+          <StyledPaginationButton
+            onClick={() => onPageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </StyledPaginationButton>
+        </StyledPaginationControls>
+      </StyledPagination>
+    );
   };
 
   if (loading) {
@@ -232,9 +400,24 @@ const LeadsTable = ({ leads, loading, onUpdateLead, filterStatus, onFilterChange
           <StyledTableBody>
             {leads.map((lead) => {
               const hasChanges = editingStates[lead.id] && Object.keys(editingStates[lead.id]).length > 0;
+              const daysSince = calculateDaysSince(lead.createdAt);
+              const isOldLead = daysSince !== null && daysSince > 10;
+              const highlightColor = daysSince !== null && daysSince > 10 ? (daysSince % 2 === 0 ? "pink" : "green") : null;
+              
               return (
-                <StyledTableRow key={lead.id}>
-                  <StyledTableCell>{formatDate(lead.createdAt)}</StyledTableCell>
+                <StyledTableRow
+                  key={lead.id}
+                  $isOldLead={isOldLead}
+                  $highlightColor={highlightColor}
+                >
+                  <StyledTableCell>
+                    {formatDate(lead.createdAt)}
+                    {isOldLead && (
+                      <StyledOldLeadBadge $highlightColor={highlightColor}>
+                        {daysSince}+ days
+                      </StyledOldLeadBadge>
+                    )}
+                  </StyledTableCell>
                   <StyledTableCell>
                     {lead.website ? (
                       <a
@@ -293,6 +476,7 @@ const LeadsTable = ({ leads, loading, onUpdateLead, filterStatus, onFilterChange
           </StyledTableBody>
         </StyledTable>
       )}
+      {renderPagination()}
     </div>
   );
 };

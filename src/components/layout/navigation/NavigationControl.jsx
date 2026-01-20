@@ -17,6 +17,10 @@ const NavigationControl = () => {
           active={
             navigationItem === "Home"
               ? pathname === "/"
+              : navigationItem === "AI Services"
+              ? pathname === "/ai"
+              : navigationItem === "TechStart"
+              ? pathname === "/techstart"
               : pathname === `/${ConvertPathNameToURL(navigationItem)}`
           }
         >
@@ -24,6 +28,10 @@ const NavigationControl = () => {
             href={
               navigationItem === "Home"
                 ? "/"
+                : navigationItem === "AI Services"
+                ? "/ai"
+                : navigationItem === "TechStart"
+                ? "/techstart"
                 : `/${ConvertPathNameToURL(navigationItem)}`
             }
           >

@@ -15,6 +15,7 @@ import {
 import MobileMenu from "./navigation/MobileMenu";
 import NewsletterPopup from "../newsletter/NewsletterPopup";
 import MouseTrail from "../effects/MouseTrail";
+import AIChatModal from "../ai/AIChatModal";
 import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
@@ -135,6 +136,7 @@ const Layout = ({ children }) => {
         />
       )}
       <MouseTrail />
+      <AIChatModal />
     </>
   );
 };

@@ -4,6 +4,7 @@ import CallToActionButton from "../src/components/buttons/action/CallToActionBut
 import styled from "styled-components";
 import { colours, media } from "../src/utils/style.utils";
 import SEO from "../src/components/SEO";
+import PartnersSection from "../src/components/partners/PartnersSection";
 
 // About Hero Section
 const StyledAboutHero = styled.section.withConfig({
@@ -458,6 +459,8 @@ const About = () => {
           </StyledAboutContentGrid>
         </StyledAboutContentContainer>
       </StyledAboutContentSection>
+
+      <PartnersSection />
     </>
   );
 };

@@ -17,6 +17,7 @@ import { colours } from "../src/utils/style.utils";
 import LoginForm from "../src/components/leads/LoginForm";
 import LeadsForm from "../src/components/leads/LeadsForm";
 import LeadsTable from "../src/components/leads/LeadsTable";
+import ResearchModal from "../src/components/leads/ResearchModal";
 
 const StyledLeadsPage = styled.div`
   min-height: 100vh;
@@ -65,6 +66,50 @@ const StyledLogoutButton = styled.button`
   }
 `;
 
+const StyledHeaderButtons = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+`;
+
+const StyledCompaniesHouseButton = styled.button`
+  padding: 0.75rem 1.5rem;
+  background: ${colours.darkGreen};
+  color: ${colours.white};
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: ${colours.pink};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+`;
+
+const StyledResearchButton = styled.button`
+  padding: 0.75rem 1.5rem;
+  background: ${colours.pink};
+  color: ${colours.white};
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: ${colours.darkGreen};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+`;
+
 const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -92,6 +137,9 @@ const LeadsPage = () => {
   const [leads, setLeads] = useState([]);
   const [filterStatus, setFilterStatus] = useState("all");
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showResearchModal, setShowResearchModal] = useState(false);
+  const itemsPerPage = 20;
 
   useEffect(() => {
     if (!user) {
@@ -129,6 +177,17 @@ const LeadsPage = () => {
 
     return () => unsubscribe();
   }, [user, filterStatus]);
+
+  // Reset to page 1 when filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filterStatus]);
+
+  // Calculate pagination
+  const totalPages = Math.ceil(leads.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedLeads = leads.slice(startIndex, endIndex);
 
   const handleAddLead = async (leadData) => {
     try {
@@ -169,7 +228,28 @@ const LeadsPage = () => {
       <StyledContainer>
         <StyledHeader>
           <StyledTitle>Leads Management</StyledTitle>
-          <StyledLogoutButton onClick={logout}>Logout</StyledLogoutButton>
+          <StyledHeaderButtons>
+            <StyledCompaniesHouseButton
+              onClick={() => {
+                const url = `https://find-and-update.company-information.service.gov.uk/advanced-search/get-results?status=active&status=open&incorporationFromDay=01&incorporationFromMonth=01&incorporationFromYear=2020`;
+                window.open(url, "_blank", "noopener,noreferrer");
+              }}
+            >
+              Companies House
+            </StyledCompaniesHouseButton>
+            <StyledResearchButton onClick={() => setShowResearchModal(true)}>
+              Research
+            </StyledResearchButton>
+            <StyledCompaniesHouseButton
+              onClick={() => {
+                window.open("/guide", "_blank", "noopener,noreferrer");
+              }}
+              style={{ background: colours.pink }}
+            >
+              How-to Guide
+            </StyledCompaniesHouseButton>
+            <StyledLogoutButton onClick={logout}>Logout</StyledLogoutButton>
+          </StyledHeaderButtons>
         </StyledHeader>
 
         <StyledContent>
@@ -181,15 +261,25 @@ const LeadsPage = () => {
           <StyledSection>
             <StyledSectionTitle>Leads ({leads.length})</StyledSectionTitle>
             <LeadsTable
-              leads={leads}
+              leads={paginatedLeads}
+              allLeads={leads}
               loading={loading}
               onUpdateLead={handleUpdateLead}
               filterStatus={filterStatus}
               onFilterChange={setFilterStatus}
+              currentPage={currentPage}
+              totalPages={totalPages}
+              itemsPerPage={itemsPerPage}
+              onPageChange={setCurrentPage}
             />
           </StyledSection>
         </StyledContent>
       </StyledContainer>
+      <ResearchModal
+        isOpen={showResearchModal}
+        onClose={() => setShowResearchModal(false)}
+        onAddLead={handleAddLead}
+      />
     </StyledLeadsPage>
   );
 };

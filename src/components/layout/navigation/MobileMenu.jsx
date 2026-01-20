@@ -17,9 +17,17 @@ const MobileMenu = ({ showMenu, onMenuClick }) => {
   const router = useRouter();
 
   const navigateToPath = (path) => {
-    router
-      .push(path === "Home" ? "/" : `/${ConvertPathNameToURL(path)}`)
-      .then(onMenuClick(false));
+    let url = "/";
+    if (path === "Home") {
+      url = "/";
+    } else if (path === "AI Services") {
+      url = "/ai";
+    } else if (path === "TechStart") {
+      url = "/techstart";
+    } else {
+      url = `/${ConvertPathNameToURL(path)}`;
+    }
+    router.push(url).then(onMenuClick(false));
   };
 
   const handleBackdropClick = (e) => {
