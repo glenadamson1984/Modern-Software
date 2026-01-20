@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import Layout from "../src/components/layout/Layout";
 import React from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
+import Script from "next/script";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { AuthProvider } from "../src/contexts/AuthContext";
@@ -24,9 +26,24 @@ function AppContent({ Component, pageProps }) {
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AuthProvider>
-      <AppContent Component={Component} pageProps={pageProps} />
-    </AuthProvider>
+    <>
+      {/* Google tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-1004932801"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-1004932801');
+        `}
+      </Script>
+      <AuthProvider>
+        <AppContent Component={Component} pageProps={pageProps} />
+      </AuthProvider>
+    </>
   );
 }
 

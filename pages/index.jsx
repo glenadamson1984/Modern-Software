@@ -63,7 +63,7 @@ const Home = () => {
     url: "https://modernsoftware.co.uk",
     logo: "https://modernsoftware.co.uk/images/Logo/logoonwhite2.png",
     description:
-      "Custom software development company based in Northern Ireland",
+      "Software Northern Ireland - Custom software development and web design company based in Northern Ireland",
     address: {
       "@type": "PostalAddress",
       addressCountry: "GB",
@@ -80,9 +80,9 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Web Designer Portadown | Website Designer Northern Ireland | Small Business Web Design NI"
-        description="Professional website design and custom software solutions for small businesses in Northern Ireland. Local web designer serving Portadown, Banbridge, Lurgan, Armagh, and Craigavon. Affordable web design for small businesses in NI."
-        keywords="web designer Portadown, website designer Northern Ireland, website designer Banbridge, website designer Armagh, website designer Craigavon, small business website NI, small business web design Northern Ireland, local business website designer, affordable website design NI, website for small business Northern Ireland, web designer Lurgan, custom software development Northern Ireland"
+        title="Software Northern Ireland | Custom Software Development | Web Designer Portadown"
+        description="Software Northern Ireland - Professional custom software development and website design for small businesses. Based in Northern Ireland, serving Portadown, Banbridge, Lurgan, Armagh, and Craigavon. Expert software solutions and web design services."
+        keywords="software northern ireland, custom software northern ireland, software company northern ireland, software development northern ireland, web designer Portadown, website designer Northern Ireland, website designer Banbridge, website designer Armagh, website designer Craigavon, small business website NI, small business web design Northern Ireland, local business website designer, affordable website design NI, website for small business Northern Ireland, web designer Lurgan, custom software development Northern Ireland"
         canonicalUrl="/"
         structuredData={structuredData}
       />
@@ -110,12 +110,13 @@ const Home = () => {
         )}
         <StyledHeroContainer isDesktop={isDesktop}>
           <StyledHeroTitle isDesktop={isDesktop}>
-            Web Designer for Small Businesses in Northern Ireland
+            Software Northern Ireland | Custom Software & Web Design
           </StyledHeroTitle>
           <StyledHeroDescription isDesktop={isDesktop}>
-            Professional website design and custom software solutions for small
-            businesses. Serving Portadown, Banbridge, Lurgan, Armagh, and
-            Craigavon. Help your business grow with a website that works.
+            Professional custom software development and website design for
+            small businesses in Northern Ireland. Serving Portadown, Banbridge,
+            Lurgan, Armagh, and Craigavon. Expert software solutions and modern
+            web design to help your business grow.
           </StyledHeroDescription>
           <StyledHeroButtons>
             <CallToActionButton
@@ -176,11 +177,12 @@ const Home = () => {
             )}
             <StyledFeaturesContainer>
               <StyledSectionTitle isDesktop={isDesktop}>
-                We design focused software that solves real business problems.
+                Custom Software Development in Northern Ireland
               </StyledSectionTitle>
               <StyledSectionDescription isDesktop={isDesktop}>
-                No off-the-shelf solutions. Just smart, scalable systems
-                designed for your business.
+                We design focused software solutions for businesses across
+                Northern Ireland. No off-the-shelf solutions. Just smart,
+                scalable systems designed for your business.
               </StyledSectionDescription>
               <StyledFeaturesGrid isDesktop={isDesktop}>
                 <StyledFeatureCard>
