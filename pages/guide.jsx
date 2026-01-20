@@ -227,7 +227,7 @@ const GuidePage = () => {
               <StyledStepList>
                 <li>Select a new status from the dropdown</li>
                 <li>Edit notes in the notes field</li>
-                <li>Click "Update" to save your changes</li>
+                <li>Click &quot;Update&quot; to save your changes</li>
               </StyledStepList>
               <StyledTip>
                 <strong>Tip:</strong> The Update button is only enabled when you make changes to a
@@ -264,8 +264,8 @@ const GuidePage = () => {
               </StyledStepDescription>
               <StyledStepList>
                 <li>Click page numbers to jump to a specific page</li>
-                <li>Use "Previous" and "Next" buttons to navigate</li>
-                <li>The pagination shows "Showing X-Y of Z leads"</li>
+                <li>Use &quot;Previous&quot; and &quot;Next&quot; buttons to navigate</li>
+                <li>The pagination shows &quot;Showing X-Y of Z leads&quot;</li>
               </StyledStepList>
             </StyledStepContent>
           </StyledStep>
@@ -305,11 +305,11 @@ const GuidePage = () => {
                 email addresses and websites. Click it next to any lead to start research.
               </StyledStepDescription>
               <StyledStepList>
-                <li>Click "Research" button in the Actions column</li>
-                <li>Click "Start Research" in the modal</li>
+                <li>Click &quot;Research&quot; button in the Actions column</li>
+                <li>Click &quot;Start Research&quot; in the modal</li>
                 <li>Review the found email and website</li>
                 <li>Check the outreach strategy recommendation</li>
-                <li>Click "Update Lead" to save the information</li>
+                <li>Click &quot;Update Lead&quot; to save the information</li>
               </StyledStepList>
               <StyledTip>
                 <strong>Note:</strong> Research results include an automatic outreach strategy based
@@ -358,7 +358,7 @@ const GuidePage = () => {
                 specific locations.
               </StyledStepDescription>
               <StyledStepList>
-                <li>Click "Companies House" button in the header</li>
+                <li>Click &quot;Companies House&quot; button in the header</li>
                 <li>The search opens in a new tab</li>
                 <li>Results are filtered for active companies from 2020 onwards</li>
                 <li>You can further filter by location, company type, etc.</li>

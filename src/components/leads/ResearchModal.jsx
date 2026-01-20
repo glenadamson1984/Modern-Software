@@ -289,6 +289,10 @@ const ResearchModal = ({ isOpen, onClose, onAddLead }) => {
       });
 
       if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        if (errorData.quotaExceeded || response.status === 503) {
+          throw new Error("QUOTA_EXCEEDED");
+        }
         throw new Error("Failed to fetch company information");
       }
 
@@ -300,7 +304,11 @@ const ResearchModal = ({ isOpen, onClose, onAddLead }) => {
         strategy,
       });
     } catch (err) {
-      setError(err.message || "Failed to research company. Please try again.");
+      const errorMessage =
+        err.message === "QUOTA_EXCEEDED"
+          ? "AI service is currently offline. Please come back another time."
+          : err.message || "Failed to research company. Please try again.";
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }

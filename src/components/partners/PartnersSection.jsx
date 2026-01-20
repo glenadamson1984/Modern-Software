@@ -180,6 +180,31 @@ const PartnersSection = () => {
               commercial potential of innovative tech ideas.
             </StyledPartnerDescription>
           </StyledPartnerCard>
+
+          <StyledPartnerCard
+            href="https://digitaldna.org.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledPartnerLogoWrapper>
+              <StyledPartnerLogo
+                src="/images/partners/digital-dna-logo.png"
+                alt="Digital DNA"
+                onError={(e) => {
+                  // Fallback to text if logo not found
+                  e.target.style.display = "none";
+                  e.target.parentElement.innerHTML =
+                    '<div style="font-size: 2rem; color: #1a4d3a; font-weight: bold;">Digital DNA</div>';
+                }}
+              />
+            </StyledPartnerLogoWrapper>
+            <StyledPartnerName>Digital DNA</StyledPartnerName>
+            <StyledPartnerDescription>
+              Northern Ireland&apos;s premier technology and digital innovation event. We regularly
+              attend to stay connected with the local tech community, share knowledge, and discover
+              the latest trends in digital transformation.
+            </StyledPartnerDescription>
+          </StyledPartnerCard>
         </StyledPartnersGrid>
 
         <StyledCredentialsText>

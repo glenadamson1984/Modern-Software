@@ -24,7 +24,7 @@ export default async function handler(req, res) {
       ];
 
       const completion = await openai.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-3.5-turbo",
         messages: messages,
         temperature: 0.7,
       });
@@ -47,7 +47,7 @@ export default async function handler(req, res) {
 }`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4",
+      model: "gpt-3.5-turbo",
       messages: [
         {
           role: "system",
@@ -92,6 +92,16 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("OpenAI API error:", error);
+    
+    // Check for quota exceeded error
+    if (error.code === "insufficient_quota" || error.status === 429) {
+      return res.status(503).json({
+        error: "Service temporarily unavailable",
+        message: "AI service is currently offline. Please come back another time.",
+        quotaExceeded: true,
+      });
+    }
+    
     return res.status(500).json({
       error: "Failed to process request",
       message: error.message,

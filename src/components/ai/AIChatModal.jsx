@@ -211,16 +211,25 @@ const AIChatModal = () => {
       });
 
       if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        if (errorData.quotaExceeded || response.status === 503) {
+          throw new Error("QUOTA_EXCEEDED");
+        }
         throw new Error("Failed to get response");
       }
 
       const data = await response.json();
       setMessages((prev) => [...prev, { text: data.message, isUser: false }]);
     } catch (error) {
+      const errorMessage =
+        error.message === "QUOTA_EXCEEDED"
+          ? "AI service is currently offline. Please come back another time."
+          : "Sorry, I'm having trouble connecting. Please try again later.";
+      
       setMessages((prev) => [
         ...prev,
         {
-          text: "Sorry, I'm having trouble connecting. Please try again later.",
+          text: errorMessage,
           isUser: false,
         },
       ]);
