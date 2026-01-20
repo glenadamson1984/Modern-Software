@@ -64,26 +64,24 @@ const Portfolio = () => {
       />
       {/* Featured Work Hero Section */}
       <StyledFeaturedWorkHero isDesktop={isDesktop}>
-        {isDesktop && (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              zIndex: 0,
-              opacity: 0.6,
-            }}
-          >
-            <source src="/videos/7989732-hd_1920_1080_25fps.mp4" type="video/mp4" />
-          </video>
-        )}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+            opacity: 0.6,
+          }}
+        >
+          <source src="/videos/7989732-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        </video>
         <StyledFeaturedWorkContent>
           <StyledFeaturedWorkTitle isDesktop={isDesktop}>
             Featured Work

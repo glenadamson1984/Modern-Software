@@ -299,26 +299,24 @@ const About = () => {
       />
       {/* About Hero Section */}
       <StyledAboutHero isDesktop={isDesktop}>
-        {isDesktop && (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              zIndex: 0,
-              opacity: 0.6,
-            }}
-          >
-            <source src="/videos/853878-hd_1920_1080_25fps.mp4" type="video/mp4" />
-          </video>
-        )}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+            opacity: 0.6,
+          }}
+        >
+          <source src="/videos/853878-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        </video>
         <StyledAboutHeroContent>
           <StyledAboutHeroTitle isDesktop={isDesktop}>
             Who are we?

@@ -88,26 +88,24 @@ const Home = () => {
       />
       {/* Hero Section */}
       <StyledHeroBackground isDesktop={isDesktop}>
-        {isDesktop && (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              zIndex: 0,
-              opacity: 0.6,
-            }}
-          >
-            <source src="/assets/coder.mp4" type="video/mp4" />
-          </video>
-        )}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+            opacity: 0.6,
+          }}
+        >
+          <source src="/assets/coder.mp4" type="video/mp4" />
+        </video>
         <StyledHeroContainer isDesktop={isDesktop}>
           <StyledHeroTitle isDesktop={isDesktop}>
             Software Northern Ireland | Custom Software & Web Design
@@ -152,29 +150,27 @@ const Home = () => {
         <StyledMainContent isDesktop={isDesktop}>
           {/* Features Section */}
           <StyledFeaturesSection isDesktop={isDesktop}>
-            {isDesktop && (
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  zIndex: 0,
-                  opacity: 0.6,
-                }}
-              >
-                <source
-                  src="/videos/7263301-uhd_3840_2160_25fps.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            )}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                zIndex: 0,
+                opacity: 0.6,
+              }}
+            >
+              <source
+                src="/videos/7263301-uhd_3840_2160_25fps.mp4"
+                type="video/mp4"
+              />
+            </video>
             <StyledFeaturesContainer>
               <StyledSectionTitle isDesktop={isDesktop}>
                 Custom Software Development in Northern Ireland
@@ -308,29 +304,27 @@ const Home = () => {
 
       {/* Process Section */}
       <StyledProcessSection isDesktop={isDesktop}>
-        {isDesktop && (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              zIndex: 0,
-              opacity: 0.6,
-            }}
-          >
-            <source
-              src="/videos/853878-hd_1920_1080_25fps.mp4"
-              type="video/mp4"
-            />
-          </video>
-        )}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+            opacity: 0.6,
+          }}
+        >
+          <source
+            src="/videos/853878-hd_1920_1080_25fps.mp4"
+            type="video/mp4"
+          />
+        </video>
         <StyledProcessContainer>
           <StyledSectionTitle isDesktop={isDesktop}>
             How We Help Small Businesses in Northern Ireland
