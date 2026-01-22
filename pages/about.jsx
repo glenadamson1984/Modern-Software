@@ -514,23 +514,47 @@ const About = () => {
               </StyledBrochureButtonWrapper>
             </StyledAboutContentColumn>
             <StyledAboutImageWrapper isDesktop={isDesktop}>
-              <div style={{
-                width: isDesktop ? "400px" : "300px",
-                height: isDesktop ? "400px" : "300px",
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}>
+              <div
+                style={{
+                  background: colours.darkGrey,
+                  borderRadius: "12px",
+                  padding: "0.75rem 1rem",
+                  display: "inline-block",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2)",
+                  transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                  position: "relative",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px) scale(1.02)";
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(255, 64, 139, 0.3), 0 0 20px rgba(255, 64, 139, 0.1)";
+                  const img = e.currentTarget.querySelector("img");
+                  if (img) {
+                    img.style.filter = "brightness(1.15) contrast(1.1)";
+                    img.style.transform = "scale(1.02)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2)";
+                  const img = e.currentTarget.querySelector("img");
+                  if (img) {
+                    img.style.filter = "brightness(1.05) contrast(1.05)";
+                    img.style.transform = "scale(1)";
+                  }
+                }}
+                onClick={() => window.open("https://www.modern-investor.co.uk", "_blank")}
+              >
                 <Image
                   src="/images/Modern-investor-logo.png"
                   alt="Modern Investor Logo"
-                  width={isDesktop ? 400 : 300}
-                  height={isDesktop ? 150 : 112}
+                  width={isDesktop ? 355 : 266}
+                  height={isDesktop ? 112.5 : 84}
                   style={{ 
-                    objectFit: "contain",
-                    maxWidth: "100%",
-                    height: "auto"
+                    borderRadius: "8px",
+                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    filter: "brightness(1.05) contrast(1.05)"
                   }}
                 />
               </div>
