@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import useWindowSize from "../src/hooks/useWindowSize";
 import CallToActionButton from "../src/components/buttons/action/CallToActionButton";
 import styled from "styled-components";
@@ -256,9 +257,10 @@ const StyledAboutImage = styled.div`
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
   }
 
-  img {
-    width: 100%;
-    height: 100%;
+  img,
+  span {
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
   }
 `;
@@ -410,9 +412,12 @@ const About = () => {
             </StyledAboutContentColumn>
             <StyledAboutImageWrapper isDesktop={isDesktop}>
               <StyledAboutImage isDesktop={isDesktop}>
-                <img
+                <Image
                   src="/images/business_deal.jpg"
                   alt="We work better together"
+                  width={400}
+                  height={400}
+                  style={{ objectFit: "cover" }}
                 />
               </StyledAboutImage>
             </StyledAboutImageWrapper>
@@ -429,7 +434,13 @@ const About = () => {
           <StyledAboutContentGrid isDesktop={isDesktop}>
             <StyledAboutImageWrapper isDesktop={isDesktop}>
               <StyledAboutImage isDesktop={isDesktop}>
-                <img src="/images/Logo/simple.jpg" alt="Hello from me!" />
+                <Image 
+                  src="/images/Logo/simple.jpg" 
+                  alt="Hello from me!" 
+                  width={400}
+                  height={400}
+                  style={{ objectFit: "cover" }}
+                />
               </StyledAboutImage>
             </StyledAboutImageWrapper>
             <StyledAboutContentColumn>
@@ -485,7 +496,7 @@ const About = () => {
                 isDesktop={isDesktop}
                 style={{ color: colours.white, opacity: 0.9 }}
               >
-                Whether you're looking to track investment performance, learn from live trades, 
+                Whether you&apos;re looking to track investment performance, learn from live trades, 
                 or access professional investment coaching, Modern Investor offers a comprehensive 
                 platform for investors at all levels.
               </StyledAboutContentText>
