@@ -146,6 +146,7 @@ const StyledUpdateButton = styled.button`
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  margin-right: 0.5rem;
 
   &:hover {
     background: ${colours.pink};
@@ -158,6 +159,39 @@ const StyledUpdateButton = styled.button`
     cursor: not-allowed;
     transform: none;
   }
+`;
+
+const StyledDeleteButton = styled.button`
+  padding: 0.5rem 1rem;
+  background: ${colours.red};
+  color: ${colours.white};
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: #c41e1e;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+`;
+
+const StyledActionsCell = styled(StyledTableCell)`
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 
 const StyledEmptyState = styled.div`
@@ -253,6 +287,7 @@ const LeadsTable = ({
   allLeads,
   loading,
   onUpdateLead,
+  onDeleteLead,
   filterStatus,
   onFilterChange,
   currentPage,
@@ -462,14 +497,19 @@ const LeadsTable = ({
                       placeholder="Add notes..."
                     />
                   </StyledTableCell>
-                  <StyledTableCell>
+                  <StyledActionsCell>
                     <StyledUpdateButton
                       onClick={() => handleUpdate(lead.id)}
                       disabled={!hasChanges}
                     >
                       Update
                     </StyledUpdateButton>
-                  </StyledTableCell>
+                    <StyledDeleteButton
+                      onClick={() => onDeleteLead && onDeleteLead(lead.id)}
+                    >
+                      Delete
+                    </StyledDeleteButton>
+                  </StyledActionsCell>
                 </StyledTableRow>
               );
             })}

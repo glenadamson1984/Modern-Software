@@ -8,6 +8,7 @@ import {
   orderBy,
   addDoc,
   updateDoc,
+  deleteDoc,
   doc,
   onSnapshot,
   serverTimestamp,
@@ -213,6 +214,20 @@ const LeadsPage = () => {
     }
   };
 
+  const handleDeleteLead = async (leadId) => {
+    if (!window.confirm("Are you sure you want to delete this lead? This action cannot be undone.")) {
+      return;
+    }
+
+    try {
+      await deleteDoc(doc(db, "leads", leadId));
+    } catch (error) {
+      console.error("Error deleting lead:", error);
+      alert("Failed to delete lead. Please try again.");
+      throw error;
+    }
+  };
+
   if (!user) {
     return (
       <StyledLeadsPage>
@@ -265,6 +280,7 @@ const LeadsPage = () => {
               allLeads={leads}
               loading={loading}
               onUpdateLead={handleUpdateLead}
+              onDeleteLead={handleDeleteLead}
               filterStatus={filterStatus}
               onFilterChange={setFilterStatus}
               currentPage={currentPage}
