@@ -517,29 +517,22 @@ const About = () => {
               <div style={{
                 width: isDesktop ? "400px" : "300px",
                 height: isDesktop ? "400px" : "300px",
-                background: "rgba(255, 255, 255, 0.1)",
-                borderRadius: "12px",
+                position: "relative",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                border: "1px solid rgba(255, 255, 255, 0.2)",
               }}>
-                <div style={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: isDesktop ? "48px" : "36px",
-                  fontWeight: 700,
-                  color: colours.white,
-                  textAlign: "center",
-                }}>
-                  {`{M}`}
-                  <div style={{
-                    fontSize: isDesktop ? "24px" : "18px",
-                    marginTop: "1rem",
-                    opacity: 0.8,
-                  }}>
-                    INVESTOR
-                  </div>
-                </div>
+                <Image
+                  src="/images/Modern-investor-logo.png"
+                  alt="Modern Investor Logo"
+                  width={isDesktop ? 400 : 300}
+                  height={isDesktop ? 150 : 112}
+                  style={{ 
+                    objectFit: "contain",
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
               </div>
             </StyledAboutImageWrapper>
           </StyledAboutContentGrid>
