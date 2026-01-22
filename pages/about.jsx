@@ -458,6 +458,83 @@ const About = () => {
         </StyledAboutContentContainer>
       </StyledAboutContentSection>
 
+      {/* Modern Investor Section */}
+      <StyledAboutContentSection
+        isDesktop={isDesktop}
+        style={{ background: colours.darkGrey }}
+      >
+        <StyledAboutContentContainer>
+          <StyledAboutContentGrid isDesktop={isDesktop}>
+            <StyledAboutContentColumn>
+              <StyledAboutContentHeadline 
+                isDesktop={isDesktop}
+                style={{ color: colours.white }}
+              >
+                Modern Investor
+              </StyledAboutContentHeadline>
+              <StyledAboutContentText 
+                isDesktop={isDesktop}
+                style={{ color: colours.white, opacity: 0.9 }}
+              >
+                In addition to software development, we also operate Modern Investor - 
+                an investment network based in Northern Ireland. Modern Investor provides 
+                transparent performance tracking, live trade updates, expert coaching, and 
+                investment insights to help investors grow their portfolios.
+              </StyledAboutContentText>
+              <StyledAboutContentText 
+                isDesktop={isDesktop}
+                style={{ color: colours.white, opacity: 0.9 }}
+              >
+                Whether you're looking to track investment performance, learn from live trades, 
+                or access professional investment coaching, Modern Investor offers a comprehensive 
+                platform for investors at all levels.
+              </StyledAboutContentText>
+              <StyledBrochureButtonWrapper>
+                <a
+                  href="https://www.modern-investor.co.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", display: "inline-block", maxWidth: "300px", width: "100%" }}
+                >
+                  <CallToActionButton>
+                    Visit Modern Investor →
+                  </CallToActionButton>
+                </a>
+              </StyledBrochureButtonWrapper>
+            </StyledAboutContentColumn>
+            <StyledAboutImageWrapper isDesktop={isDesktop}>
+              <div style={{
+                width: isDesktop ? "400px" : "300px",
+                height: isDesktop ? "400px" : "300px",
+                background: "rgba(255, 255, 255, 0.1)",
+                borderRadius: "12px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+              }}>
+                <div style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontSize: isDesktop ? "48px" : "36px",
+                  fontWeight: 700,
+                  color: colours.white,
+                  textAlign: "center",
+                }}>
+                  {`{M}`}
+                  <div style={{
+                    fontSize: isDesktop ? "24px" : "18px",
+                    marginTop: "1rem",
+                    opacity: 0.8,
+                  }}>
+                    INVESTOR
+                  </div>
+                </div>
+              </div>
+            </StyledAboutImageWrapper>
+          </StyledAboutContentGrid>
+        </StyledAboutContentContainer>
+      </StyledAboutContentSection>
+
       <PartnersSection />
     </>
   );

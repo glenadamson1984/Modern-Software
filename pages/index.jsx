@@ -216,7 +216,7 @@ const Home = () => {
                   </StyledFeatureDescription>
                 </StyledFeatureCard>
               </StyledFeaturesGrid>
-              <div style={{ textAlign: "center", marginTop: "2rem" }}>
+              <div style={{ textAlign: "center", marginTop: "2rem", maxWidth: "300px", marginLeft: "auto", marginRight: "auto" }}>
                 <CallToActionButton
                   variant="darkGreen"
                   onClick={() => router.push("/contactus")}

@@ -182,6 +182,14 @@ const Footer = () => {
         <Link href="/contactus">
           <a>Contact</a>
         </Link>
+        <a 
+          href="https://www.modern-investor.co.uk" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          Modern Investor
+        </a>
       </StyledFooterLinks>
       <div
         style={{
