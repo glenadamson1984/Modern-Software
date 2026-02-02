@@ -289,3 +289,46 @@ export const StyledTestimonialCompany = styled.span`
   font-size: 14px;
   color: ${colours.grey};
 `;
+
+// Portfolio pagination
+export const StyledPagination = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid ${colours.whiteBorder};
+`;
+
+export const StyledPaginationLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: ${(props) => (props.$active ? colours.white : colours.black)};
+  background: ${(props) => (props.$active ? colours.pink : colours.lightGrey)};
+  border: 1px solid
+    ${(props) => (props.$active ? colours.pink : colours.whiteBorder)};
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not([aria-disabled="true"]) {
+    background: ${(props) =>
+      props.$active ? colours.pink : colours.whiteBorder};
+    color: ${(props) => (props.$active ? colours.white : colours.black)};
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+`;

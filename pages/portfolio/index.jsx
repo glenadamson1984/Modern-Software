@@ -4,6 +4,7 @@ import portfolioData from "../../data/portfolio.json";
 import testimonialsData from "../../data/testimonials.json";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import SEO from "../../src/components/SEO";
 import {
   StyledFeaturedWorkHero,
@@ -33,16 +34,50 @@ import {
   StyledProjectTags,
   StyledProjectTag,
   StyledProjectImage,
+  StyledPagination,
+  StyledPaginationLink,
 } from "../../page-styles/portfolio.styles";
+
+// Page 1: these featured clients (curated); page 2+ : everything else, N per page
+const PAGE_1_TITLES = [
+  "Gourmet Table",
+  "Terraquest",
+  "Loweconex UI",
+  "Sensoteq",
+  "Loughall Youth FC",
+];
+const ITEMS_PER_PAGE = 5;
 
 const Portfolio = () => {
   const { checkIsDesktop } = useWindowSize();
   const isDesktop = checkIsDesktop();
+  const router = useRouter();
 
   // Get all portfolio items sorted by priority
-  const portfolioItems = portfolioData.sort(
+  const allItems = [...portfolioData].sort(
     (a, b) => a.attributes.priority - b.attributes.priority
   );
+
+  const page1Items = PAGE_1_TITLES.map((title) =>
+    allItems.find((item) => item.attributes.title === title)
+  ).filter(Boolean);
+  const restItems = allItems.filter(
+    (item) => !PAGE_1_TITLES.includes(item.attributes.title)
+  );
+
+  const totalPages = 1 + Math.ceil(restItems.length / ITEMS_PER_PAGE);
+  const currentPage = Math.min(
+    totalPages,
+    Math.max(1, parseInt(router.query.page, 10) || 1)
+  );
+
+  const portfolioItems =
+    currentPage === 1
+      ? page1Items
+      : restItems.slice(
+          (currentPage - 2) * ITEMS_PER_PAGE,
+          (currentPage - 2) * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+        );
 
   // Duplicate testimonials for seamless infinite scroll
   const duplicatedTestimonials = [...testimonialsData, ...testimonialsData];
@@ -80,7 +115,10 @@ const Portfolio = () => {
             opacity: 0.6,
           }}
         >
-          <source src="/videos/7989732-hd_1920_1080_25fps.mp4" type="video/mp4" />
+          <source
+            src="/videos/7989732-hd_1920_1080_25fps.mp4"
+            type="video/mp4"
+          />
         </video>
         <StyledFeaturedWorkContent>
           <StyledFeaturedWorkTitle isDesktop={isDesktop}>
@@ -97,7 +135,10 @@ const Portfolio = () => {
         <StyledTickerContainer>
           <StyledTickerTrack duration={tickerDuration}>
             {duplicatedTestimonials.map((testimonial, index) => (
-              <StyledTestimonialCard key={`${testimonial.id}-${index}`} isDesktop={isDesktop}>
+              <StyledTestimonialCard
+                key={`${testimonial.id}-${index}`}
+                isDesktop={isDesktop}
+              >
                 <StyledTestimonialStars>
                   {renderStars(testimonial.rating)}
                 </StyledTestimonialStars>
@@ -126,7 +167,8 @@ const Portfolio = () => {
               Our Portfolio
             </StyledPortfolioSectionTitle>
             <StyledPortfolioSectionSubtitle isDesktop={isDesktop}>
-              Explore our recent projects and see how we&apos;ve helped businesses transform their operations
+              Explore our recent projects and see how we&apos;ve helped
+              businesses transform their operations
             </StyledPortfolioSectionSubtitle>
           </StyledPortfolioSectionHeader>
           {portfolioItems.map((item) => (
@@ -176,6 +218,53 @@ const Portfolio = () => {
               </StyledProjectCard>
             </Link>
           ))}
+          <StyledPagination aria-label="Portfolio pagination">
+            <Link
+              href={
+                currentPage > 1 ? `/portfolio?page=${currentPage - 1}` : "#"
+              }
+              passHref
+              legacyBehavior
+            >
+              <StyledPaginationLink
+                aria-label="Previous page"
+                aria-disabled={currentPage <= 1}
+              >
+                Previous
+              </StyledPaginationLink>
+            </Link>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <Link
+                key={page}
+                href={`/portfolio?page=${page}`}
+                passHref
+                legacyBehavior
+              >
+                <StyledPaginationLink
+                  $active={currentPage === page}
+                  aria-current={currentPage === page ? "page" : undefined}
+                >
+                  {page}
+                </StyledPaginationLink>
+              </Link>
+            ))}
+            <Link
+              href={
+                currentPage < totalPages
+                  ? `/portfolio?page=${currentPage + 1}`
+                  : "#"
+              }
+              passHref
+              legacyBehavior
+            >
+              <StyledPaginationLink
+                aria-label="Next page"
+                aria-disabled={currentPage >= totalPages}
+              >
+                Next
+              </StyledPaginationLink>
+            </Link>
+          </StyledPagination>
         </StyledPortfolioContainer>
       </StyledPortfolioSection>
     </>
