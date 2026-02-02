@@ -152,6 +152,20 @@ This project — particularly the mobile app — aligns well with the aims of th
 • Begin design phase`,
       },
     ],
+    screenshots: [
+      {
+        src: "/images/proposals/funeral-mobile1.png",
+        label: "Mobile app — New Call-Out, Active Jobs, Case Details",
+      },
+      {
+        src: "/images/proposals/funeral-mobile2.png",
+        label: "Mobile app — On the way (ETA and map)",
+      },
+      {
+        src: "/images/proposals/funeral-website.png",
+        label: "Web system — Dashboard and job details",
+      },
+    ],
   },
 };
 

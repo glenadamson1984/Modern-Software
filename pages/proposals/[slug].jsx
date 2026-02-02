@@ -83,6 +83,30 @@ const StyledSectionContent = styled.div`
   word-wrap: break-word;
 `;
 
+const StyledScreenshotsSection = styled.section`
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+`;
+
+const StyledScreenshotBlock = styled.div`
+  margin-bottom: 2rem;
+`;
+
+const StyledScreenshotImage = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+`;
+
+const StyledScreenshotLabel = styled.p`
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: ${colours.grey};
+  margin: 0.5rem 0 0 0;
+`;
+
 export async function getStaticPaths() {
   const slugs = getAllProposalSlugs();
   const paths = slugs.map((slug) => ({ params: { slug } }));
@@ -145,6 +169,21 @@ export default function ProposalPage({ proposal }) {
               <StyledSectionContent>{section.content}</StyledSectionContent>
             </StyledSection>
           ))}
+
+          {proposal.screenshots && proposal.screenshots.length > 0 && (
+            <StyledScreenshotsSection>
+              <StyledSectionHeading>SCREEN MOCKUPS</StyledSectionHeading>
+              {proposal.screenshots.map((shot, i) => (
+                <StyledScreenshotBlock key={i}>
+                  <StyledScreenshotImage
+                    src={shot.src}
+                    alt={shot.label}
+                  />
+                  <StyledScreenshotLabel>{shot.label}</StyledScreenshotLabel>
+                </StyledScreenshotBlock>
+              ))}
+            </StyledScreenshotsSection>
+          )}
         </StyledContentContainer>
       </StyledPageContainer>
     </>
