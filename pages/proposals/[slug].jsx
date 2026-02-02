@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import styled from "styled-components";
@@ -98,6 +98,12 @@ const StyledScreenshotImage = styled.img`
   display: block;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
 `;
 
 const StyledScreenshotLabel = styled.p`
@@ -105,6 +111,53 @@ const StyledScreenshotLabel = styled.p`
   font-size: 14px;
   color: ${colours.grey};
   margin: 0.5rem 0 0 0;
+`;
+
+const LightboxOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: pointer;
+`;
+
+const LightboxImage = styled.img`
+  max-width: 95vw;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  pointer-events: none;
+`;
+
+const LightboxClose = styled.button`
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 10000;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: ${colours.white};
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
 `;
 
 export async function getStaticPaths() {
@@ -123,6 +176,18 @@ export async function getStaticProps({ params }) {
 
 export default function ProposalPage({ proposal }) {
   const router = useRouter();
+  const [lightboxImage, setLightboxImage] = useState(null);
+
+  useEffect(() => {
+    if (lightboxImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [lightboxImage]);
 
   if (router.isFallback) {
     return (
@@ -178,6 +243,7 @@ export default function ProposalPage({ proposal }) {
                   <StyledScreenshotImage
                     src={shot.src}
                     alt={shot.label}
+                    onClick={() => setLightboxImage(shot)}
                   />
                   <StyledScreenshotLabel>{shot.label}</StyledScreenshotLabel>
                 </StyledScreenshotBlock>
@@ -186,6 +252,32 @@ export default function ProposalPage({ proposal }) {
           )}
         </StyledContentContainer>
       </StyledPageContainer>
+
+      {lightboxImage && (
+        <LightboxOverlay
+          onClick={() => setLightboxImage(null)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === "Escape" && setLightboxImage(null)}
+          aria-label="Close lightbox"
+        >
+          <LightboxClose
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxImage(null);
+            }}
+            aria-label="Close"
+          >
+            ×
+          </LightboxClose>
+          <LightboxImage
+            src={lightboxImage.src}
+            alt={lightboxImage.label}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </LightboxOverlay>
+      )}
     </>
   );
 }
