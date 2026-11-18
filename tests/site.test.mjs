@@ -14,6 +14,11 @@ test('public pages contain indexable content, unique titles and correct canonica
 test('sitemap excludes admin, proposal and submission-only pages',()=>{
  const xml=fs.readFileSync(new URL('sitemap-0.xml',base),'utf8');for(const segment of ['/leads','/proposals','/thank-you','/404','modernsoftware.co.uk'])assert.equal(xml.includes(segment),false,segment);
  for(const page of ['software-development-northern-ireland','consultancy','website-design-northern-ireland','about'])assert.ok(xml.includes('/'+page));
+ for(const match of xml.matchAll(/<loc>([^<]+)<\/loc>/g)){
+  const url=new URL(match[1]);const page=url.pathname==='/'?'':url.pathname.slice(1);
+  const html=fs.readFileSync(new URL((page?page+'/':'')+'index.html',base),'utf8');
+  assert.ok(html.includes('rel="canonical" href="'+url.href+'"'),`Sitemap differs from canonical URL: ${url.href}`);
+ }
 });
 test('page links resolve to a built page, server endpoint, redirect or existing asset',()=>{
  const output=JSON.parse(fs.readFileSync(new URL('../.vercel/output/config.json',import.meta.url),'utf8'));
