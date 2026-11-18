@@ -1,0 +1,4 @@
+---
+import Base from '../layouts/Base.astro';import CTA from '../components/modern/CTA.astro';import {services} from '../data/site.mjs';
+---
+<Base title="Software Development, Consultancy & Website Services" description="Bespoke software development, technical consultancy, web and mobile applications, and websites from Modern Software in Northern Ireland."><section class="page-hero wrap"><span class="eyebrow">WHAT WE DO</span><h1>Software with<br/>a purpose<span class="pink">.</span></h1><p>From business-critical systems to clearer customer experiences. Start with the work you need to make easier.</p></section><section class="wrap service-list">{services.map((s,i)=><a href={'/'+s.slug}><span class="eyebrow">0{i+1} / {s.label}</span><div><h2>{s.lead}</h2><p>{s.intro}</p></div><span class="arrow">↗</span></a>)}</section><CTA/></Base>

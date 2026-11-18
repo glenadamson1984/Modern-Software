@@ -1,6 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://modernsoftware.co.uk/sitemap.xml
+Sitemap: https://modern-software.co.uk/sitemap-index.xml

@@ -35,3 +35,7 @@ yarn-error.log*
 # vercel
 .vercel
 sendgrid.env
+
+# Astro outputs
+/dist/
+/.astro/

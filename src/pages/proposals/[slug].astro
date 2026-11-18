@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro';import {getProposalBySlug} from '../../../data/proposals';
+export const prerender=false;const proposal=getProposalBySlug(Astro.params.slug);if(!proposal)return Astro.redirect('/404',302);
+---
+<Base title={proposal.title} noindex><article class="prose wrap"><span class="eyebrow">{proposal.subtitle}</span><h1>{proposal.title}</h1><p>Prepared for: {proposal.preparedFor}</p><p>Prepared by: {proposal.preparedBy}</p>{proposal.sections.map(section=><section><h2>{section.heading}</h2>{section.subheading&&<h3>{section.subheading}</h3>}{section.content?.split('\n\n').map(paragraph=><p style="white-space:pre-line">{paragraph}</p>)}</section>)}{proposal.screenshots?.length>0&&<section><h2>Screen mockups</h2>{proposal.screenshots.map(shot=><figure style="margin-block:30px"><a href={shot.src} target="_blank" rel="noreferrer"><img src={shot.src} alt={shot.label} loading="lazy" style="max-width:100%;height:auto;border-radius:8px"/></a><figcaption>{shot.label} — select to open full size.</figcaption></figure>)}</section>}</article></Base>

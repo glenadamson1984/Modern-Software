@@ -1,39 +1,31 @@
 {
   "name": "modern-software",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev --host 0.0.0.0 --port 3120",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 3120",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
+    "astro": "7.4.12",
+    "@astrojs/vercel": "11.0.22",
+    "@astrojs/react": "7.1.9",
+    "@astrojs/sitemap": "3.7.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "@sendgrid/mail": "^7.7.0",
+    "firebase": "^12.8.0",
+    "openai": "^6.16.0",
+    "styled-components": "^6.1.19",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@sendgrid/mail": "^7.7.0",
-    "dotenv": "^16.0.2",
-    "firebase": "^12.8.0",
-    "next": "^12.1.6",
-    "openai": "^6.16.0",
-    "prettier": "^2.8.0",
-    "prop-types": "^15.8.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-firebase-hooks": "^5.1.1",
-    "react-icons": "^4.3.1",
-    "react-is": "^18.2.0",
-    "react-player": "^2.12.0",
-    "react-toastify": "^9.1.1",
-    "styled-components": "5.3.5"
+    "@fortawesome/react-fontawesome": "^0.2.0"
   },
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "eslint": "8.6.0",
-    "eslint-config-next": "12.0.7",
-    "postcss": "^8.4.19",
-    "prettier": "^2.7.1",
-    "tailwindcss": "^3.2.4"
+  "engines": {
+    "node": "24.x"
   }
 }

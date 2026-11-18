@@ -1,0 +1,7 @@
+---
+import {Image} from 'astro:assets';
+import glen from '../../assets/glen.png';
+import Base from '../../layouts/Base.astro';import CTA from '../../components/modern/CTA.astro';import {work} from '../../data/site.mjs';
+export function getStaticPaths(){return work.map(item=>({params:{slug:item.slug},props:{item}}));}const {item}=Astro.props;
+---
+<Base title={item.name+' | Software Consultancy Work'} description={item.intro}><section class="page-hero wrap"><a href="/portfolio" class="eyebrow">SELECTED WORK / CONSULTANCY</a><h1>{item.name}<span class="pink">.</span></h1><p>{item.intro}</p><div class="tags">{item.stack.map(tag=><span>{tag}</span>)}</div></section><figure class="case-image wrap"><Image src={item.optimized} format="webp" quality={85} alt={item.name+' application interface'} width="1200" height="750"/><figcaption>{item.note}</figcaption></figure><section class="section wrap case-copy"><div><span class="eyebrow">THE CONTEXT</span><h2>{item.title}</h2><p>{item.intro}</p></div><div><span class="eyebrow">THE CONTRIBUTION</span><h2>Part of the delivery team.</h2><p>{item.contribution}</p><a class="text-link" href={item.external}>Visit {item.name} ↗</a></div></section><CTA/></Base>
