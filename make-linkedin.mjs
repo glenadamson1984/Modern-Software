@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';import sharp from 'sharp';
-const out='../output/linkedin/';
+const out='../output/linkedin/';await fs.mkdir(out,{recursive:true});
 const mark=await fs.readFile('public/brand/mark.svg','utf8');const inner=mark.replace(/^[\s\S]*?<svg[^>]*>/,'').replace('</svg>','');
 const svg=(w,h,content)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><rect width="${w}" height="${h}" fill="#181b19"/><g stroke="#3c5142" fill="none" opacity=".5"><path d="M30 ${h*.25}H330v70h100M0 ${h*.8}h230v-85h180"/><circle cx="270" cy="${h*.4}" r="130"/><circle cx="270" cy="${h*.4}" r="180"/></g><g fill="#b5f4d7" opacity=".5"><rect x="320" y="${h*.25-4}" width="8" height="8"/><rect x="226" y="${h*.8-4}" width="8" height="8"/></g>${content}</svg>`;
 const text=(x,y,size,content,color='#f3f5ef',weight=600)=>`<text x="${x}" y="${y}" fill="${color}" font-family="Arial, sans-serif" font-size="${size}" font-weight="${weight}" letter-spacing="-.6">${content}</text>`;

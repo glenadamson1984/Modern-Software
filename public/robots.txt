@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://modern-software.co.uk/sitemap-index.xml
+Sitemap: https://www.modern-software.co.uk/sitemap-index.xml

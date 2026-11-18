@@ -5,7 +5,7 @@ test('public pages contain indexable content, unique titles and correct canonica
  const titles=new Set();
  for(const page of pages){const html=fs.readFileSync(new URL((page?page+'/':'')+'index.html',base),'utf8');
   assert.equal((html.match(/<h1[\s>]/g)||[]).length,1,page);assert.equal((html.match(/rel="canonical"/g)||[]).length,1,page);
-  assert.ok(html.includes('href="https://modern-software.co.uk'+(page?'/'+page:'/')+'"'),page);
+  assert.ok(html.includes('href="https://www.modern-software.co.uk'+(page?'/'+page:'/')+'"'),page);
   const title=html.match(/<title>(.*?)<\/title>/s)?.[1];assert.ok(title);assert.equal(titles.has(title),false,title);titles.add(title);
   assert.ok(html.includes('name="description"'));assert.ok(html.includes('lang="en-GB"'));assert.ok(html.includes('name="robots" content="index,follow"'));
   assert.ok(html.includes('https://www.glenadamson.co.uk/about'));assert.equal(html.includes('astro-island'),false,page);
