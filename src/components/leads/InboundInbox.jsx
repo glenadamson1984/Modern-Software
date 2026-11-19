@@ -3,7 +3,7 @@ import {collection,query,where,onSnapshot,doc,updateDoc,serverTimestamp} from 'f
 import {db} from '../../config/firebase';
 
 export default function InboundInbox(){
- const [leads,setLeads]=useState([]),[error,setError]=useState(''),[open,setOpen]=useState(false),[loading,setLoading]=useState(true),[busy,setBusy]=useState('');
+ const [leads,setLeads]=useState([]),[error,setError]=useState(''),[open,setOpen]=useState(true),[loading,setLoading]=useState(true),[busy,setBusy]=useState('');
  useEffect(()=>onSnapshot(query(collection(db,'leads'),where('inbound','==',true)),snapshot=>{
   setLeads(snapshot.docs.map(row=>({id:row.id,...row.data()})).sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0)));setLoading(false);setError('');
  },()=>{setError('Unable to load website enquiries. Check your signed-in access and database permissions.');setLoading(false);}),[]);

@@ -408,6 +408,9 @@ const LeadsTable = ({
         <StyledFilterLabel>Filter by Status:</StyledFilterLabel>
         <StyledSelect value={filterStatus} onChange={(e) => onFilterChange(e.target.value)}>
           <option value="all">All</option>
+          <option value="New">New</option>
+          <option value="Contacted">Contacted</option>
+          <option value="Qualified">Qualified</option>
           <option value="Sent">Sent</option>
           <option value="Replied">Replied</option>
           <option value="Won">Won</option>
@@ -483,6 +486,9 @@ const LeadsTable = ({
                       value={getFieldValue(lead, "status")}
                       onChange={(e) => handleFieldChange(lead.id, "status", e.target.value)}
                     >
+                      <option value="New">New</option>
+                      <option value="Contacted">Contacted</option>
+                      <option value="Qualified">Qualified</option>
                       <option value="Sent">Sent</option>
                       <option value="Replied">Replied</option>
                       <option value="Won">Won</option>

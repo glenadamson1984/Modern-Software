@@ -134,6 +134,15 @@ const StyledSectionTitle = styled.h2`
   margin: 0 0 1.5rem 0;
 `;
 
+const ManualEntry = styled.details`
+  border: 1px solid ${colours.lightGrey};
+  border-radius: 10px;
+  padding: 1.25rem;
+  color: ${colours.darkGrey};
+  summary { cursor: pointer; font-size: 1rem; font-weight: 600; }
+  > p { font-size: 1rem; color: ${colours.darkGrey}; margin: 1rem 0 1.5rem; }
+`;
+
 const LeadsPage = () => {
   const { user, logout } = useAuth();
   const [leads, setLeads] = useState([]);
@@ -270,13 +279,9 @@ const LeadsPage = () => {
 
         <StyledContent>
           <InboundInbox />
-          <StyledSection>
-            <StyledSectionTitle>Add New Lead</StyledSectionTitle>
-            <LeadsForm onSubmit={handleAddLead} />
-          </StyledSection>
 
           <StyledSection>
-            <StyledSectionTitle>Leads ({leads.length})</StyledSectionTitle>
+            <StyledSectionTitle>All leads ({leads.length})</StyledSectionTitle>
             <LeadsTable
               leads={paginatedLeads}
               allLeads={leads}
@@ -291,6 +296,11 @@ const LeadsPage = () => {
               onPageChange={setCurrentPage}
             />
           </StyledSection>
+          <ManualEntry>
+            <summary>Add a lead manually</summary>
+            <p>Website forms add enquiries automatically. Use this only for a phone call, referral or another enquiry received elsewhere.</p>
+            <LeadsForm onSubmit={handleAddLead} />
+          </ManualEntry>
         </StyledContent>
       </StyledContainer>
       <ResearchModal
