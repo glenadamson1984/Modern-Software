@@ -12,3 +12,9 @@ test('delivery success, configuration failure and provider failure remain distin
  let sent=false;assert.equal((await processEnquiry(valid,{configured:false,send:async()=>{sent=true}})).status,503);assert.equal(sent,false);
  assert.equal((await processEnquiry(valid,{send:async()=>{throw new Error('Provider failure')}})).status,502);
 });
+test('inbound enquiries are saved before email; a saved lead survives email failure',async()=>{
+ const calls=[];const body={...valid,source:'google',medium:'cpc',campaign:'ni-apps'};
+ const result=await processEnquiry(body,{save:async data=>{calls.push('saved');assert.equal(data.campaign,'ni-apps');return 'test-lead';},send:async(data,id)=>{calls.push('email');assert.equal(id,'test-lead');throw new Error('Mail offline');},markNotification:async(id,status)=>calls.push(status)});
+ assert.equal(result.status,200);assert.deepEqual(calls,['saved','email','failed']);
+ let sent=false;const failed=await processEnquiry(valid,{save:async()=>{throw new Error('DB offline')},send:async()=>{sent=true}});assert.equal(failed.status,503);assert.equal(sent,false);
+});

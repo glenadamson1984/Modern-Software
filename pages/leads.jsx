@@ -19,6 +19,7 @@ import LoginForm from "../src/components/leads/LoginForm";
 import LeadsForm from "../src/components/leads/LeadsForm";
 import LeadsTable from "../src/components/leads/LeadsTable";
 import ResearchModal from "../src/components/leads/ResearchModal";
+import InboundInbox from "../src/components/leads/InboundInbox";
 
 const StyledLeadsPage = styled.div`
   min-height: 100vh;
@@ -268,6 +269,7 @@ const LeadsPage = () => {
         </StyledHeader>
 
         <StyledContent>
+          <InboundInbox />
           <StyledSection>
             <StyledSectionTitle>Add New Lead</StyledSectionTitle>
             <LeadsForm onSubmit={handleAddLead} />

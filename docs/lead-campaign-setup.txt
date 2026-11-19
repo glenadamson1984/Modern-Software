@@ -1,0 +1,44 @@
+Mobile app enquiries — production setup
+
+The existing /mobile-app-development page now has a short enquiry form.
+The existing Firebase admin sign-in at /leads is retained. An inbound inbox
+subscribes to the existing leads collection, displays unread counts and lets
+an authenticated admin mark a lead read or update its follow-up status.
+
+Required server setting in Vercel, Production:
+FIREBASE_SERVICE_ACCOUNT_JSON = service-account JSON for the EXISTING Firebase project.
+Keep it a server-only Secret. Never use a PUBLIC_ or NEXT_PUBLIC_ prefix.
+Never commit it, paste it in chat, or put it in a client bundle.
+The credential must have permission to create/update documents in Firestore.
+Use a dedicated service account with only the required Firestore permissions.
+Redeploy after adding the setting. This does not require public Firestore writes.
+Existing Firestore rules must allow the authorised admin to access leads and
+deny anonymous access. No security-rule changes are made by this release.
+
+SENDGRID_API_KEY already exists in Vercel. Email alerts are addressed to Glen's
+existing inbox. A lead is saved before email when storage is configured.
+A failed alert is marked on the saved lead and does not lose the enquiry.
+If storage is unconfigured, the existing email-only route is retained; the
+inbox will NOT automatically receive enquiries until the secret is added.
+If neither service is configured, return 503. Never show success on a failed
+unsaved enquiry. A storage failure returns 503 before attempting mail.
+
+Campaign attribution: source/medium/campaign from bounded UTM query fields
+are included in the saved enquiry and email. No advertising click IDs,
+browser tracking cookies or analytics requests are added by this change.
+The browser emits modern-software:enquiry-sent only after successful receipt.
+That is a local event, NOT an installed Google Ads conversion tag.
+Before launch configure consent-aware Google Ads conversion measurement;
+count a successful enquiry once, not a button click or a thank-you page visit.
+
+Checks before enabling paid traffic:
+- Verify admin login with the existing account and rules.
+- Add server secret and redeploy.
+- Submit an authorised real test enquiry and confirm a saved lead and email.
+- Confirm unauthenticated visitors cannot read leads.
+- Verify campaign source and mark-read/status updates.
+- Check account policy notices and all old campaigns before reactivation.
+- Obtain an approved advertising budget and launch decision.
+
+Build and unit checks cover markup/canonicals and persistence-before-mail,
+including failed database and failed email cases, using mock providers.
