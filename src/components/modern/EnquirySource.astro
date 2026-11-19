@@ -1,0 +1,17 @@
+<script>
+  const params=new URLSearchParams(location.search);
+  const fields=[['source','utm_source'],['medium','utm_medium'],['campaign','utm_campaign']];
+  const attribution=fields.map(([field,param])=>({field,param,value:(params.get(param)||'').replace(/[^a-zA-Z0-9 _.-]/g,'').slice(0,120)})).filter(item=>item.value);
+  // Carry campaign source through the service-page enquiry link without cookies or click IDs.
+  for(const link of document.querySelectorAll<HTMLAnchorElement>('a[href]')){
+    const url=new URL(link.href,location.href);
+    if(url.origin===location.origin&&url.pathname==='/contact'){
+      for(const item of attribution)url.searchParams.set(item.param,item.value);
+      if(attribution.length)link.href=url.href;
+    }
+  }
+  const form=document.querySelector<HTMLFormElement>('#enquiry');
+  if(form)for(const item of attribution){
+    const input=document.createElement('input');input.type='hidden';input.name=item.field;input.value=item.value;form.appendChild(input);
+  }
+</script>
