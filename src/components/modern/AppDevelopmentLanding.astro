@@ -48,7 +48,7 @@ import {site} from '../../data/site.mjs';
           const response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
           const data=await response.json();if(!response.ok)throw new Error(data.message||'Unable to send your enquiry. Please try again or email Glen.');
           form.reset();status.textContent='Thank you. Your app enquiry has been sent to Glen. He’ll reply using the details you provided.';
-          // Local success signal only. An advertising conversion tag must be configured separately.
+          // Sent only after the server accepts the enquiry; measurement respects cookie preferences.
           window.dispatchEvent(new CustomEvent('modern-software:enquiry-sent',{detail:{service:'mobile-app-development'}}));
         }catch(error){status.textContent=error instanceof Error?error.message:'Unable to send your enquiry. Please email Glen directly.';}
         finally{button.disabled=false;button.textContent='Discuss my app idea';}
