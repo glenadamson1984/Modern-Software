@@ -8,15 +8,15 @@ export function validateEnquiry(body){
 }
 export async function processEnquiry(body,{send,configured=true,save,markNotification}){
  const result=validateEnquiry(body);if(result.error)return {status:400,message:result.error};
- if(!configured)return {status:503,message:'The enquiry service is temporarily unavailable. Please email glen.adamson@modern-software.co.uk directly.'};
+ if(!configured)return {status:503,message:'The enquiry service is temporarily unavailable. Please email info@modern-software.co.uk directly.'};
  let leadId;
- if(save){try{leadId=await save(result.data);}catch{return {status:503,message:'Your enquiry could not be saved. Please retry or email Glen directly.'};}}
+ if(save){try{leadId=await save(result.data);}catch{return {status:503,message:'Your enquiry could not be saved. Please retry or email us directly.'};}}
  try{
   await send(result.data,leadId);
   if(leadId&&markNotification)await markNotification(leadId,'sent').catch(()=>{});
   return {status:200,message:'Your enquiry has been sent.'};
  }catch{
   if(leadId){if(markNotification)await markNotification(leadId,'failed').catch(()=>{});return {status:200,message:'Your enquiry has been received.'};}
-  return {status:502,message:'Your enquiry could not be sent. Please retry or email Glen directly.'};
+  return {status:502,message:'Your enquiry could not be sent. Please retry or email us directly.'};
  }
 }

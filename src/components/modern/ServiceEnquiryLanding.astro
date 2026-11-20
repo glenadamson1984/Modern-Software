@@ -45,8 +45,8 @@ const content=website?{
       for(const [field,param] of [['source','utm_source'],['medium','utm_medium'],['campaign','utm_campaign']]){const input=form.elements.namedItem(field) as HTMLInputElement|null;const value=params.get(param);if(input&&value)input.value=value.slice(0,180);}
       form.addEventListener('submit',async event=>{
         event.preventDefault();const button=form.querySelector<HTMLButtonElement>('button[type="submit"]')!;if(button.disabled)return;const status=document.querySelector<HTMLElement>('#service-form-status')!;button.disabled=true;button.textContent='Sending…';status.textContent='';
-        try{const response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});const data=await response.json();if(!response.ok)throw new Error(data.message||'Unable to send. Please try again or email Glen.');form.reset();status.textContent='Thank you. Your enquiry has been sent to Glen. He’ll reply using the details you provided.';window.dispatchEvent(new CustomEvent('modern-software:enquiry-sent',{detail:{service:form.dataset.service}}));}
-        catch(error){status.textContent=error instanceof Error?error.message:'Unable to send. Please email Glen directly.';}
+        try{const response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});const data=await response.json();if(!response.ok)throw new Error(data.message||'Unable to send. Please try again or email us.');form.reset();status.textContent='Thank you. Your enquiry has been sent. We’ll reply using the details you provided.';window.dispatchEvent(new CustomEvent('modern-software:enquiry-sent',{detail:{service:form.dataset.service}}));}
+        catch(error){status.textContent=error instanceof Error?error.message:'Unable to send. Please email us directly.';}
         finally{button.disabled=false;button.textContent=form.dataset.button!;}
       });
     }
